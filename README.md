@@ -14,7 +14,7 @@ https://www.babysits.co/landing/ni%C3%B1eras/?utm_campaign=co-parents&gclid=Cj0K
 https://canguros.com.ar/landing/nineras-buenos-aires/?gclid=Cj0KCQiAyracBhDoARIsACGFcS4odKwjUxr9P1UykhtC4zUV0wazkgJpaLt_9WYYJl9AxE1fmDUqnn0aAhw-EALw_wcB
 
 Descripción de los integrantes.
-Marcos Pagniez, 26 años
+Marcos Pagniez, 26 años.Trabajo como Sales performance analyst en una empresa de consumo masivo. Estudio programación, porque creo que el conocimiento de nuevas tecnologías es y será clave para el corto plazo.
 
 
 Steven Alarcon, 28 años. Soy coordinador de produccion y calidad en una fabrica de colchones en Bogota Colombia . Empece a estudiar programacion por adquirir nuevos conocimientos en algo diferente a mi expericencia laboral.
