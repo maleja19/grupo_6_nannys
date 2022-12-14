@@ -15,3 +15,4 @@ https://canguros.com.ar/landing/nineras-buenos-aires/?gclid=Cj0KCQiAyracBhDoARIs
 
 Descripción de los integrantes.
 Marcos Pagniez, 26 años 
+Steven Alarcon, 28 años
