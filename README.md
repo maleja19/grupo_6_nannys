@@ -20,3 +20,6 @@ Marcos Pagniez, 26 años.Trabajo como Sales performance analyst en una empresa d
 
 
 Steven Alarcon, 28 años. Soy coordinador de produccion y calidad en una fabrica de colchones en Bogota Colombia . Empece a estudiar programacion por adquirir nuevos conocimientos en algo diferente a mi expericencia laboral.
+
+
+Jeison Fenando peña, 31 años, empece a estudiar progrmación para complementar mi perfil laboral y poder emprender nuevos retos laborales
