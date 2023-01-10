@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
+            
+}
+
+.navbar{
+    
+    display: flex;
+    background-color:#fc9d9a;   
+    margin-top: 0;
+    height: 70px;
+    
+
+    
+}   
+
+.navbar i{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #F0F0F0;
+    position: relative;
+    left: 30px;
+}
+
+.navbar p{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    position: relative;
+    left:20px;
+    color: #F0F0F0;
+
+
+}
+
+
+.container{
+    margin: 150px ;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    
+}
+
+main h1{
+
+    position: relative;
+    left: 50%;
+}
+
+.container .perfil{
+    width: 200px;
+    height: 400px;
+    padding: 40px;
+    padding-bottom: 70px;
+    padding-top: 20px;
+    background-color:white;
+    border-radius: 10px;
+    margin-top: 15px;
+      
+
+}
+
+.container .perfil img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    
+    
+
+}
+.container .perfil p{
+    text-align: justify;
+    margin-top: 0;
+    font-family: "Poppins";
+    font-size: 13px;    
+   
+
+}
+
+.container .perfil h3{
+    text-align: center;
+    margin-bottom: 0;
+    margin-top:5px;
+   
+  
+}
+
+.submit{
+    position:relative;
+    left: 60px;
+    font-size: 16px;
+    background-color: #83af9b;
+    font-family: "abrir sans";
+    color: #F0F0F0;
+    border: 1px solid #83af9b;
+}
