@@ -1,0 +1,482 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x:  hidden;
+}
+/*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
+.navBar {
+    background-color: #fc9d9a;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+    padding-top: 1%;}
+
+.contenedorBotones a{
+    display: flex;
+    font-family: "montserrat";
+    color:  gray;
+    text-decoration: none;
+    padding: 1%;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.contenedorBotones a:hover{
+    color:  white;
+    background-color: #fc9d9a;
+}
+
+.burger-menu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    padding: 1%;    
+}
+
+.burger-menu i{
+    padding: 1%;
+    border: white solid 1px;
+    color: white ;
+    border-radius: 5px;
+}
+
+.burger-menu i:hover {
+    background-color: white;
+    border: #fc9d9a solid 1px;
+    color: #fc9d9a ;
+}
+/*-----------------------------------------------------------------------------------Body--------------------------------------------------------------------------------------------*/
+
+body {
+  background-color: white;
+}
+
+.contenedorImagenBanner {
+  width: 100vw;
+}
+
+.contenedorImagenBanner img {
+  width: inherit;
+}
+
+.subtitulo {
+  font-family: "poppins";
+  color: #fc9d9a;
+  margin-left: 1px;
+}
+
+.servicios {
+  display: flex;
+}
+
+.contenedorAccordion {
+  width: 50vw;
+  display: flex;
+  text-align: -webkit-center;
+  align-items: center;
+}
+
+.accordion {
+  margin: 10px auto;
+  width: 100vw;
+}
+
+.accordion li {
+  list-style: none;
+  width: 90%;
+  margin-bottom: 10px;
+  background: #fc9d9a;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: "poppins";
+}
+
+.accordion li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color:white ;
+}
+
+.accordion li label span {
+  transform: rotate(90deg);
+  font-size: 22px;
+  color: white
+}
+
+.accordion label + input[type="radio"]{
+  display: none;
+}
+
+.accordion .content {
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.accordion label + input[type="radio"]:checked + .content {
+  max-height: 400px;
+}
+
+.content p {
+  color: white;
+}
+
+.contenedorImagenServicios {
+  width: 50vw;
+  align-items: center;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.imagenServicios{
+  width: inherit;
+  border-radius: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 90%;
+  width: 90%;
+}
+
+.nineras {
+  display: flex;
+  border-top: solid 1px #fc9d9a;
+  display: flex;
+}
+
+.recomendaciones {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+.recomendacionesImg {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recomendacionesImg img{
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+}
+
+.recomendacionesExp {
+  width: 50vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;;
+}
+
+.recomendacionesExp h4 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  font-family: "poppins";
+  color:#fc9d9a;
+}
+
+.recomendacionesExp button {
+  font-family: "montserrat";
+  color:  gray;
+  text-decoration: none;
+  padding: 1%;
+  background-color: white;
+  border-radius: 2px;
+  border:solid grey 1px;
+  border-radius: 5px;
+}
+
+.recomendacionesExp button:hover {
+  color:  white;
+  background-color: #fc9d9a;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 5px 0px #83af9b;
+  transition: 1s;
+}
+
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contactoImg {
+  width: 48vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contenedorFormulario {
+  width: 50vw;
+  height: 200px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contenedorFormulario form {
+  border: 1px solid #fc9d9a;
+  padding: 8px;
+  border-radius: 5px;
+  border-color: #fc9d9a;
+}
+
+.contenedorFormulario h4 {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  font-family: "poppins";
+  color: #fc9d9a;
+}
+
+.contenedorFormulario input {
+  display: block;
+  margin-bottom: 10px;
+  border: #fc9d9a solid 1px;
+  border-radius: 5px;
+  background-color: #fc9d9a;
+  color: white;
+  padding: 2px;
+}
+::placeholder {color: white;}
+
+.contenedorFormulario label {
+  display: block;
+  font-family: "montserrat";
+  font-weight: bold;
+  color: #fc9d9a;
+}
+
+.contenedorFormulario textarea {
+  resize: none;
+}
+
+/*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
+footer {
+    background-color:#fc9d9a ;
+    position: relative;
+    bottom: 0;
+}
+
+.GranContenedorFooter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.contenedorFooter {
+    width: 20vw;
+    text-align: center;
+    background-color: white;
+    border-radius: 3px;
+    color: gray;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.contenedorFooterRedes {
+  width: 20vw;
+  text-align: center;
+  border-radius: 3px;
+  color: gray;
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.contenedorFooter h3 {
+    font-family: "poppins";
+    border-bottom: #fc9d9a solid 2px;
+    width: 100vw;
+    background-color: white;
+}
+
+.contenedorFooterRedes h3 {
+  font-family: "poppins";
+  border-bottom: #fc9d9a solid 2px;
+  width: 100vw;
+}
+
+.itemFooter {
+    list-style: none;
+    font-family: "montserrat";
+}
+
+.itemFooter:hover {
+    background-color: #fc9d9a;
+    color: white;
+}
+
+.itemFooter a {
+    text-decoration: none;
+    color: gray;
+}
+
+:root {
+    --instagram: #e4405f;
+    --facebook:#3b5999;
+    --twitter:#55acee;
+    --youtube: #bd081c;
+  }
+  
+  .contenedorRedes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contenedorRedes ul {
+    display: flex;
+   flex-wrap: nowrap;
+  }
+ 
+  .contenedorRedes ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+  
+  .contenedorRedes ul li a {
+    display: block;
+    padding: 0 10px;
+    background: white;
+    color: #fc9d9a;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow:#83af9b 0 3px 5px 0px;
+    transition: 2s;
+    border-radius: 6px; 
+  }
+  
+  .contenedorRedes ul:hover a {
+    filter: blur(2px);
+  }
+  
+  .contenedorRedes ul li a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
+    filter: none;
+  }
+  
+  .contenedorRedes ul li .facebook:hover {
+    background: var(--facebook);
+  }
+  
+  .contenedorRedes ul li .instagram:hover {
+    background: var(--instagram);
+  }
+  
+  .contenedorRedes ul li .twitter:hover {
+    background: var(--twitter);
+  }
+  
+  .contenedorRedes ul li .youtube:hover {
+    background: var(--youtube);
+  }
+/*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
+
+@media (max-width:768px) {
+    .contenedorLogo {
+        width: 100vw;
+        text-align: center;
+    }
+
+    .contenedorBotones {
+        display: none;
+    }
+
+    .subtitulo {
+      text-align: center;
+    }
+
+    .contenedorFooter {
+        width: 90vw;
+    }
+
+  .contenedorFooterRedes {
+      width: 90vw;
+    }
+
+  .servicios {
+    flex-wrap: wrap;
+  }
+
+  .contenedorAccordion{
+    width: 100vw;
+  }
+
+  .contenedorImagenServicios {
+    width: 100vw;
+  }
+
+  .recomendacionesImg {
+    width: inherit;
+  }
+  .recomendacionesExp {
+    width: 100vw;
+  }
+
+  .recomendacionesExp h4 {
+    font-size: large;
+  }
+  .contactoImg {
+    width: 100vw;
+  }
+  .contenedorFormulario {
+    width: 100vw;
+  }
+
+}
+
+@media (min-width:769px) {
+    .contenedorLogo {
+        width: 50vw;
+    }
+
+    .contenedorLogo a {
+        margin-left: 5%;
+    }
+
+    .contenedorBotones {
+        width: 49vw;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2%;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+
+
+
