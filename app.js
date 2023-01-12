@@ -12,4 +12,4 @@ app.get('/compras', (req, res) => {
     res.sendFile(htmlVentanas)
 })
 
-app.listen(3000, () => console.log("servidor escuchando"));
+app.listen(3001, () => console.log("servidor escuchando en el puerto 3001"));
