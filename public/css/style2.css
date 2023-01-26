@@ -11,7 +11,10 @@
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 1%;
-    padding-top: 1%;}
+    padding-top: 1%;
+    position: fixed;
+    width: 100vw;
+  }
 
 .contenedorBotones a{
     display: flex;
@@ -66,6 +69,8 @@ body {
   font-family: "poppins";
   color: #fc9d9a;
   margin-left: 1px;
+  margin: 10px;
+  border-bottom: #fc9d9a 1px solid;
 }
 
 .servicios {
@@ -158,12 +163,14 @@ body {
   display: flex;
   width: 100vw;
   flex-wrap: wrap;
+  background-color: #f9cdad;
 }
 .recomendacionesImg {
   width: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
 }
 
 .recomendacionesImg img{
@@ -173,6 +180,7 @@ body {
   align-items: center;
   width: 80%;
   height: 80%;
+  border-radius: 20px;
 }
 
 .recomendacionesExp {
@@ -180,7 +188,8 @@ body {
   align-items: center;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;;
+  flex-wrap: wrap;
+ 
 }
 
 .recomendacionesExp h4 {
@@ -188,7 +197,8 @@ body {
   display: flex;
   justify-content: center;
   font-family: "poppins";
-  color:#fc9d9a;
+  color:#fe4365;
+  margin-top: 20%;
 }
 
 .recomendacionesExp button {
@@ -200,6 +210,7 @@ body {
   border-radius: 2px;
   border:solid grey 1px;
   border-radius: 5px;
+  margin-bottom: 30%;
 }
 
 .recomendacionesExp button:hover {
