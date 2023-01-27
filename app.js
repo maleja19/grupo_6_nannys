@@ -32,5 +32,4 @@ app.get('/form2', (req, res) => {
 })
 
 
-
-app.listen(3030, () => console.log("servidor escuchando en el puerto 3030"));
+app.listen(3030,()=>console.log("servidor escuchando"));
