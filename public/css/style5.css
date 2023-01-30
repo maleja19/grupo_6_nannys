@@ -1,0 +1,130 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
+.navBar {
+    background-color: #fc9d9a;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+    padding-top: 1%;}
+
+.contenedorBotones a {
+    display: flex;
+    font-family: "montserrat";
+    font-weight: bold;
+    text-decoration: none;
+    color:  gray;
+    padding: 1%;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.contenedorBotones a:hover{
+    color:  white;
+    background-color: #fc9d9a;
+}
+
+
+form {
+display: flex-block;
+justify-content:center;
+text-align:left;
+width: 50vw;
+background-color: #c8c8a9;
+margin-left: 5%;
+border-color: #fe4365;
+border-style:solid;
+border-radius: 5px;
+padding: 100px;
+
+}
+
+
+body {
+    background-color: white;
+    font-family: 'Poppins';
+    font-size: large;
+    color: #fe4365
+ }
+
+ .create-form {
+    padding: 20px 200px;
+ }
+
+ .control-formulario {
+    margin-bottom: 20px;
+    width:50vw;
+ }
+
+ .control-formulario label {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+     }
+
+ .radio {
+    padding: 5px 5px;
+ }
+
+ .control {
+    width: 50%;
+    padding: 8px 8px;
+ }
+
+.boton-formulario {
+border-color: #fe4365;
+color: #fe4365;
+font-weight: bold;
+justify-content: center;
+text-align:center;
+border-radius: 5px;
+}
+
+/*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
+
+@media (max-width:768px) {
+    .contenedorLogo {
+        width: 100vw;
+        text-align: center;
+    }
+
+    .contenedorBotones {
+        display: none;
+    }
+
+    .subtitulo {
+      text-align: center;
+    }
+
+   
+  .create-form {
+    width: 100vw;
+  }
+
+}
+
+@media (min-width:769px) {
+    .contenedorLogo {
+        width: 50vw;
+    }
+
+    .contenedorLogo a {
+        margin-left: 5%;
+    }
+
+    .contenedorBotones {
+        width: 49vw;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2%;
+    }
+    .create-form {
+      width: 100vw;
+    }
+}
