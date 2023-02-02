@@ -1,5 +1,5 @@
 const express = require('express');
-const {home,signInNineras,signInPadres,login,compras} = require('../controllers/mainControllers');
+const {home,signInNineras,signInPadres,login,compras, formEditNineras} = require('../controllers/mainControllers');
 
 const routerMain = express.Router();
 
@@ -12,5 +12,12 @@ routerMain.get('/signp', signInPadres);
 routerMain.get('/login', login);
 
 routerMain.get('/compras', compras);
+
+routerMain.get('/form-edit1', formEditNineras);
+
+
+
+
+
 
 module.exports = routerMain;
