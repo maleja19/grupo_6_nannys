@@ -2,25 +2,31 @@ const path=require("path")
 
 
 const home = (req,res)=>{
-    res.sendFile(path.join(__dirname,'../views/home.html'));
+    res.render('home.ejs');
 }
 
 const signInNineras=(req,res)=>{
-    res.sendFile(path.join(__dirname,'../views/RegistrarseNineras.html'));
+    res.render('users/RegistrarseNineras.ejs');
    
 }
 
 const signInPadres=(req,res)=>{
-    res.sendFile(path.join(__dirname,'../views/RegistrarseParents.html'));
+    res.render('users/RegistrarseParents.ejs');
 }
 
 const login=(req,res)=>{
-    res.sendFile(path.join(__dirname,'../views/loginIn.html'));
+    res.render('users/loginIn.ejs');
 }
 
 const compras=(req,res)=>{
-    res.sendFile(path.join(__dirname, '../views/compras.html'));
+    res.render('products/compras.ejs');
 }
+
+const formEditNineras=(req,res)=>{
+    res.render('users/formEditNineras.ejs');
+}
+
+
 
 
 
@@ -29,5 +35,6 @@ module.exports={
     signInNineras,
     signInPadres,
     login,
-    compras
+    compras,
+    formEditNineras
 };

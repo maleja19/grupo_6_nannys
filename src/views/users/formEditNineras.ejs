@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/crear-producto" method="POST" class="create-form">
+
+        <div class="control-formulario">
+          Imagen de Perfil: <input type="file" name="foto" id="fotoPerfil" accept= ".jpg, multiple">
+        </div>
+        
+        
+        <div class="control-formulario">
+            <label>Nombre</label>
+            <input type="text" name="Nombres" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label>Apellido</label>
+            <input type="text" name="Apellidos" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label>Correo Electrónico</label>
+            <input type="email" name="mail" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label for="" class="label">Username</label>
+            <input type="text" name="Username" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label for="" class="label">Password</label>
+            <input type="text" name="Password" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label for="" class="label">Confirm Password</label>
+            <input type="text" name="ConfirmPasswor" class="control">
+        </div>
+    
+    
+    
+       
+        <div class="control-formulario">
+            <label>Fecha de Nacimiento</label>
+            <input type="date" name="fechaNacimiento" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label>Nacionadlidad</label>
+            <input type="text" name="nacionalidad">
+        </div>
+    
+        <div class="control-formulario">
+            <label>País de residencia</label>
+            <select name="País de residencia">
+                <option value="Argentina">Argentina</option>
+                <option value="Colombia">Colombia</option>
+            </select>     
+        </div>
+    
+        <div class="control-formulario">
+             <label>Ciudad de residencia</label>
+             <select name="ciudad">
+                <option value="CABA">CABA</option>
+                <option value="COR">Córdoba</option>
+                <option value="LP">La Plata</option>
+                <option value="MDQ">Mar del Plata</option>
+                <option value="Ro">Rosario</option>
+                <option value="BGT">Bogotá</option>
+                <option value="BARR">Barranquilla</option>
+                <option value="CAL">Cali</option>
+                <option value="Cart">Cartagena</option>
+                <option value="Med">Medellín</option>  
+            </select>
+        </div>
+        
+        
+        <div class="control-formulario">
+            <label>Número de Contacto</label>
+            <input type="number" name="celular" placeholder="">
+        </div>
+    
+        <div class="control-formulario">
+            <label>Alguna vez contrataste niñera?</label>         
+                <input type="radio" name="Alguna vez contrataste niñera?" class="radio">Si
+                <input type="radio" name="Alguna vez contrataste niñera?" class="radio">No</label>
+        </div>
+
+        <div class="control-formulario">
+            <label>descripcion</label>
+            <input type="text" name="Nombres" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label>precio</label>
+            
+        </div>
+
+        <div class="control-formulario">
+            <label>Actitudes</label>
+            <input  type="checkbox" name="Actitudes" value="Paciencia"><label for="Paciencia">Paciencia</label></div>
+            <input  type="checkbox" name="Actitudes" value="Respondable"><label for="Respondable">Respondable</label></div>
+            <input  type="checkbox" name="Actitudes" value="Proactiva"><label for="Proactiva">Proactiva</label></div>
+            <input  type="checkbox" name="Actitudes" value="Divertida"><label for="Divertida">Divertida</label></div>
+            <input  type="checkbox" name="Actitudes" value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
+            <input  type="checkbox" name="Actitudes" value="Organizada"><label for="Organizada">Organizada</label></div>
+            <input  type="checkbox" name="Actitudes" value="Puntual"><label for="Puntual">Puntual</label></div>
+            <input  type="checkbox" name="Actitudes" value="Creativa"><label for="Creativa">Creativa</label></div>
+            <input  type="checkbox" name="Actitudes" value="Amistosa"><label for="Amistosa">Amistosa</label></div>
+        </div>
+    
+        <button type="reset" class="boton-formulario">Borrar</button>
+        <button type="submit" class="boton-formulario">Guardar</button>
+        
+    
+    </form>
+
+
+    
+</body>
+</html>
