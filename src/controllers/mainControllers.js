@@ -26,6 +26,10 @@ const formEditNineras=(req,res)=>{
     res.render('users/formEditNineras.ejs');
 }
 
+const detalle=(req,res)=>{
+    res.render('products/detalleProductos.ejs');
+}
+
 
 
 
@@ -36,5 +40,6 @@ module.exports={
     signInPadres,
     login,
     compras,
-    formEditNineras
+    formEditNineras,
+    detalle
 };

@@ -1,0 +1,364 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x:  hidden;
+}
+.navBar {
+    background-color: #fc9d9a;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    position: fixed;
+    width: 100vw;
+  }
+
+.contenedorBotones a{
+    display: flex;
+    font-family: "montserrat";
+    color:  gray;
+    text-decoration: none;
+    padding: 1%;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.contenedorBotones a:hover{
+    color:  white;
+    background-color: #fc9d9a;
+}
+
+.burger-menu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    padding: 1%;    
+}
+
+.burger-menu i{
+    padding: 1%;
+    border: white solid 1px;
+    color: white ;
+    border-radius: 5px;
+}
+
+.burger-menu i:hover {
+    background-color: white;
+    border: #fc9d9a solid 1px;
+    color: #fc9d9a ;
+}
+
+/*BODY*/
+
+.contenedorDetalle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f9cdad;
+    padding: 0 20px;
+    font-family: "poppins";
+    font-weight: bolder;
+    margin-top: 60px;
+}
+
+.card-container {
+    display: flex;
+    height: auto;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    border-right: 1px solid gray;
+    width: 50vw;
+}
+
+.descripcion {
+    background: #fc9d9a;
+    width: 50vw;
+}
+
+.header, .descripcion {
+    padding: 20px;
+    text-align: center;
+}
+
+.header a{
+    position: relative;
+    display: block;
+}
+
+.header img {
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, .06);
+    margin: 20px 30px;
+    transition: .2s;
+}
+
+.header a:hover img {
+    box-shadow: 0 0 0 12px rgba(0, 0, 0, .1);
+}
+
+.header h2 {
+    color: #fc9d9a;
+    font-family: "montserrat";
+}
+
+.header h4 {
+    margin-bottom: 20px;
+    color: gray;
+    font-family:"poppins";
+}
+
+.descripcion {
+    position: relative;
+}
+
+.descripcion p {
+    margin: 20px 30px;
+    color: gray;
+}
+
+.caracteristica {
+    text-align: initial;
+    color: gray;
+    margin: 10px;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color:#fc9d9a ;
+    position: relative;
+    bottom: 0;
+}
+
+.GranContenedorFooter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.contenedorFooter {
+    width: 20vw;
+    text-align: center;
+    background-color: white;
+    border-radius: 3px;
+    color: gray;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.contenedorFooterRedes {
+  width: 20vw;
+  text-align: center;
+  border-radius: 3px;
+  color: gray;
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.contenedorFooter h3 {
+    font-family: "poppins";
+    border-bottom: #fc9d9a solid 2px;
+    width: 100vw;
+    background-color: white;
+}
+
+.contenedorFooterRedes h3 {
+  font-family: "poppins";
+  border-bottom: #fc9d9a solid 2px;
+  width: 100vw;
+}
+
+.itemFooter {
+    list-style: none;
+    font-family: "montserrat";
+}
+
+.itemFooter:hover {
+    background-color: #fc9d9a;
+    color: white;
+}
+
+.itemFooter a {
+    text-decoration: none;
+    color: gray;
+}
+
+:root {
+    --instagram: #e4405f;
+    --facebook:#3b5999;
+    --twitter:#55acee;
+    --youtube: #bd081c;
+  }
+  
+  .contenedorRedes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contenedorRedes ul {
+    display: flex;
+   flex-wrap: nowrap;
+  }
+ 
+  .contenedorRedes ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+  
+  .contenedorRedes ul li a {
+    display: block;
+    padding: 0 10px;
+    background: white;
+    color: #fc9d9a;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow:#83af9b 0 3px 5px 0px;
+    transition: 2s;
+    border-radius: 6px; 
+  }
+  
+  .contenedorRedes ul:hover a {
+    filter: blur(2px);
+  }
+  
+  .contenedorRedes ul li a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
+    filter: none;
+  }
+  
+  .contenedorRedes ul li .facebook:hover {
+    background: var(--facebook);
+  }
+  
+  .contenedorRedes ul li .instagram:hover {
+    background: var(--instagram);
+  }
+  
+  .contenedorRedes ul li .twitter:hover {
+    background: var(--twitter);
+  }
+  
+  .contenedorRedes ul li .youtube:hover {
+    background: var(--youtube);
+  }
+
+/*MEDIA QUERIES*/
+
+
+
+@media (max-width:640px){
+    .card-container{
+        display: block;
+        width: 450px;
+    }
+    .header {
+        padding: 20px 20px 5px 20px;
+        border: none;
+        width: auto;
+        border-bottom: gray solid 1px;
+    }
+    .descripcion{
+        padding: 5px 20px 20px 20px;
+        background: transparent;
+        width: auto;
+    }
+
+    .header h4 {
+        margin:0;
+    }
+}
+
+@media (max-width:768px) {
+    .contenedorLogo {
+        width: 100vw;
+        text-align: center;
+    }
+
+    .contenedorBotones {
+        display: none;
+    }
+
+    .subtitulo {
+      text-align: center;
+    }
+
+    .contenedorFooter {
+        width: 90vw;
+    }
+
+  .contenedorFooterRedes {
+      width: 90vw;
+    }
+
+  .servicios {
+    flex-wrap: wrap;
+  }
+
+  .contenedorAccordion{
+    width: 100vw;
+  }
+
+  .contenedorImagenServicios {
+    width: 100vw;
+  }
+
+  .recomendacionesImg {
+    width: inherit;
+  }
+  .recomendacionesExp {
+    width: 100vw;
+  }
+
+  .recomendacionesExp h4 {
+    font-size: large;
+  }
+  .contactoImg {
+    width: 100vw;
+  }
+  .contenedorFormulario {
+    width: 100vw;
+  }
+
+}
+
+@media (min-width:769px) {
+    .contenedorLogo {
+        width: 50vw;
+    }
+
+    .contenedorLogo a {
+        margin-left: 5%;
+    }
+
+    .contenedorBotones {
+        width: 49vw;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2%;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
