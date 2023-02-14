@@ -19,30 +19,13 @@
 
     <title>Document</title>
 </head>
-<header>
-    <nav class="navBar">
 
-        <div class="contenedorLogo">
-            <a href="home.html" class="logo"><img src="" alt="Logo"></a>
-        </div>
 
-        <div class="contenedorBotones">
-            <a href="#" class="botonNav">Como Funciona?</a>
-            <a href="compras.html" class="botonNav">Servicios</a>
-            <a href="#" class="botonNav">Ayuda</a>
-            <a href="SignIn.html" class="botonNav">Acceder</a>
-            <a href="RegistrarseNineras.html" class="botonNav">Registrarse</a>
-        </div>
-
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-
-    </nav>
-</header>
 
 <body>  
 
+    <%- include('partials/header.ejs')%>
+    
 
     <div class="contenedorImagenBanner">
          <img src="/images/bannerHome.jpg" alt="niñeras con niños en parque">
@@ -131,42 +114,8 @@
         </div>
     </div>
 
+<%- include('partials/footer.ejs')%>
 </body>
 
-<footer>
-    <div>
 
-        <div class="GranContenedorFooter">
-
-            <div class="contenedorFooter">
-                <h3>Nombre Empresa</h3>
-                <ul>
-                    <li class="itemFooter"><a href="">Privacidad</a></li>
-                    <li class="itemFooter"><a href="">Términos</a></li>
-                    <li class="itemFooter"><a href="">Datos de la empresa</a></li>
-                </ul>
-            </div>
-
-            <div class="contenedorFooter">
-                <h3>Preguntas Frecuentes</h3>
-                <ul>
-                    <li class="itemFooter"><a href="">Como Funciona</a></li>
-                    <li class="itemFooter"><a href="">Ayuda</a></li>
-                </ul>
-            </div>
-
-            <div class="contenedorFooterRedes">
-                <h3>Siguenos en</h3>
-                <div class="contenedorRedes">
-                    <ul>
-                        <li><a href="" class="instagram"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="" class="facebook"><i class="fab fa-facebook-f"></i></i></a></li>
-                        <li><a href="" class="twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="" class="youtube"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div> 
-        </div>
-    </div>
-</footer>
 </html>
