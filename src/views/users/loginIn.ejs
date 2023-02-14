@@ -21,28 +21,12 @@
 
     <title>Nannies - SignIn</title>
 </head>
-<nav class="navBar">
-
-    <div class="contenedorLogo">
-        <a href="" class="logo"><img src="/images/logo 2.jpg" alt="Logo" width="200" heigth = "150"></a>
-    </div>
-
-    <div class="contenedorBotones">
-        <a href="#" class="botonNav">Como Funciona?</a>
-        <a href="#" class="botonNav">Servicios</a>
-        <a href="#" class="botonNav">Ayuda</a>
-        <a href="#" class="botonNav">Acceder</a>
-        <a href="#" class="botonNav">Registrarse</a>
-    </div>
-    
-</nav>
-
-    <header>
-        <h1>¡Bienvenido a Nannies!</h1>
-    </header>
 
           
 <body>
+    <%- include('partials/header.ejs')%>
+
+    <h1>¡Bienvenido a Nannies!</h1>
     
 <!--- Formulario Niñeras-->
 <form action="/crear-producto" method="POST" class="create-form">
