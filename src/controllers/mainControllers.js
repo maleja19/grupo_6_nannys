@@ -28,15 +28,17 @@ const formEditNineras=(req,res)=>{
     res.render('users/formEditNineras.ejs');
 }
 
-
-
-
+const detalle=(req,res)=>{
+    res.render('products/detalleProductos.ejs');
+}
 
 module.exports={
     home,
     mision,
     signInNineras,
     signInPadres,
-    login,
-    formEditNineras
+    login,   
+    formEditNineras,
+    detalle
+
 };

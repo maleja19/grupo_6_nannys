@@ -51,6 +51,7 @@
     color: #fc9d9a ;
 }
 
+<<<<<<< HEAD
 /*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
 .contenedorBanner {
     width: 100vw;
@@ -206,6 +207,89 @@ h3 {
 }
   
 /*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
+=======
+/*BODY*/
+
+.contenedorDetalle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f9cdad;
+    padding: 0 20px;
+    font-family: "poppins";
+    font-weight: bolder;
+    margin-top: 60px;
+}
+
+.card-container {
+    display: flex;
+    height: auto;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    border-right: 1px solid gray;
+    width: 50vw;
+}
+
+.descripcion {
+    background: #fc9d9a;
+    width: 50vw;
+}
+
+.header, .descripcion {
+    padding: 20px;
+    text-align: center;
+}
+
+.header a{
+    position: relative;
+    display: block;
+}
+
+.header img {
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, .06);
+    margin: 20px 30px;
+    transition: .2s;
+}
+
+.header a:hover img {
+    box-shadow: 0 0 0 12px rgba(0, 0, 0, .1);
+}
+
+.header h2 {
+    color: #fc9d9a;
+    font-family: "montserrat";
+}
+
+.header h4 {
+    margin-bottom: 20px;
+    color: gray;
+    font-family:"poppins";
+}
+
+.descripcion {
+    position: relative;
+}
+
+.descripcion p {
+    margin: 20px 30px;
+    color: gray;
+}
+
+.caracteristica {
+    text-align: initial;
+    color: gray;
+    margin: 10px;
+}
+
+/*FOOTER*/
+
+>>>>>>> 690aced524a2a1739304f9ca0e310c4c68ace656
 footer {
     background-color:#fc9d9a ;
     position: relative;
@@ -336,10 +420,41 @@ footer {
   .contenedorRedes ul li .youtube:hover {
     background: var(--youtube);
   }
+<<<<<<< HEAD
 /*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
 
 @media (max-width:768px) {
     /* telefono*/
+=======
+
+/*MEDIA QUERIES*/
+
+
+
+@media (max-width:640px){
+    .card-container{
+        display: block;
+        width: 450px;
+    }
+    .header {
+        padding: 20px 20px 5px 20px;
+        border: none;
+        width: auto;
+        border-bottom: gray solid 1px;
+    }
+    .descripcion{
+        padding: 5px 20px 20px 20px;
+        background: transparent;
+        width: auto;
+    }
+
+    .header h4 {
+        margin:0;
+    }
+}
+
+@media (max-width:768px) {
+>>>>>>> 690aced524a2a1739304f9ca0e310c4c68ace656
     .contenedorLogo {
         width: 100vw;
         text-align: center;
@@ -389,15 +504,21 @@ footer {
   .contenedorFormulario {
     width: 100vw;
   }
+<<<<<<< HEAD
   h3{
     text-align: center;
   }
+=======
+>>>>>>> 690aced524a2a1739304f9ca0e310c4c68ace656
 
 }
 
 @media (min-width:769px) {
+<<<<<<< HEAD
 
      /* laptop*/
+=======
+>>>>>>> 690aced524a2a1739304f9ca0e310c4c68ace656
     .contenedorLogo {
         width: 50vw;
     }
@@ -416,6 +537,7 @@ footer {
     .burger-menu {
         display: none;
     }
+<<<<<<< HEAD
 
     .contain-experiences{
       display:inline-flex;
@@ -521,3 +643,7 @@ footer {
 
 
 
+=======
+}
+
+>>>>>>> 690aced524a2a1739304f9ca0e310c4c68ace656
