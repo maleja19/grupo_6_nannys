@@ -1,6 +1,7 @@
 const express = require("express")
 const morgan = require('morgan');
 const routerMain = require('./src/routes/main');
+const routerProducts = require('./src/routes/products');
 const path=require('path');
 
 const port = process.env.PORT || 3030;
@@ -16,6 +17,6 @@ app.use(morgan('dev'));
 app.use(express.static('public'));
 
 app.use(routerMain)
-
+app.use(routerProducts)
 
 app.listen(port, () => console.log(`servidor escuchando en puerto ${port}`));

@@ -5,6 +5,11 @@ const home = (req,res)=>{
     res.render('home.ejs');
 }
 
+const mision=(req,res)=>{
+    res.render('mision.ejs');
+   
+}
+
 const signInNineras=(req,res)=>{
     res.render('users/RegistrarseNineras.ejs');
    
@@ -18,9 +23,6 @@ const login=(req,res)=>{
     res.render('users/loginIn.ejs');
 }
 
-const compras=(req,res)=>{
-    res.render('products/compras.ejs');
-}
 
 const formEditNineras=(req,res)=>{
     res.render('users/formEditNineras.ejs');
@@ -32,9 +34,9 @@ const formEditNineras=(req,res)=>{
 
 module.exports={
     home,
+    mision,
     signInNineras,
     signInPadres,
     login,
-    compras,
     formEditNineras
 };

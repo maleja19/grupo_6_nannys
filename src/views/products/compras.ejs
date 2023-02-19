@@ -47,80 +47,28 @@
         
         <div class="contain-nineras">
 
+        <% for(i=0;i< productos.length;i++){%>
+            
             <div class="contain-perfil">
             
-            <div class="contain-person"><img class="img-person" src="/images/ninera1.jpg" alt="perfil1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <div class="contain-person"><img class="img-person" src=<%= productos[i].img %>><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>               
             <div class="descripcion">
-                <h4>Lorena Jimenez</h4>
+                <h4><%= productos[i].nombre+" "+productos[i].apellido %></h4>
                 <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat"</p>
                 
                 <ul>
-                    <li>consectetur</li>
-                    <li>consectetur</li>
-                    <li>consectetur</li>
+                    <li><%= productos[i].aptitudes[0]%></li>
+                    <li><%= productos[i].aptitudes[1]%></li>
+                    <li><%= productos[i].aptitudes[2]%></li>
                     
                 </ul>
-                <p>Valor: $ 13.000/dia</p>
+                <p>Valor:<%= productos[i].precio %></p>
                 <input class="submit" type="submit" value="Seleccionar">
                 </div>
             </div>
-
-            <div class="contain-perfil">
-            
-                <div class="contain-person"><img class="img-person" src="/images/ninera2.jpg" alt="perfil1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>               
-                <div class="descripcion">
-                    <h4>Lorena Jimenez</h4>
-                    <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat"</p>
-                    
-                    <ul>
-                        <li>consectetur</li>
-                        <li>consectetur</li>
-                        <li>consectetur</li>
-                        
-                    </ul>
-                    <p>Valor: $ 13.000/dia</p>
-                    <input class="submit" type="submit" value="Seleccionar">
-                    </div>
-                </div>
-            
-            <div class="contain-perfil">
-        
-                <div class="contain-person"><img class="img-person" src="/images/ninera3.jpg" alt="perfil1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>               
-                <div class="descripcion">
-                    <h4>Lorena Jimenez</h4>
-                    <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat"</p>
-                    
-                    <ul>
-                        <li>consectetur</li>
-                        <li>consectetur</li>
-                        <li>consectetur</li>
-                        
-                    </ul>
-                    <p>Valor: $ 13.000/dia</p>
-                    <input class="submit" type="submit" value="Seleccionar">
-                    </div>
-                </div>
-            <div class="contain-perfil">
-
-                <div class="contain-person"><img class="img-person" src="/images/ninera4.jpg" alt="perfil1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>               
-                <div class="descripcion">
-                    <h4>Lorena Jimenez</h4>
-                    <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat"</p>
-                    
-                    <ul>
-                        <li>consectetur</li>
-                        <li>consectetur</li>
-                        <li>consectetur</li>
-                        
-                    </ul>
-                    <p>Valor: $ 13.000/dia</p>
-                    <input class="submit" type="submit" value="Seleccionar">
-                    </div>
-                </div>
+            <%}%>
+                      
 
         </div>
                
