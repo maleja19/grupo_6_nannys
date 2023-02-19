@@ -35,4 +35,22 @@ Hacer menos:
 Dejar de hacer:
 
 - Falta de comunicacion de algunos integrantes del grupo
+
+Tercer sprint
+
+Comenzar hacer:
+
+-Pactar reuniones que puedan ser cumplidas por cada uno de los integrantes del grupo
+-Estar actualizados con el material de la clase pertinente para poder desarrollar el proyecto
+en tiempo y forma.
+
+Hacer mas:
+
+- Mas reuniones productivas para avanzar con los sprints
+- Tener una comunicacion mas frecuente entre integrantes
+
+Continuar haciendo:
+
+- Participar en forma conjunta en el proyecto
+- Seguir con la buena predisposicion para que el proyecto salga bien.
  
