@@ -1,0 +1,96 @@
+[
+    {
+        "id":1,
+        "img": "/images/ninera1.jpg",
+        "nombre": "Camila",
+        "apellido":"Walkers",
+        "correo electronico": "camila.walkers19@hotmail.com",
+        "fecha de nacimiento":23,
+        "nacionalidad": "Argentina",
+        "pais de residencia": "Argentina",
+        "ciudad de residencia":"Buenos Aires",
+        "direccion":"maipu12700",
+        "numero de contacto":"1134590231",
+        "descipción":"Niñera con 3 años de experiencia en el cuidado de niños y bebés. Me caracterizo por organizar sesiones de lectura y juegos didácticos para fomentar el desarrollo intelectual de los niños. Eficaz en las tareas de alimentar, bañar, cambiar y lavar la ropa de niños y bebés.",
+        "precio":"1200 x hs",
+        "aptitudes":["creativa","organizada","comunicativa"]      
+       
+    },
+
+    {
+        "id":2,
+        "img": "/images/ninera2.jpg",
+        "nombre":"Laura",
+        "apellido":"Pagniez",
+        "correo electronico":"laura.pagniez@gmail.com",
+        "fecha de nacimiento":24,
+        "nacionalidad":"Argentina",
+        "pais de residencia":"Argentina",
+        "ciudad de residencia":"Mendoza",
+        "direccion":"Av. Ing. Cipolletti 939",
+        "numero de contacto": "1232550687",
+        "descipción":"Niñera con amplia experiencia en el cuidado e instrucción de niños. Capaz de seguir instrucciones detalladas referentes a la alimentación, medicación, tareas y cuidados en general. Dispuesta a participar en la limpieza de los cuartos y el lavado de ropa de los niños.",
+        "precio":"1250 x hora",
+        "aptitudes":["creativa","organizada","comunicativa"]
+       
+
+    },
+
+    {
+        "id":3,
+        "img": "/images/ninera3.jpg",
+        "nombre":"Angela",
+        "apellido": "Poveda",
+        "correo electronico":"angela.poveda@gmail.com",
+        "fecha de nacimiento":25,
+        "nacionalidad":"Colombiana",
+        "pais de residencia":"Argentina",
+        "ciudad de residencia":"Cordoba",
+        "direccion":"Porto y Mariño 454",
+        "numero de contacto":"1134566689",
+        "descipción":"Niñera carismática, paciente y divertida. Experiencia de más de 5 años con niños mayores y bebés. Capacidad de transportar a los niños a sus diferentes actividades. Mantengo una relación cercana con los papás para reportarles cualquier irregularidad.",
+        "precio":"1700 x hora",
+        "aptitudes":["creativa","organizada","comunicativa"]
+       
+
+    },
+
+    {
+        "id":4,
+        "img": "/images/ninera4.jpg",
+        "nombre":"Carolina",
+        "apellido":"Murcia",
+        "correo electronico":"carolina.murcia@gmail.com",
+        "fecha de nacimiento":"28",
+        "nacionalidad":"Argentina",
+        "pais de residencia":"Argentina",
+        "ciudad de residencia":"Buenos Aires",
+        "direccion": "colectora Sur Au 5",
+        "numero de contacto":"1347585421",
+        "descipción":"Soy Marta, estudiante de Educación Primaria de la UAB. Tengo experiencia como canguro cuidando a los peques de familiares y amigos, y además, he trabajado como monitora de extraescolares. Así que estoy acostumbrada a desarrollar actividades lúdicas y educativas para niños de todas las edades.",
+        "precio":"2000 x hora",
+        "aptitudes":["creativa","organizada","comunicativa"]    
+       
+
+    },
+
+    {
+        "id":5,
+        "img": "/images/ninera5.png",
+        "nombre":"Sofia",
+        "apellido":"Farias",
+        "correo electronico":"sofia.farias@gmail.com",
+        "fecha de nacimiento": "29",
+        "nacionalidad":"Argentina",
+        "pais de residencia":"Argentina",
+        "ciudad de residencia":"Buenos Aires",
+        "direccion":"Av Leandro N. Alem 758",
+        "numero de contacto":"1257689458",
+        "descipción":"Niñera experimentada y fiable con más de diez años de experiencia en el cuidado de niños y sus familias. Ofrezco cuidados óptimos a niños de incluso tan solo 8 semanas de edad. Aporto un historial probado de clientes satisfechos, altamente dispuestos a recomendar mis servicios. ",
+        "precio":"1300 x hora",
+        "aptitudes":["creativa","organizada","comunicativa"]
+       
+
+    }
+]
+

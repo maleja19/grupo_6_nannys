@@ -2,8 +2,13 @@
     padding:0;
     margin: 0;
     box-sizing: border-box;
+<<<<<<< HEAD:public/css/style7.css
 }
 
+=======
+  
+}
+>>>>>>> 2023e1d99736748fe3148d8dbc368a0a47b6bb93:public/css/style6.css
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
 .navBar {
     background-color: #fc9d9a;
@@ -51,9 +56,170 @@ body {
     color: #fe4365
  }
 
+<<<<<<< HEAD:public/css/style7.css
  .create-form {
     padding: 20px 200px;
  }
+=======
+<<<<<<< HEAD
+/*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
+.contenedorBanner {
+    width: 100vw;
+    height:50vh;
+   
+
+  } 
+
+.contenedorBanner h1{
+    position: absolute;
+    color: gray;
+    top:12vh;
+    font-family: "poppins";
+    
+    
+}
+
+.contenedorBanner p{
+    position: absolute;
+    color: gray;
+    top:17vh;
+    font-family: "poppins";
+    font-size: 20px;   
+    
+
+}
+
+.img-children{
+    width: 100vw;
+    height: 50vh;
+    margin: 0;
+    
+}
+
+h3 {
+    font-family: "poppins";
+    color: #fc9d9a;
+    margin-left: 1px;
+    margin: 10px;
+    border-bottom: #fc9d9a 1px solid;
+    margin-bottom: 15px;
+  }
+
+.contain-mision{
+  display: block;
+ 
+  
+}
+
+.contain-goals{
+  border: 1px solid #83af9b;
+  margin: auto;
+  width: 60%;
+  margin-bottom:20px ;
+  height: 25vh;
+  border-radius: 5px;
+  
+}
+
+.contain-goals h4{
+  font-family: "poppins";
+  border-radius: 50%;
+  color: white;
+  border: 1px solid #83af9b ;
+  text-align: center;
+  margin: auto;
+  width: 12%;
+  position: relative;
+  bottom: 12px;
+  background-color: #83af9b;
+
+  
+}
+
+.contain-goals p{
+  border-bottom: 1px solid #83af9b;
+  text-align: center;
+  font-family: "poppins";
+  font-size: 16px;
+  background-color: #83af9b;
+  color: white;
+
+}
+
+
+
+.contain-goals ul{
+  padding-left: 5vw;
+  margin-top: 1vh;
+  font-family: "poppins";
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.comentario{
+  padding-left: 3vw;
+  margin-bottom: 3vh;
+  font-family: "poppins";
+  font-size: 13px;
+  background-color: #83af9b;
+  color: white;
+}
+
+.contain-experiences{
+  display:inline-block;
+  margin: auto;
+  
+}
+.contain-nannys{
+
+  border: 1px solid #83af9b;
+  height: 50vh;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.contain-nannys img{
+  width: 100%;
+  height: 20vh;
+  
+}
+
+.contain-nannys p{
+  font-family: "poppins";
+  margin-top: 1vh;
+  font-size: 13px;
+  
+}
+
+.contain-nannys a{
+  position: relative;
+  top: 8px;
+  font-family: "poppins";
+  font-size: 13px;
+}
+
+.security i{
+  text-align: center;
+  display: block;
+  font-size: 30px;
+  color:#83af9b;  
+}
+
+.security p{
+  text-align: center;
+  display: block;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 5%;
+  font-family: "poppins";
+  font-size: 14px;
+  
+}
+  
+/*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
+=======
+/*BODY*/
+>>>>>>> 2023e1d99736748fe3148d8dbc368a0a47b6bb93:public/css/style6.css
 
  .control-formulario {
     margin-bottom: 20px;
@@ -85,9 +251,32 @@ text-align:center;
 border-radius: 5px;
 }
 
+<<<<<<< HEAD:public/css/style7.css
 /*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
 .footer {
     background-color: #fc9d9a;
+=======
+.descripcion {
+    position: relative;
+}
+
+.descripcion p {
+    margin: 20px 30px;
+    color: gray;
+}
+
+.caracteristica {
+    text-align: initial;
+    color: gray;
+    margin: 10px;
+}
+
+/*FOOTER*/
+
+>>>>>>> 690aced524a2a1739304f9ca0e310c4c68ace656
+footer {
+    background-color:#fc9d9a ;
+>>>>>>> 2023e1d99736748fe3148d8dbc368a0a47b6bb93:public/css/style6.css
     position: relative;
     bottom: 0;
 }
@@ -216,9 +405,45 @@ border-radius: 5px;
   .contenedorRedes ul li .youtube:hover {
     background: var(--youtube);
   }
+<<<<<<< HEAD:public/css/style7.css
+/*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
+=======
+<<<<<<< HEAD
 /*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
 
 @media (max-width:768px) {
+    /* telefono*/
+=======
+
+/*MEDIA QUERIES*/
+
+
+
+@media (max-width:640px){
+    .card-container{
+        display: block;
+        width: 450px;
+    }
+    .header {
+        padding: 20px 20px 5px 20px;
+        border: none;
+        width: auto;
+        border-bottom: gray solid 1px;
+    }
+    .descripcion{
+        padding: 5px 20px 20px 20px;
+        background: transparent;
+        width: auto;
+    }
+
+    .header h4 {
+        margin:0;
+    }
+}
+>>>>>>> 2023e1d99736748fe3148d8dbc368a0a47b6bb93:public/css/style6.css
+
+@media (max-width:768px) {
+>>>>>>> 690aced524a2a1739304f9ca0e310c4c68ace656
     .contenedorLogo {
         width: 100vw;
         text-align: center;
@@ -268,10 +493,21 @@ border-radius: 5px;
   .contenedorFormulario {
     width: 100vw;
   }
+<<<<<<< HEAD
+  h3{
+    text-align: center;
+  }
+=======
+>>>>>>> 690aced524a2a1739304f9ca0e310c4c68ace656
 
 }
 
 @media (min-width:769px) {
+<<<<<<< HEAD
+
+     /* laptop*/
+=======
+>>>>>>> 690aced524a2a1739304f9ca0e310c4c68ace656
     .contenedorLogo {
         width: 50vw;
     }
@@ -286,4 +522,121 @@ border-radius: 5px;
         justify-content: space-between;
         padding-right: 2%;
     }
+<<<<<<< HEAD:public/css/style7.css
 }
+=======
+
+    .burger-menu {
+        display: none;
+    }
+<<<<<<< HEAD
+
+    .contain-experiences{
+      display:inline-flex;
+      justify-content: space-around;
+      
+    }
+    .contain-nannys{
+    
+      border: 1px solid #83af9b;
+      height: 50vh;
+      width: 15%;
+      margin: auto;
+      margin-bottom: 15px;
+    }
+    .contain-nannys img{
+      width: 100%;
+      height: 20vh;
+      
+    }
+    
+    .contain-nannys p{
+      font-family: "poppins";
+      margin-top: 1vh;
+      font-size: 0.8vw;
+      
+    }
+    
+    .contain-nannys a{
+      position: relative;
+      top: 8px;
+      font-family: "poppins";
+      font-size: 13px;
+    }
+
+    .contain-mision{
+      display: flex;
+      justify-content:space-around;
+      padding-top: 5vh;
+      width: 60%;
+      margin: auto;
+    }
+
+    
+    .contain-goals{
+      border: 1px solid #83af9b;
+      margin: auto;
+      width: 25%;
+      margin-bottom:20px ;
+      height: 25vh;
+      border-radius: 5px;
+      
+    }
+    
+    .contain-goals h4{
+      font-family: "poppins";
+      border-radius: 50%;
+      color: white;
+      border: 1px solid #83af9b ;
+      text-align: center;
+      margin: auto;
+      width: 12%;
+      position: relative;
+      bottom: 12px;
+      background-color: #83af9b;
+    
+      
+    }
+    
+    .contain-goals p{
+      border-bottom: 1px solid #83af9b;
+      text-align: center;
+      font-family: "poppins";
+      font-size: 16px;
+      background-color: #83af9b;
+      color: white;
+    
+    }
+    
+    
+    
+    .contain-goals ul{
+      padding-left: 1vw;
+      margin-top: 1vh;
+      font-family: "poppins";
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+
+    .security p{
+      text-align: center;
+      display: block;
+      padding-left: 40%;
+      padding-right: 40%;
+      padding-bottom: 5%;
+      font-family: "poppins";
+      font-size: 14px;
+      
+    }
+
+    
+}
+
+
+
+
+=======
+}
+
+>>>>>>> 690aced524a2a1739304f9ca0e310c4c68ace656
+>>>>>>> 2023e1d99736748fe3148d8dbc368a0a47b6bb93:public/css/style6.css
