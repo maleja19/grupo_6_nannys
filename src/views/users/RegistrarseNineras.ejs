@@ -28,7 +28,7 @@
 
         
 <!--- Formulario Niñeras-->
-<form action="/crear-producto" method="POST" class="create-form">
+<form action="/new-ninera" method="POST" enctype="multipart/form-data">
     <h1>¡Bienvenido a Nannies!</h1>
     <div class="control-formulario">
       Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple">
@@ -47,28 +47,22 @@
 
     <div class="control-formulario">
         <label>Correo Electrónico</label>
-        <input type="email" name="mail" class="control">
+        <input type="email" name="email" class="control">
     </div>
 
     <div class="control-formulario">
         <label for="" class="label">Username</label>
-        <input type="text" name="Username" class="control">
+        <input type="text" name="username" class="control">
     </div>
 
     <div class="control-formulario">
         <label for="" class="label">Password</label>
-        <input type="text" name="Password" class="control">
+        <input type="text" name="password" class="control">
     </div>
-
-    <div class="control-formulario">
-        <label for="" class="label">Confirm Password</label>
-        <input type="text" name="ConfirmPassword" class="control">
-    </div>
-
    
     <div class="control-formulario">
-        <label>Fecha de Nacimiento</label>
-        <input type="date" name="fechaNacimiento" class="control">
+        <label>Edad</label>
+        <input type="text" name="edad" class="control">
     </div>
 
     <div class="control-formulario">
@@ -78,7 +72,7 @@
 
     <div class="control-formulario">
         <label>País de residencia</label>
-        <select name="País de residencia" class="control">
+        <select name="pais_de_residencia" class="control">
             <option value="Argentina">Argentina</option>
             <option value="Colombia">Colombia</option>
         </select>     
@@ -86,7 +80,7 @@
 
     <div class="control-formulario">
          <label>Ciudad de residencia</label>
-         <select name="ciudad" class="control">
+         <select name="ciudad_de_residencia" class="control">
             <option value="CABA">CABA</option>
             <option value="COR">Córdoba</option>
             <option value="LP">La Plata</option>
@@ -102,7 +96,7 @@
     
     <div class="control-formulario">
         <label>Dirección</label>
-        <input type="text" name="dirección" class="control">
+        <input type="text" name="direccion" class="control">
     </div>
     
     <div class="control-formulario">
@@ -113,22 +107,27 @@
  
     <div class="control-formulario">
         <label>Descripción</label>
-        <textarea name="Experiencia" class="control"></textarea >
+        <textarea name="descripcion" class="control"></textarea >
+    </div>
+
+    <div class="control-formulario">
+        <label>Describete en una frase</label><!--- Se debe limitar-->
+        <textarea name="frase" class="control"></textarea >
     </div>
 
 
     <div class="control-formulario">
         <label>Aptitudes (Seleccioná tres)</label>
         
-        <input  type="checkbox" name="Aptitudes" value="Paciencia"><label for="Paciencia">Paciencia</label></div>
-        <input  type="checkbox" name="Aptitudes" value="Respondable"><label for="Respondable">Respondable</label></div>
-        <input  type="checkbox" name="Aptitudes" value="Proactiva"><label for="Proactiva">Proactiva</label></div>
-        <input  type="checkbox" name="Aptitudes" value="Divertida"><label for="Divertida">Divertida</label></div>
-        <input  type="checkbox" name="Aptitudes" value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
-        <input  type="checkbox" name="Aptitudes" value="Organizada"><label for="Organizada">Organizada</label></div>
-        <input  type="checkbox" name="Aptitudes" value="Puntual"><label for="Puntual">Puntual</label></div>
-        <input  type="checkbox" name="Aptitudes" value="Creativa"><label for="Creativa">Creativa</label></div>
-        <input  type="checkbox" name="Aptitudes" value="Amistosa"><label for="Amistosa">Amistosa</label></div>
+        <input  type="checkbox" name="aptitudes" value="Paciencia"><label for="Paciencia">Paciencia</label></div>
+        <input  type="checkbox" name="aptitudes" value="Respondable"><label for="Respondable">Respondable</label></div>
+        <input  type="checkbox" name="aptitudes" value="Proactiva"><label for="Proactiva">Proactiva</label></div>
+        <input  type="checkbox" name="aptitudes" value="Divertida"><label for="Divertida">Divertida</label></div>
+        <input  type="checkbox" name="aptitudes" value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
+        <input  type="checkbox" name="aptitudes" value="Organizada"><label for="Organizada">Organizada</label></div>
+        <input  type="checkbox" name="aptitudes" value="Puntual"><label for="Puntual">Puntual</label></div>
+        <input  type="checkbox" name="aptitudes" value="Creativa"><label for="Creativa">Creativa</label></div>
+        <input  type="checkbox" name="aptitudes" value="Amistosa"><label for="Amistosa">Amistosa</label></div>
     </div>
 
 
