@@ -10,6 +10,20 @@ const controller = {
 		res.render('products/compras.ejs',{'productos': products})
 	},
 
+	create: (req,res) => {
+		res.render('users/formEditNineras.ejs')
+	},
+
+	detail: (req,res) => {
+		const{id}=req.params;
+		const product=products.find(elem => elem.id ==parseInt(id));
+		if(product){
+			res.render('products/detalleProductos.ejs',{product})
+		}
+
+	}
+
+
 }
 
 module.exports= controller;

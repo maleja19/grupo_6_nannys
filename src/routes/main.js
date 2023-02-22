@@ -8,8 +8,6 @@ routerMain.get('/', home);
 
 routerMain.get('/mision', mision);
 
-routerMain.get('/sign', signInNineras);
-
 routerMain.get('/signp', signInPadres);
 
 routerMain.get('/login', login);
@@ -18,7 +16,7 @@ routerMain.get('/form-edit1', formEditNineras);
 
 routerMain.get('/form-edit2', formEditParents);
 
-routerMain.get('/detalle', detalle);
+
 
 
 
