@@ -1,5 +1,5 @@
 const express = require('express');
-const {home, mision,signInNineras,signInPadres,login,formEditNineras, formEditParents, detalle} = require('../controllers/mainControllers');
+const {home, mision,signInPadres,login,formEditNineras, formEditParents} = require('../controllers/mainControllers');
 
 
 const routerMain = express.Router();
