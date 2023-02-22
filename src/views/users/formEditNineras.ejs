@@ -22,115 +22,127 @@
     <title>Cargá tus datos</title>
 </head>
 <body>
+
     <%- include('../partials/header.ejs')%>
 
-
-    <form action="/crear-producto" method="POST" class="create-form">
-
-        <div class="control-formulario">
-          Imagen de Perfil: <input type="file" name="foto" id="fotoPerfil" accept= ".jpg, multiple">
-        </div>
         
+<!--- Formulario Niñeras-->
+<form action="/crear-producto" method="POST" class="create-form">
+    <h1>¡Bienvenido a Nannies!</h1>
+    <div class="control-formulario">
+      Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple">
+    </div>
+    
+    
+    <div class="control-formulario">
+        <label>Nombre</label>
+        <input type="text" name="Nombres" class="control">
+    </div>
+
+    <div class="control-formulario">
+        <label>Apellido</label>
+        <input type="text" name="Apellidos" class="control">
+    </div>
+
+    <div class="control-formulario">
+        <label>Correo Electrónico</label>
+        <input type="email" name="mail" class="control">
+    </div>
+
+    <div class="control-formulario">
+        <label for="" class="label">Username</label>
+        <input type="text" name="Username" class="control">
+    </div>
+
+    <div class="control-formulario">
+        <label for="" class="label">Password</label>
+        <input type="text" name="Password" class="control">
+    </div>
+
+    <div class="control-formulario">
+        <label for="" class="label">Confirm Password</label>
+        <input type="text" name="ConfirmPassword" class="control">
+    </div>
+
+   
+    <div class="control-formulario">
+        <label>Fecha de Nacimiento</label>
+        <input type="date" name="fechaNacimiento" class="control">
+    </div>
+
+    <div class="control-formulario">
+        <label>Nacionadlidad</label>
+        <input type="text" name="nacionalidad" class="control">
+    </div>
+
+    <div class="control-formulario">
+        <label>País de residencia</label>
+        <select name="País de residencia" class="control">
+            <option value="Argentina">Argentina</option>
+            <option value="Colombia">Colombia</option>
+        </select>     
+    </div>
+
+    <div class="control-formulario">
+         <label>Ciudad de residencia</label>
+         <select name="ciudad" class="control">
+            <option value="CABA">CABA</option>
+            <option value="COR">Córdoba</option>
+            <option value="LP">La Plata</option>
+            <option value="MDQ">Mar del Plata</option>
+            <option value="Ro">Rosario</option>
+            <option value="BGT">Bogotá</option>
+            <option value="BARR">Barranquilla</option>
+            <option value="CAL">Cali</option>
+            <option value="Cart">Cartagena</option>
+            <option value="Med">Medellín</option>  
+        </select>
+    </div>
+    
+    <div class="control-formulario">
+        <label>Dirección</label>
+        <input type="text" name="dirección" class="control">
+    </div>
+    
+    <div class="control-formulario">
+        <label>Número de Contacto</label>
+        <input type="number" name="celular" class="control" placeholder="">
+    </div>
+
+ 
+    <div class="control-formulario">
+        <label>Descripción</label>
+        <textarea name="Experiencia" class="control"></textarea >
+    </div>
+
+
+    <div class="control-formulario">
+        <label>Aptitudes (Seleccioná tres)</label>
         
-        <div class="control-formulario">
-            <label>Nombre</label>
-            <input type="text" name="Nombres" class="control">
-        </div>
-    
-        <div class="control-formulario">
-            <label>Apellido</label>
-            <input type="text" name="Apellidos" class="control">
-        </div>
-    
-        <div class="control-formulario">
-            <label>Correo Electrónico</label>
-            <input type="email" name="mail" class="control">
-        </div>
-    
-        <div class="control-formulario">
-            <label>Edad</label>
-            <input type="number" name="Edad" class="control">
-        </div>
-    
-        <div class="control-formulario">
-            <label>Nacionadlidad</label>
-            <input type="text" name="nacionalidad">
-        </div>
-    
-        <div class="control-formulario">
-            <label>País de residencia</label>
-            <select name="País de residencia">
-                <option value="Argentina">Argentina</option>
-                <option value="Colombia">Colombia</option>
-            </select>     
-        </div>
-    
-        <div class="control-formulario">
-             <label>Ciudad de residencia</label>
-             <select name="ciudad">
-                <option value="CABA">CABA</option>
-                <option value="COR">Córdoba</option>
-                <option value="LP">La Plata</option>
-                <option value="MDQ">Mar del Plata</option>
-                <option value="Ro">Rosario</option>
-                <option value="BGT">Bogotá</option>
-                <option value="BARR">Barranquilla</option>
-                <option value="CAL">Cali</option>
-                <option value="Cart">Cartagena</option>
-                <option value="Med">Medellín</option>  
-            </select>
-        </div>
-                
-        <div class="control-formulario">
-            <label>Número de Contacto</label>
-            <input type="number" name="celular" placeholder="">
-        </div>
+        <input  type="checkbox" name="Aptitudes" value="Paciencia"><label for="Paciencia">Paciencia</label></div>
+        <input  type="checkbox" name="Aptitudes" value="Respondable"><label for="Respondable">Respondable</label></div>
+        <input  type="checkbox" name="Aptitudes" value="Proactiva"><label for="Proactiva">Proactiva</label></div>
+        <input  type="checkbox" name="Aptitudes" value="Divertida"><label for="Divertida">Divertida</label></div>
+        <input  type="checkbox" name="Aptitudes" value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
+        <input  type="checkbox" name="Aptitudes" value="Organizada"><label for="Organizada">Organizada</label></div>
+        <input  type="checkbox" name="Aptitudes" value="Puntual"><label for="Puntual">Puntual</label></div>
+        <input  type="checkbox" name="Aptitudes" value="Creativa"><label for="Creativa">Creativa</label></div>
+        <input  type="checkbox" name="Aptitudes" value="Amistosa"><label for="Amistosa">Amistosa</label></div>
+    </div>
+
+
+    <div class="control-formulario">
+        <label>Precio por Hora</label>
+       <input type="price" name="precio" class="control" placeholder="">       
+    </div>
+
         
-              
-        <div class="control-formulario">
-            <label>Experiencia</label>
-            <textarea name="Experiencia" class="control"></textarea >
-        </div>
-
-
-        <div class="control-formulario">
-            <label>Aptitudes (Seleccioná tres)</label>
-            <input  type="checkbox" name="Aptitudes" value="Paciencia"><label for="Paciencia">Paciencia</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Respondable"><label for="Respondable">Respondable</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Proactiva"><label for="Proactiva">Proactiva</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Divertida"><label for="Divertida">Divertida</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Organizada"><label for="Organizada">Organizada</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Puntual"><label for="Puntual">Puntual</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Creativa"><label for="Creativa">Creativa</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Amistosa"><label for="Amistosa">Amistosa</label></div>
-        </div>
-
-
-        <div class="control-formulario">
-            <label>Disponibilidad</label>
-            <input  type="checkbox" name="Disponibilidad" value="Por Hora"><label for="PorHora">Por Hora</label></div>
-            <input  type="checkbox" name="Disponibilidad" value="Media Jornada"><label for="MediaJornada">Media Jornada</label></div>
-            <input  type="checkbox" name="Disponibilidad" value="Jornada Completa"><label for="JornadaCompleta">Jornada Completa (8 hs.)</label></div>
-            <input  type="checkbox" name="Disponibilidad" value="Mañana"><label for="Mañana">Mañana</label></div>
-            <input  type="checkbox" name="Disponibilidad" value="Tarde"><label for="Tarde">Tarde</label></div>
-            <input  type="checkbox" name="Disponibilidad" value="Noche"><label for="Noche">Noche</label></div>
-            <input  type="checkbox" name="Disponibilidad" value="Indistinto"><label for="Indistinto">Indistinto</label></div>
-        </div>
-
+    <button type="reset" class="boton-formulario">Borrar</button>
+    <button type="submit" class="boton-formulario">Guardar</button>
     
-        <div class="control-formulario">
-            <label>Precio por Hora</label>
-            <input type="number" name="precio" placeholder="">       
-        </div>
 
-            
-        <button type="reset" class="boton-formulario">Borrar</button>
-        <button type="submit" class="boton-formulario">Guardar</button>
-        
-    
-    </form>
+</form>
 
-    <%- include('../partials/footer.ejs')%>   
+<%- include('../partials/footer.ejs')%>   
 </body>
 </html>

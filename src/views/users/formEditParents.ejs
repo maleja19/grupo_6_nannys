@@ -21,14 +21,15 @@
 
     <title>Cargá tus datos</title>
 </head>
+<!--- Formulario-->
+
 <body>
-    <%- include('../partials/header.ejs')%>
 
+<%- include('../partials/header.ejs')%>
 
-    <form action="/crear-producto" method="POST" class="create-form">
-
-        
-        <div class="control-formulario">
+<form action="/crear-producto" method="POST" class="create-form">
+    <h1>¡Bienvenido a Nannies!</h1>
+         <div class="control-formulario">
             <label>Nombre</label>
             <input type="text" name="Nombres" class="control">
         </div>
@@ -44,18 +45,28 @@
         </div>
     
         <div class="control-formulario">
-            <label>Edad</label>
-            <input type="number" name="Edad" class="control">
+            <label for="" class="label">Username</label>
+            <input type="text" name="Username" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label for="" class="label">Password</label>
+            <input type="password" name="Password" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label for="" class="label">Confirm Password</label>
+            <input type="text" name="ConfirmPassword" class="control">
         </div>
     
         <div class="control-formulario">
             <label>Nacionadlidad</label>
-            <input type="text" name="nacionalidad">
+            <input type="text" name="nacionalidad" class="control" >
         </div>
     
         <div class="control-formulario">
             <label>País de residencia</label>
-            <select name="País de residencia">
+            <select name="País de residencia" class="control">
                 <option value="Argentina">Argentina</option>
                 <option value="Colombia">Colombia</option>
             </select>     
@@ -63,7 +74,7 @@
     
         <div class="control-formulario">
              <label>Ciudad de residencia</label>
-             <select name="ciudad">
+             <select name="ciudad" class="control">
                 <option value="CABA">CABA</option>
                 <option value="COR">Córdoba</option>
                 <option value="LP">La Plata</option>
@@ -76,38 +87,34 @@
                 <option value="Med">Medellín</option>  
             </select>
         </div>
-                
+        
+        
         <div class="control-formulario">
             <label>Número de Contacto</label>
-            <input type="number" name="celular" placeholder="">
+            <input type="number" name="celular" class="control" placeholder="">
         </div>
-        
-        <div class="control-formulario">
-            <label>Elegí las aptitudes que buscás</label>
-            <input  type="checkbox" name="Aptitudes" value="Paciencia"><label for="Paciencia">Paciencia</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Respondable"><label for="Respondable">Respondable</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Proactiva"><label for="Proactiva">Proactiva</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Divertida"><label for="Divertida">Divertida</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Organizada"><label for="Organizada">Organizada</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Puntual"><label for="Puntual">Puntual</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Creativa"><label for="Creativa">Creativa</label></div>
-            <input  type="checkbox" name="Aptitudes" value="Amistosa"><label for="Amistosa">Amistosa</label></div>
-        </div>
-
     
         <div class="control-formulario">
-            <label>Precio por Hora</label>
-            <input type="number" name="precio" placeholder="">       
+            <label>Alguna vez contrataste niñera?</label>         
+                <input type="radio" name="Alguna vez contrataste niñera?" class="radio">Si
+                <input type="radio" name="Alguna vez contrataste niñera?" class="radio">No</label>
         </div>
-
-            
+    
+        <div class="control-formulario">
+            <label>Dejanos tus dudas</label>
+            <textarea name="Dejanos tus dudas" class="control"></textarea >
+        </div>
+    
         <button type="reset" class="boton-formulario">Borrar</button>
         <button type="submit" class="boton-formulario">Guardar</button>
-        
+     </form>
     
-    </form>
-
-    <%- include('../partials/footer.ejs')%>   
-</body>
-</html>
+    </div1>
+    
+    <%- include('../partials/footer.ejs')%>
+    
+    </body>
+    
+    
+    </html>
+    
