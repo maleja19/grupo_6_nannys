@@ -1,0 +1,45 @@
+[
+    {
+        "id":1,
+        "nombre": "Érica",
+        "apellido":"Rivas",
+        "correo electronico": "rivaserica@gmail.com",
+        "fecha de nacimiento":44,
+        "nacionalidad": "Argentina",
+        "pais de residencia": "Argentina",
+        "ciudad de residencia":"Buenos Aires",
+        "direccion":"Santa Fe 130",
+        "numero de contacto":"1173574470",
+        "Alguna vez contrataste niñera?": "nb",
+        "Dejanos tus dudas": "Quisiera saber si hay descuento contratando mensual"
+    },
+
+    { "id":2,
+        "nombre": "Shakira",
+        "apellido":"Mebarak ",
+        "correo electronico": "shakimebarak@gmail.com",
+        "fecha de nacimiento":40,
+        "nacionalidad": "Colombia",
+        "pais de residencia": "Colombia",
+        "ciudad de residencia":"Barranquilla",
+        "direccion":"Calle 56 # 31-16",
+        "numero de contacto":"6024123456",
+        "Alguna vez contrataste niñera?": "si",
+        "Dejanos tus dudas": "Quisiera que la niñera tenga las cosas claras"
+    },
+    { "id":3,
+    "nombre": "Lionel",
+    "apellido":"Messi ",
+    "correo electronico": "liogenio@gmail.com",
+    "fecha de nacimiento":35,
+    "nacionalidad": "Argentina",
+    "pais de residencia": "Argentina",
+    "ciudad de residencia":"Rosario",
+    "direccion":"Zeballos y Buenos Aires",
+    "numero de contacto":"341275086",
+    "Alguna vez contrataste niñera?": "si",
+    "Dejanos tus dudas": "Hay niñeras que sepan de fútbol?"
+}
+
+]
+
