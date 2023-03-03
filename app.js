@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const routerMain = require('./src/routes/main');
 const routerProducts = require('./src/routes/products');
 const path=require('path');
-
+const methodOverride=require("method-override");
 const port = process.env.PORT || 3030;
 
 const app = express();
@@ -13,6 +13,7 @@ app.set('views',path.join(__dirname,'src/views'))
 
 app.use(express.urlencoded({ extended:false}));
 app.use(express.json());
+app.use(methodOverride("_method"))
 
 
 app.use(morgan('dev'));

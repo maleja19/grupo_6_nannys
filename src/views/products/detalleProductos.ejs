@@ -24,10 +24,7 @@
 <body>  
 
     <%- include('../partials/header.ejs')%>  
-    
-    <% if(Array.isArray(product)){%>
-
-        <%for(i=0; i< product.length; i++){%>
+        
     
     <div class="contenedorDetalle">
 
@@ -36,65 +33,29 @@
             <div class="header">        
         
                 <a href="#">
-                    <img src=<%= product[i].img %>>
+                    <img src="<%= product.img %>">
                 </a>
-                <h2><%= product[i].nombre %></h2>
+                <h2><%= product.nombre %></h2>
                 <h4>Niñera Profesional</h4>
             </div>
             <div class="descripcion">
-                <p><%= product[i].descipción%></p>
-                    <div class="caracteristica">Precio:<%= product[i].precio%></div>
+                <p><%= product.descipción%></p>
+                    <div class="caracteristica">Precio:<%= product.precio%></div>
                     <div class="caracteristica">Aptitudes:</div>
                     <ul>
-                        <li><%= product[i].aptitudes[0]%></li>
-                        <li><%= product[i].aptitudes[1]%></li>
-                        <li><%= product[i].aptitudes[2]%></li>
+                        <li><%= product.aptitudes%></li>
+                        <li><%= product.aptitudes%></li>
+                        <li><%= product.aptitudes%></li>
+                        
                     </ul>
-                    <div class="caracteristica">Celular:<%= product[i].numero de contacto%></div>
-                    <div class="caracteristica">Mail:<%= product[i].correo electronico%></div>
+                    <div class="caracteristica">Celular:<%= product.celular%></div>
+                    <div class="caracteristica">Mail:<%= product.email%></div>
                     
             </div>
         </div>
 
     </div>
-    <%}
-    %>
-       
-<%} else{%>
-
-
-
-        <div class="contenedorDetalle">
-
-           
-            <div class="card-container">
-                <div class="header">        
-            
-                    <a href="#">
-                        <img src=<%= product[i].img %>>
-                    </a>
-                    <h2><%= product.nombre %></h2>
-                    <h4>Niñera Profesional</h4>
-                </div>
-                <div class="descripcion">
-                    <p><%= product.descipción%></p>
-                        <div class="caracteristica">Precio:<%= product.precio%></div>
-                        <div class="caracteristica">Aptitudes:</div>
-                        <ul>
-                            <li><%= product.aptitudes%></li>
-                            <li><%= product.aptitudes%></li>
-                            <li><%= product.aptitudes%></li>
-                        </ul>
-                        <div class="caracteristica">Celular:<%= product.numero de contacto %></div>
-                        <div class="caracteristica">Mail:<%= product.correo electronico %></div>
-                        
-                </div>
-            </div>
-
-        </div>
-
-        <%}%> 
-     
+   
     
     
 

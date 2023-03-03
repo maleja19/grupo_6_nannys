@@ -27,5 +27,9 @@ routerProducts.get('/:id/', productsController.detail);
 
 routerProducts.post('/new-ninera',upload.single('img'), productsController.store);
 
+routerProducts.get('/:id/edit', productsController.edit);
+routerProducts.put('/:id/edit', upload.single('img'),productsController.update);
+
+routerProducts.delete('/:id/borrar', productsController.delet);
 
 module.exports=routerProducts

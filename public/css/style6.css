@@ -129,6 +129,11 @@
   margin: 10px;
 }
 
+.header img{
+  width: 60vw;
+  height: 35vh;
+}
+
 /*FOOTER*/
 
 footer {
@@ -360,4 +365,18 @@ width: 100vw;
   .burger-menu {
       display: none;
   }
+
+  .header img{
+    width: 20vw !important;
+    
+  }
+
+}
+
+@media (min-width:426px){
+  .header img{
+    width: 30vw;
+    
+  }
+
 }
