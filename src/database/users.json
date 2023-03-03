@@ -1,8 +1,8 @@
 [
     {
         "id":1,
-        "nombre": "Érica",
-        "apellido":"Rivas",
+        "nombres": "Érica",
+        "apellidos":"Rivas",
         "correo electronico": "rivaserica@gmail.com",
         "fecha de nacimiento":44,
         "nacionalidad": "Argentina",
