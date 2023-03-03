@@ -19,33 +19,16 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <title>Nannies - Registrarse</title>
+    <title>Registrarse Padres</title>
 </head>
-<nav class="navBar">
-
-    <div class="contenedorLogo">
-        <a href="" class="logo"><img src="images/logo 2.jpg" alt="Logo" width="200" heigth = "150"></a>
-    </div>
-
-    <div class="contenedorBotones">
-        <a href="#" class="botonNav" >Como Funciona?</a>
-        <a href="#" class="botonNav">Servicios</a>
-        <a href="#" class="botonNav">Ayuda</a>
-        <a href="#" class="botonNav">Acceder</a>
-    </div>
-    
-</nav>
-
-    <header>
-       
-    </header>
-
           
 <body>
+
+<%- include('../partials/header.ejs')%>
     
 <!--- Formulario-->
 <form action="/crear-producto" method="POST" class="create-form">
-<div1><h1>¡Bienvenido a Nannies!</h1>
+<h1>¡Bienvenido a Nannies!</h1>
      <div class="control-formulario">
         <label>Nombre</label>
         <input type="text" name="Nombres" class="control">
@@ -74,12 +57,6 @@
     <div class="control-formulario">
         <label for="" class="label">Confirm Password</label>
         <input type="text" name="ConfirmPassword" class="control">
-    </div>
-
-   
-    <div class="control-formulario">
-        <label>Fecha de Nacimiento</label>
-        <input type="date" name="fechaNacimiento" class="control">
     </div>
 
     <div class="control-formulario">
@@ -134,40 +111,9 @@
 
 </div1>
 
+<%- include('../partials/footer.ejs')%>
+
 </body>
 
-<footer>
-    <div>
-        <div class="GranContenedorFooter">
-            <div class="contenedorFssooter">
-                <h3>Nannies</h3>
-                <ul>
-                    <li class="itemFooter"><a href="">Privacidad</a></li>
-                    <li class="itemFooter"><a href="">Términos</a></li>
-                    <li class="itemFooter"><a href="">Datos de la empresa</a></li>
-                </ul>
-            </div>
 
-            <div class="contenedorFooter">
-                <h3>Preguntas Frecuentes</h3>
-                <ul>
-                    <li class="itemFooter"><a href="">Como Funciona</a></li>
-                    <li class="itemFooter"><a href="">Ayuda</a></li>
-                </ul>
-            </div>
-
-            <div class="contenedorFooterRedes">
-                <h3>Siguenos en</h3>
-                <div class="contenedorRedes">
-                    <ul>
-                        <li><a href="" class="instagram"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="" class="facebook"><i class="fab fa-facebook-f"></i></i></a></li>
-                        <li><a href="" class="twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="" class="youtube"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div> 
-        </div>
-    </div>
-</footer>
 </html>

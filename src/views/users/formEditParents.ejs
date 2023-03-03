@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style7.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Cargá tus datos</title>
+</head>
+<!--- Formulario-->
+
+<body>
+
+<%- include('../partials/header.ejs')%>
+
+<form action="/crear-producto" method="POST" class="create-form">
+    <h1>¡Bienvenido a Nannies!</h1>
+         <div class="control-formulario">
+            <label>Nombre</label>
+            <input type="text" name="Nombres" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label>Apellido</label>
+            <input type="text" name="Apellidos" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label>Correo Electrónico</label>
+            <input type="email" name="mail" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label for="" class="label">Username</label>
+            <input type="text" name="Username" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label for="" class="label">Password</label>
+            <input type="password" name="Password" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label for="" class="label">Confirm Password</label>
+            <input type="text" name="ConfirmPassword" class="control">
+        </div>
+    
+        <div class="control-formulario">
+            <label>Nacionadlidad</label>
+            <input type="text" name="nacionalidad" class="control" >
+        </div>
+    
+        <div class="control-formulario">
+            <label>País de residencia</label>
+            <select name="País de residencia" class="control">
+                <option value="Argentina">Argentina</option>
+                <option value="Colombia">Colombia</option>
+            </select>     
+        </div>
+    
+        <div class="control-formulario">
+             <label>Ciudad de residencia</label>
+             <select name="ciudad" class="control">
+                <option value="CABA">CABA</option>
+                <option value="COR">Córdoba</option>
+                <option value="LP">La Plata</option>
+                <option value="MDQ">Mar del Plata</option>
+                <option value="Ro">Rosario</option>
+                <option value="BGT">Bogotá</option>
+                <option value="BARR">Barranquilla</option>
+                <option value="CAL">Cali</option>
+                <option value="Cart">Cartagena</option>
+                <option value="Med">Medellín</option>  
+            </select>
+        </div>
+        
+        
+        <div class="control-formulario">
+            <label>Número de Contacto</label>
+            <input type="number" name="celular" class="control" placeholder="">
+        </div>
+    
+        <div class="control-formulario">
+            <label>Alguna vez contrataste niñera?</label>         
+                <input type="radio" name="Alguna vez contrataste niñera?" class="radio">Si
+                <input type="radio" name="Alguna vez contrataste niñera?" class="radio">No</label>
+        </div>
+    
+        <div class="control-formulario">
+            <label>Dejanos tus dudas</label>
+            <textarea name="Dejanos tus dudas" class="control"></textarea >
+        </div>
+    
+        <button type="reset" class="boton-formulario">Borrar</button>
+        <button type="submit" class="boton-formulario">Guardar</button>
+     </form>
+    
+    </div1>
+    
+    <%- include('../partials/footer.ejs')%>
+    
+    </body>
+    
+    
+    </html>
+    
