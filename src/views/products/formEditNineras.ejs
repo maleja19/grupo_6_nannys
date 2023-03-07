@@ -121,16 +121,13 @@
 
     <div class="control-formulario">
         <label>Aptitudes (Seleccioná tres)</label>
+
+        <%for(let i=0;i< aptitudes.length;i++){%>
+            <div><input  type="checkbox" name="aptitudes" checked   value="<%= aptitudes[i]%>" ><label for="<%= aptitudes[i] %>"><%=aptitudes[i]%></label></div>
+
+            <%}%>
         
-        <input  type="checkbox" name="aptitudes" value="<%= editProducts.aptitudes%>" value="Paciencia"><label for="Paciencia">Paciencia</label></div>
-        <input  type="checkbox" name="aptitudes" value="<%= editProducts.aptitudes%>" value="Respondable"><label for="Respondable">Respondable</label></div>
-        <input  type="checkbox" name="aptitudes" value="<%= editProducts.aptitudes%>" value="Proactiva"><label for="Proactiva">Proactiva</label></div>
-        <input  type="checkbox" name="aptitudes" value="<%= editProducts.aptitudes%>" value="Divertida"><label for="Divertida">Divertida</label></div>
-        <input  type="checkbox" name="aptitudes" value="<%= editProducts.aptitudes%>" value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
-        <input  type="checkbox" name="aptitudes" value="<%= editProducts.aptitudes%>" value="Organizada"><label for="Organizada">Organizada</label></div>
-        <input  type="checkbox" name="aptitudes" value="<%= editProducts.aptitudes%>" value="Puntual"><label for="Puntual">Puntual</label></div>
-        <input  type="checkbox" name="aptitudes" value="<%= editProducts.aptitudes%>" value="Creativa"><label for="Creativa">Creativa</label></div>
-        <input  type="checkbox" name="aptitudes" value="<%= editProducts.aptitudes%>" value="Amistosa"><label for="Amistosa">Amistosa</label></div>
+        
     </div>
 
 
@@ -142,7 +139,7 @@
         
     
     <button type="submit" class="boton-formulario">Guardar</button>
-    <form action="/<%=editProducts.id%>borar?_method=DELETE" method="POST" >
+    <form action="/<%=editProducts.id%>borrar?_method=DELETE" method="POST" >
         <button type="submit" class="boton-formulario">Borrar</button></form>
     
     
