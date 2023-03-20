@@ -1,57 +1,54 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
-       
-    
-    
-}
-.navBar {
-    background-color: #fc9d9a;
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    position: fixed;
-    width: 100vw;
-    margin-top: 0;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 
-.contenedorBotones a{
-    display: flex;
-    font-family: "montserrat";
-    color:  gray;
-    text-decoration: none;
-    padding: 1%;
-    background-color: white;
-    border-radius: 2px;
+}
+/*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
+
+.navBar {
+  background-color: #fc9d9a;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  position: fixed;
+  width: 100vw;
+  
+  
+}
+.logo{
+height: 10vh;
+}
+
+.contenedorLogo{
+  padding-top: 0.1vh;
+  height: 11vh;
+} 
+
+.contenedorBotones a{ 
+  display: flex;
+  font-family: "montserrat";
+  color:  gray;
+  text-decoration: none;
+  padding:1%;
+  background-color: white;
+  border-radius: 2px;
+ 
+}
+
+.contenedorBotones{
+  margin-top: 1%;
+}
+
+.botonNav{
+height: 5vh;
 }
 
 .contenedorBotones a:hover{
-    color:  white;
-    background-color: #fc9d9a;
-}
-
-.burger-menu {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100vw;
-    padding: 1%;    
-}
-
-.burger-menu i{
-    padding: 1%;
-    border: white solid 1px;
-    color: white ;
-    border-radius: 5px;
-}
-
-.burger-menu i:hover {
-    background-color: white;
-    border: #fc9d9a solid 1px;
-    color: #fc9d9a ;
+  color:  white;
+  background-color: #fc9d9a;
+  
 }
 
 /*-------------------------------------------------------------------body--------------------------------------------------------------------------*/
@@ -68,8 +65,9 @@ body {
     display: block;
     margin:auto;
     text-align: center;
+    padding-top:13vh
     
-    
+
 }
 
 .fa-search{ 
@@ -85,7 +83,7 @@ body {
     border: 2px solid #83af9b;
     width: 50%;
     height: 5vh;
-    margin-top: 15vh;
+    margin-top: 30vh;
     margin-bottom: 0.5vh;
     border-radius: 20px;
     

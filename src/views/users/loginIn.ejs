@@ -22,32 +22,34 @@
     <title>Nannies - SignIn</title>
 </head>
 
-          
+             
 <body>
   
     <%- include('../partials/header.ejs')%>
 
-    <h1>Bienvenido! Inicia tu sesión</h1>
     
 <!--- Formulario Niñeras-->
-<form action="/crear-producto" method="POST" class="create-form">
+<main>
+    <form action="/crear-producto" method="POST" class="create-form">
 
+        <h1>Bienvenido! Inicia tu sesión</h1>
+        <div class="control-formulario">
+            <label for="" class="label">Username</label>
+            <input type="text" name="Username" class="control">
+        </div>
 
         <div class="control-formulario">
-        <label for="" class="label">Username</label>
-        <input type="text" name="Username" class="control">
-    </div>
+            <label for="" class="label">Password</label>
+            <input type="password" name="Password" class="control">
+        </div>
 
-    <div class="control-formulario">
-        <label for="" class="label">Password</label>
-        <input type="password" name="Password" class="control">
-    </div>
-
-   
-    <button type="submit" class="boton-formulario-enter">Sign In</button>
-    <button type="reset" class="boton-formulario-forgot">Olvidaste tu contraseña</button>
     
-  </form>
+        <button type="submit" class="boton-formulario-enter">Sign In</button>
+        <a href="#" class="password-forgot">Olvidaste tu contraseña</a>
+        
+    </form>
+
+</main>
 
   <%- include('../partials/footer.ejs')%>
 
