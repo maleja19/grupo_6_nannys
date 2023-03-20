@@ -22,32 +22,10 @@
             " comunicativa "
         ]
     },
+
     {
         "id": 2,
-        "img": "",
-        "nombre": " Laura ",
-        "apellido": " Pagniez ",
-        "correo electrónico": " laura.pagniez@gmail.com ",
-        "nombre de usuario": " ",
-        "contraseña": " ",
-        "papá": 24,
-        "nacionalidad": " Argentina ",
-        "pais_de_residencia": "Argentina",
-        "ciudad_de_residencia": "CABA",
-        "direccion": " Av. Ing. Cipolletti 939 ",
-        "celular": "",
-        "descipcion": " Niñera con amplia experiencia en el cuidado e instrucción de niños. Capaz de seguir instrucciones detalladas referentes a la alimentación, medicación, tareas y cuidados en general. Dispuesta a participar en la limpieza de los cuartos y el lavado de ropa de los niños. ",
-        "frase": "",
-        "precio": " 1250 x hora ",
-        "email": "",
-        "username": "",
-        "password": "",
-        "edad": "",
-        "descripcion": ""
-    },
-    {
-        "id": 3,
-        "img": " /images/ninera3.jpg ",
+        "img": " /images/ninera2.jpg ",
         "nombre": " Ángela ",
         "apellido": " Poveda ",
         "email": " angela.poveda@gmail.com ",
@@ -69,8 +47,8 @@
         ]
     },
     {
-        "id": 4,
-        "img": " /images/ninera4.jpg ",
+        "id": 3,
+        "img": " /images/ninera3.jpg ",
         "nombre": " Carolina ",
         "apellido": " Murcia ",
         "email": " carolina.murcia@gmail.com ",
@@ -92,8 +70,8 @@
         ]
     },
     {
-        "id": 5,
-        "img": " /imagenes/ninera5.png ",
+        "id": 4,
+        "img": "/images/ninera4.jpg",
         "nombre": " Sofía ",
         "apellido": " Farías ",
         "email": " sofia.farias@gmail.com ",
@@ -112,6 +90,29 @@
             " creativa ",
             " organizada ",
             " comunicativa "
+        ]
+    },
+    {
+        "id": 5,
+        "img": "/images/ninera5.jpg",
+        "nombre": "roberta",
+        "apellido": "pignez",
+        "email": "consuelo.dubal@hotmail.com",
+        "username": "maleja19",
+        "password": "15232",
+        "edad": "56",
+        "nacionalidad": "Argentina",
+        "pais_de_residencia": "Argentina",
+        "ciudad_de_residencia": "CABA",
+        "direccion": "Vereda la balsa ",
+        "celular": "58652522",
+        "descripcion": "sdfghjk",
+        "frase": "asdfghjf",
+        "precio": "1540 x hora",
+        "aptitudes": [
+            "Proactiva",
+            "Divertida",
+            "Comunicacion"
         ]
     }
 ]

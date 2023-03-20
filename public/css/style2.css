@@ -6,6 +6,7 @@
     overflow-x:  hidden;
 }
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
+
 .navBar {
     background-color: #fc9d9a;
     display: flex;
@@ -14,21 +15,41 @@
     padding-top: 1%;
     position: fixed;
     width: 100vw;
+    
+    
   }
+.logo{
+  height: 10vh;
+}
 
-.contenedorBotones a{
+.contenedorLogo{
+    padding-top: 0.1vh;
+    height: 11vh;
+} 
+
+.contenedorBotones a{ 
     display: flex;
     font-family: "montserrat";
     color:  gray;
     text-decoration: none;
-    padding: 1%;
+    padding:1%;
     background-color: white;
     border-radius: 2px;
+   
+}
+
+.contenedorBotones{
+    margin-top: 1%;
+}
+
+.botonNav{
+  height: 5vh;
 }
 
 .contenedorBotones a:hover{
     color:  white;
     background-color: #fc9d9a;
+    
 }
 
 .burger-menu {
@@ -415,26 +436,26 @@ footer {
 /*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
 
 @media (max-width:768px) {
-    .contenedorLogo {
-        width: 100vw;
-        text-align: center;
-    }
-
-    .contenedorBotones {
-        display: none;
-    }
-
-    .subtitulo {
+  .contenedorLogo {
+      width: 100vw;
       text-align: center;
-    }
+  }
 
-    .contenedorFooter {
-        width: 90vw;
-    }
+  .contenedorBotones {
+      display: none;
+  }
 
-  .contenedorFooterRedes {
+  .subtitulo {
+    text-align: center;
+  }
+
+  .contenedorFooter {
       width: 90vw;
-    }
+  }
+
+.contenedorFooterRedes {
+    width: 90vw;
+  }
 
   .servicios {
     flex-wrap: wrap;

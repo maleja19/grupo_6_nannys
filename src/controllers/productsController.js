@@ -29,7 +29,7 @@ const controller = {
 
 	store: (req, res) => {
 
-		const{img,nombres,apellidos,email,username,password,edad,nacionalidad,pais_de_residencia,ciudad_de_residencia,direccion,celular,descripcion,frase,precio,aptitudes}=req.body;
+		const{img,nombre,apellido,email,username,password,edad,nacionalidad,pais_de_residencia,ciudad_de_residencia,direccion,celular,descripcion,frase,precio,aptitudes}=req.body;
 
 		const newId=products[products.length-1].id+1;
 
@@ -45,8 +45,8 @@ const controller = {
 		const obj = {
 			id:newId, 
 			img:newImage,
-			nombres,
-			apellidos,
+			nombre,
+			apellido,
 			email,
 			username,
 			password,
@@ -73,23 +73,30 @@ const controller = {
 	edit:(req,res)=>{
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		const {id}=req.params;
+		const aptitudes=["creativa","organizada","comunicativa"]
 
 		const editProducts = products.find(elem=> elem.id ==id)
 
-		res.render('products/formEditNineras.ejs',{editProducts})
+		res.render('products/formEditNineras.ejs',{editProducts,aptitudes})
 
 	},
 
 	update: (req, res) => {	
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-			
+		const image= req.file? req.file.filename : elem.img;
+		let newImage;	
+		
+		
+		if(image.length >0){
+			newImage = `/images/${image}`;
+		}
 				
 		products.forEach(elem => {		
 			
 						
 			if(elem.id == req.params.id){
-				elem.img = req.body.img?req.body.img:req.body.img;
+				elem.img = newImage;
 				elem.nombre = req.body.nombre;
 				elem.apellido=req.body.apellido;
 				elem.email=req.body.email;
@@ -117,16 +124,16 @@ const controller = {
 		res.redirect('/compras')
 	},
 
-	delet: (req, res) => {
+	eliminar: (req,res)=>{
 
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		const{id}=req.params;
-		const product=products.find(elem => elem.id ==parseInt(id));
-
-		delete product;
-
+		const id=req.params.id;
+		const productsFilter=products.filter(elem => elem.id != id);
 		
-		fs.writeFileSync(productsFilePath,JSON.stringify(products))
+		
+		
+		fs.writeFileSync(productsFilePath,JSON.stringify(productsFilter))
+			
 		res.redirect('/compras')
 	}
 
