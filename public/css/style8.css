@@ -1,53 +1,82 @@
+
 *{
-  padding:0;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
-
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
+
 .navBar {
   background-color: #fc9d9a;
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 1%;
-  padding-top: 1%;}
+  padding-top: 1%;
+  position: fixed;
+  width: 100vw;
+  
+  
+}
+.logo{
+height: 10vh;
+}
 
-.contenedorBotones a {
+.contenedorLogo{
+  padding-top: 0.1vh;
+  height: 11vh;
+} 
+
+.contenedorBotones a{ 
   display: flex;
   font-family: "montserrat";
-  font-weight: bold;
-  text-decoration: none;
   color:  gray;
-  padding: 1%;
-  margin: auto;
+  text-decoration: none;
+  padding:1%;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 2px;
+ 
+}
+
+.contenedorBotones{
+  margin-top: 1%;
+}
+
+.botonNav{
+height: 5vh;
 }
 
 .contenedorBotones a:hover{
   color:  white;
   background-color: #fc9d9a;
+  
 }
 
+/*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
 
-
+.form-container{
+  padding-top:20vh;
+  width:100%;
+}
 form {
-display: flex-block;
-justify-content:center;
-text-align:left;
-width: 50vw;
-background-color: #c8c8a9;
-margin-left: 25%;
-border: #fe4365 solid 2px;
-border-radius: 5px;
-padding: 100px;
-
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #83af9b solid 2px;
+  border-radius: 5px;
+  background-color: #EDEDEC;
 }
 
 h1 {
-font-size:x-large;
+font-size:4vh;
 text-align: center;
-margin-bottom: 30px;
+margin-bottom: 10px;
+margin-top: 10px;
+color: #83af9b;
 
 }
 
@@ -55,24 +84,30 @@ body {
   background-color: white;
   font-family: 'Poppins';
   font-size: large;
-  color: #fe4365
-}
-
-.create-form {
-  padding: 20px 200px;
+  color:#83af9b;
 }
 
 .control-formulario {
-  margin-bottom: 20px;
-  width:50vw;
+  margin-bottom: 10px;  
+  width:180vw;
+  padding-left: 60vw;
 }
 
 .control-formulario label {
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: 0.5vh;
+  font-size: 3vh;
   font-weight: bold;
   display: block;
+  font-family: "montserrat";
+
    }
+
+.file{
+  width: 60vw;
+  display: block;
+  font-size: 1.5vh;
+  text-align: justify;
+}
 
 .radio {
   padding: 5px 5px;
@@ -81,22 +116,25 @@ body {
 .control {
   width: 50%;
   padding: 8px 8px;
+  height: 3vh;
 }
 
+  
 .boton-formulario {
 
-border-color: #fe4365;
-color: #fe4365;
+border-color: #83af9b;
+color: gray;
 font-size: medium;
 font-weight:bolder;
 position: relative;
 text-align:center;
 border-radius: 5px;
+width: 6vw;
 }
 
 /*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
-.footer {
-  background-color: #fc9d9a;
+footer {
+  background-color:#fc9d9a ;
   position: relative;
   bottom: 0;
 }
@@ -226,73 +264,58 @@ width: 100vw;
   background: var(--youtube);
 }
 /*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
-
 @media (max-width:768px) {
-  .contenedorLogo {
-      width: 100vw;
-      text-align: center;
-  }
+.contenedorLogo {
+  width: 100vw;
+  text-align: center;
+}
 
-  .contenedorBotones {
-      display: none;
-  }
+.contenedorBotones {
+  display: none;
+}
 
-  .subtitulo {
-    text-align: center;
-  }
+.subtitulo {
+text-align: center;
+}
 
-  .contenedorFooter {
-      width: 90vw;
-  }
+.contenedorFooter {
+  width: 90vw;
+}
 
 .contenedorFooterRedes {
-    width: 90vw;
-  }
-
-.servicios {
-  flex-wrap: wrap;
+width: 90vw;
 }
 
-.contenedorAccordion{
-  width: 100vw;
-}
+.boton-formulario {
+  width: 18vw;
 
-.contenedorImagenServicios {
-  width: 100vw;
-}
-
-.recomendacionesImg {
-  width: inherit;
-}
-.recomendacionesExp {
-  width: 100vw;
-}
-
-.recomendacionesExp h4 {
-  font-size: large;
-}
-.contactoImg {
-  width: 100vw;
-}
-.contenedorFormulario {
-  width: 100vw;
 }
 
 }
 
 @media (min-width:769px) {
   .contenedorLogo {
-      width: 50vw;
-  }
+    width: 50vw;
+}
 
-  .contenedorLogo a {
-      margin-left: 5%;
-  }
+.contenedorLogo a {
+    margin-left: 5%;
+}
 
-  .contenedorBotones {
-      width: 49vw;
-      display: flex;
-      justify-content: space-between;
-      padding-right: 2%;
-  }
+.contenedorBotones {
+    width: 49vw;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2%;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.control-formulario {
+  margin-bottom: 10px;    
+  width:105vw;
+  padding-left: 35vw;
+}
 }

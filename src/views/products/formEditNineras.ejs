@@ -27,10 +27,12 @@
 
         
 <!--- Formulario Niñeras-->
-<form action="/<%=editProducts.id%>/edit?_method=PUT" method="POST" class="create-form">
+<main class="form-container">
+
+<form action="/<%=editProducts.id%>/edit?_method=PUT"  method="POST" class="create-form" enctype="multipart/form-data" >
     <h1>Modificacion de datos</h1>
     <div class="control-formulario">
-      Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple" value="<%= editProducts.img %>">
+      <label>Imagen de Perfil:</label> <input type="file" class="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple" value="<%= editProducts.img %>">
     </div>
     
     
@@ -119,13 +121,22 @@
     </div>
 
 
-    <div class="control-formulario">
-        <label>Aptitudes (Seleccioná tres)</label>
+    <label>Aptitudes (Seleccioná tres)</label>
 
-        <%for(let i=0;i< aptitudes.length;i++){%>
-            <div><input  type="checkbox" name="aptitudes" checked   value="<%= aptitudes[i]%>" ><label for="<%= aptitudes[i] %>"><%=aptitudes[i]%></label></div>
+    <div class="contain-aptitudes">        
+        
+        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Paciencia"><label for="Paciencia">Paciencia</label></div>
+        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Respondable"><label for="Respondable">Respondable</label></div>
+        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Proactiva"><label for="Proactiva">Proactiva</label></div>
+        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Divertida"><label for="Divertida">Divertida</label></div>
+        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
+        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Organizada"><label for="Organizada">Organizada</label></div>
+        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Puntual"><label for="Puntual">Puntual</label></div>
+        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Creativa"><label for="Creativa">Creativa</label></div>
+        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Amistosa"><label for="Amistosa">Amistosa</label></div>
+    </div>
 
-            <%}%>
+        
         
         
     </div>
@@ -139,13 +150,14 @@
         
     
     <button type="submit" class="boton-formulario">Guardar</button>
-    <form action="/<%=editProducts.id%>borrar?_method=DELETE" method="POST" >
-        <button type="submit" class="boton-formulario">Borrar</button></form>
+   
     
     
 
 </form>
-
+<form action="/<%=editProducts.id%>/borrar?_method=DELETE" method="POST" class="create-form" enctype="multipart/form-data">
+    <button type="submit" class="boton-formulario">Borrar</button></form>
+</main>
 
 <%- include('../partials/footer.ejs')%>   
 </body>

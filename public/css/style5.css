@@ -1,35 +1,77 @@
 *{
-    padding:0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x:  hidden;
+}
+/*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
+
+.navBar {
+  background-color: #fc9d9a;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  position: fixed;
+  width: 100vw;
+  
+  
+}
+.logo{
+height: 10vh;
 }
 
-/*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
-.navBar {
-    background-color: #fc9d9a;
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 1%;
-    padding-top: 1%;}
+.contenedorLogo{
+  padding-top: 0.1vh;
+  height: 11vh;
+} 
 
-.contenedorBotones a {
-    display: flex;
-    font-family: "montserrat";
-    font-weight: bold;
-    text-decoration: none;
-    color:  gray;
-    padding: 1%;
-    margin: auto;
-    background-color: white;
-    border-radius: 5px;
+.contenedorBotones a{ 
+  display: flex;
+  font-family: "montserrat";
+  color:  gray;
+  text-decoration: none;
+  padding:1%;
+  background-color: white;
+  border-radius: 2px;
+ 
+}
+
+.contenedorBotones{
+  margin-top: 1%;
+}
+
+.botonNav{
+height: 5vh;
 }
 
 .contenedorBotones a:hover{
-    color:  white;
-    background-color: #fc9d9a;
+  color:  white;
+  background-color: #fc9d9a;
+  
 }
 
+.burger-menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  padding: 1%;    
+}
 
+.burger-menu i{
+  padding: 1%;
+  border: white solid 1px;
+  color: white ;
+  border-radius: 5px;
+}
+
+.burger-menu i:hover {
+  background-color: white;
+  border: #fc9d9a solid 1px;
+  color: #fc9d9a ;
+}
+/*--------------------------------------------------------------------------------body----------------------------------------------------------------------------------------------------------*/
 body {
     background-color: white;
     font-family: 'Poppins';
@@ -101,36 +143,25 @@ body {
   }
 
 /*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
-.footer {
-    background-color: #fc9d9a;
-    position: relative;
-    bottom: 0;
+/*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
+footer {
+  background-color:#fc9d9a ;
+  position: relative;
+  bottom: 0;
 }
 
 .GranContenedorFooter {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
-    justify-content: space-evenly;
-    padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
 }
 
 .contenedorFooter {
-    width: 20vw;
-    text-align: center;
-    background-color: white;
-    border-radius: 3px;
-    color: gray;
-    margin-top: 1%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center; 
-}
-
-.contenedorFooterRedes {
   width: 20vw;
   text-align: center;
+  background-color: white;
   border-radius: 3px;
   color: gray;
   margin-top: 1%;
@@ -140,97 +171,109 @@ body {
   justify-content: center; 
 }
 
-.contenedorFooter h3 {
-    font-family: "poppins";
-    border-bottom: #fc9d9a solid 2px;
-    width: 100vw;
-    background-color: white;
+.contenedorFooterRedes {
+width: 20vw;
+text-align: center;
+border-radius: 3px;
+color: gray;
+margin-top: 1%;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: center; 
 }
 
-.contenedorFooterRedes h3 {
+.contenedorFooter h3 {
   font-family: "poppins";
   border-bottom: #fc9d9a solid 2px;
   width: 100vw;
+  background-color: white;
+}
+
+.contenedorFooterRedes h3 {
+font-family: "poppins";
+border-bottom: #fc9d9a solid 2px;
+width: 100vw;
 }
 
 .itemFooter {
-    list-style: none;
-    font-family: "montserrat";
+  list-style: none;
+  font-family: "montserrat";
 }
 
 .itemFooter:hover {
-    background-color: #fc9d9a;
-    color: white;
+  background-color: #fc9d9a;
+  color: white;
 }
 
 .itemFooter a {
-    text-decoration: none;
-    color: gray;
+  text-decoration: none;
+  color: gray;
 }
 
 :root {
-    --instagram: #e4405f;
-    --facebook:#3b5999;
-    --twitter:#55acee;
-    --youtube: #bd081c;
-  }
-  
-  .contenedorRedes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  --instagram: #e4405f;
+  --facebook:#3b5999;
+  --twitter:#55acee;
+  --youtube: #bd081c;
+}
 
-  .contenedorRedes ul {
-    display: flex;
-   flex-wrap: nowrap;
-  }
- 
-  .contenedorRedes ul li {
-    display: inline-block;
-    margin: 0 5px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-  }
-  
-  .contenedorRedes ul li a {
-    display: block;
-    padding: 0 10px;
-    background: white;
-    color: #fc9d9a;
-    line-height: 50px;
-    font-size: 18px;
-    box-shadow:#83af9b 0 3px 5px 0px;
-    transition: 2s;
-    border-radius: 6px; 
-  }
-  
-  .contenedorRedes ul:hover a {
-    filter: blur(2px);
-  }
-  
-  .contenedorRedes ul li a:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
-    filter: none;
-  }
-  
-  .contenedorRedes ul li .facebook:hover {
-    background: var(--facebook);
-  }
-  
-  .contenedorRedes ul li .instagram:hover {
-    background: var(--instagram);
-  }
-  
-  .contenedorRedes ul li .twitter:hover {
-    background: var(--twitter);
-  }
-  
-  .contenedorRedes ul li .youtube:hover {
-    background: var(--youtube);
-  }
+.contenedorRedes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedorRedes ul {
+  display: flex;
+ flex-wrap: nowrap;
+}
+
+.contenedorRedes ul li {
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.contenedorRedes ul li a {
+  display: block;
+  padding: 0 10px;
+  background: white;
+  color: #fc9d9a;
+  line-height: 50px;
+  font-size: 18px;
+  box-shadow:#83af9b 0 3px 5px 0px;
+  transition: 2s;
+  border-radius: 6px; 
+}
+
+.contenedorRedes ul:hover a {
+  filter: blur(2px);
+}
+
+.contenedorRedes ul li a:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
+  filter: none;
+}
+
+.contenedorRedes ul li .facebook:hover {
+  background: var(--facebook);
+}
+
+.contenedorRedes ul li .instagram:hover {
+  background: var(--instagram);
+}
+
+.contenedorRedes ul li .twitter:hover {
+  background: var(--twitter);
+}
+
+.contenedorRedes ul li .youtube:hover {
+  background: var(--youtube);
+}
 /*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
 
 @media (max-width:768px) {
