@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult }=require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../database/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -12,7 +13,7 @@ const controller = {
 	},
 
 	create: (req,res) => {
-		res.render('users/RegistrarseNineras.ejs')
+		res.render('products/RegistrarseNineras.ejs')
 	},
 
 	detail: (req,res) => {
@@ -29,6 +30,15 @@ const controller = {
 
 	store: (req, res) => {
 
+
+		const resultvalidation = validationResult(req);
+
+		if(resultvalidation.errors.length>0){
+
+			res.render('products/RegistrarseNineras.ejs',{
+				errors: resultvalidation.mapped() })
+		}
+		
 		const{img,nombre,apellido,email,username,password,edad,nacionalidad,pais_de_residencia,ciudad_de_residencia,direccion,celular,descripcion,frase,precio,aptitudes}=req.body;
 
 		const newId=products[products.length-1].id+1;
@@ -66,9 +76,11 @@ const controller = {
 		products.push(obj);
 		console.log(obj)
 		fs.writeFileSync(productsFilePath,JSON.stringify(products))
-		res.redirect('/compras')
+		res.redirect('products/compras')
 		
 	},
+
+	
 
 	edit:(req,res)=>{
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -121,7 +133,7 @@ const controller = {
 		
 		fs.writeFileSync(productsFilePath,JSON.stringify(products))
 		
-		res.redirect('/compras')
+		res.redirect('/products/compras')
 	},
 
 	eliminar: (req,res)=>{
@@ -134,7 +146,7 @@ const controller = {
 		
 		fs.writeFileSync(productsFilePath,JSON.stringify(productsFilter))
 			
-		res.redirect('/compras')
+		res.redirect('/products/compras')
 	}
 
 }

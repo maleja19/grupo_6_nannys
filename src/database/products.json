@@ -4,10 +4,10 @@
         "img": " /images/ninera1.jpg ",
         "nombre": " Camila ",
         "apellido": " Waelkens ",
-        "correo electrónico": " camila.walkers19@hotmail.com ",
-        "nombre de usuario": " ",
-        "contraseña": " ",
-        "padre": 23,
+        "email": " camila.walkers19@hotmail.com ",
+        "username": " ",
+        "password": " ",
+        "edad": 23,
         "nacionalidad": " Argentina ",
         "pais_de_residencia": " Argentina ",
         "ciudad_de_residencia": " Buenos Aires ",
@@ -22,16 +22,15 @@
             " comunicativa "
         ]
     },
-
     {
         "id": 2,
         "img": " /images/ninera2.jpg ",
         "nombre": " Ángela ",
         "apellido": " Poveda ",
         "email": " angela.poveda@gmail.com ",
-        "nombre de usuario": " ",
-        "contraseña": " ",
-        "padre": 25,
+        "username": " ",
+        "password": " ",
+        "edad": 25,
         "nacionalidad": " colombiana ",
         "pais_de_residencia": " Argentina ",
         "ciudad_de_residencia": " Córdoba ",
@@ -52,8 +51,8 @@
         "nombre": " Carolina ",
         "apellido": " Murcia ",
         "email": " carolina.murcia@gmail.com ",
-        "nombre de usuario": " ",
-        "contraseña": " ",
+        "username": " ",
+        "password": " ",
         "edad": " 28 ",
         "nacionalidad": " Argentina ",
         "pais_de_residencia": " Argentina ",
@@ -75,8 +74,8 @@
         "nombre": " Sofía ",
         "apellido": " Farías ",
         "email": " sofia.farias@gmail.com ",
-        "nombre de usuario": " ",
-        "contraseña": " ",
+        "username": " ",
+        "password": " ",
         "edad": " 29 ",
         "nacionalidad": " Argentina ",
         "pais_de_residencia": " Argentina ",
@@ -115,4 +114,5 @@
             "Comunicacion"
         ]
     }
+   
 ]

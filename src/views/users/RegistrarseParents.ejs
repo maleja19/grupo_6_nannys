@@ -25,38 +25,37 @@
 <body>
 
 <%- include('../partials/header.ejs')%>
-    
+<main class="form-container">
 <!--- Formulario-->
-<form action="/crear-producto" method="POST" class="create-form">
+<form action="/new-user" method="POST" class="create-form">
 <h1>¡Bienvenido a Nannies!</h1>
+
+<div class="control-formulario">
+Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple">
+</div>
      <div class="control-formulario">
         <label>Nombre</label>
-        <input type="text" name="Nombres" class="control">
+        <input type="text" name="nombre" class="control">
     </div>
 
     <div class="control-formulario">
         <label>Apellido</label>
-        <input type="text" name="Apellidos" class="control">
+        <input type="text" name="apellido" class="control">
     </div>
 
     <div class="control-formulario">
         <label>Correo Electrónico</label>
-        <input type="email" name="mail" class="control">
+        <input type="email" name="email" class="control">
     </div>
 
     <div class="control-formulario">
         <label for="" class="label">Username</label>
-        <input type="text" name="Username" class="control">
+        <input type="text" name="username" class="control">
     </div>
 
     <div class="control-formulario">
         <label for="" class="label">Password</label>
-        <input type="password" name="Password" class="control">
-    </div>
-
-    <div class="control-formulario">
-        <label for="" class="label">Confirm Password</label>
-        <input type="text" name="ConfirmPassword" class="control">
+        <input type="password" name="password" class="control">
     </div>
 
     <div class="control-formulario">
@@ -66,7 +65,7 @@
 
     <div class="control-formulario">
         <label>País de residencia</label>
-        <select name="País de residencia" class="control">
+        <select name="pais_de_residencia" class="control">
             <option value="Argentina">Argentina</option>
             <option value="Colombia">Colombia</option>
         </select>     
@@ -74,7 +73,7 @@
 
     <div class="control-formulario">
          <label>Ciudad de residencia</label>
-         <select name="ciudad" class="control">
+         <select name="ciudad_de_residencia" class="control">
             <option value="CABA">CABA</option>
             <option value="COR">Córdoba</option>
             <option value="LP">La Plata</option>
@@ -88,29 +87,33 @@
         </select>
     </div>
     
+    <div class="control-formulario">
+        <label>Dirección</label>
+        <input type="number" name="direccion" class="control" placeholder="">
+    </div>
     
     <div class="control-formulario">
         <label>Número de Contacto</label>
-        <input type="number" name="celular" class="control" placeholder="">
+        <input type="number" name="movil" class="control" placeholder="">
     </div>
 
     <div class="control-formulario">
         <label>Alguna vez contrataste niñera?</label>         
-            <input type="radio" name="Alguna vez contrataste niñera?" class="radio">Si
-            <input type="radio" name="Alguna vez contrataste niñera?" class="radio">No</label>
+            <input type="radio" name="pregunta" class="radio">Si
+            <input type="radio" name="pregunta" class="radio">No</label>
     </div>
 
     <div class="control-formulario">
         <label>Dejanos tus dudas</label>
-        <textarea name="Dejanos tus dudas" class="control"></textarea >
+        <textarea name="dudas" class="control"></textarea >
     </div>
 
-    <button type="reset" class="boton-formulario">Borrar</button>
+    
     <button type="submit" class="boton-formulario">Guardar</button>
  </form>
 
 </div1>
-
+</main>   
 <%- include('../partials/footer.ejs')%>
 
 </body>
