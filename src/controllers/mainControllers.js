@@ -10,42 +10,24 @@ const mision=(req,res)=>{
    
 }
 
-const signInNineras=(req,res)=>{
-    res.render('users/RegistrarseNineras.ejs');
-   
-}
 
-const signInPadres=(req,res)=>{
-    res.render('users/RegistrarseParents.ejs');
-}
 
 const login=(req,res)=>{
     res.render('users/loginIn.ejs');
 }
 
 
-const formEditNineras=(req,res)=>{
-    res.render('users/formEditNineras.ejs');
-}
-
 const formEditParents=(req,res)=>{
     res.render('users/formEditParents.ejs');
 }
 
 
-const detalle=(req,res)=>{
-    res.render('products/detalleProductos.ejs');
-}
-
 
 module.exports={
     home,
     mision,
-    signInNineras,
-    signInPadres,
     login,   
-    formEditNineras,
     formEditParents,
-    detalle
+   
 
 };
