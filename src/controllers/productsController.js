@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult }=require('express-validator');
+const bcrypt =require('bcryptjs');
 
 const productsFilePath = path.join(__dirname, '../database/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -59,7 +60,7 @@ const controller = {
 			apellido,
 			email,
 			username,
-			password,
+			password: bcrypt.hashSync(password,10),
 			edad,
 			nacionalidad,
 			pais_de_residencia,
