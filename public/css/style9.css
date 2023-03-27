@@ -1,54 +1,75 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x:  hidden;
 }
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
-.navBar {
-    background-color: #fc9d9a;
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    position: fixed;
-    width: 100vw;
-  }
 
-.contenedorBotones a{
-    display: flex;
-    font-family: "montserrat";
-    color:  gray;
-    text-decoration: none;
-    padding: 1%;
-    background-color: white;
-    border-radius: 2px;
+.navBar {
+  background-color: #fc9d9a;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  position: fixed;
+  width: 100vw;
+  
+  
+}
+.logo{
+height: 10vh;
+}
+
+.contenedorLogo{
+  padding-top: 0.1vh;
+  height: 11vh;
+} 
+
+.contenedorBotones a{ 
+  display: flex;
+  font-family: "montserrat";
+  color:  gray;
+  text-decoration: none;
+  padding:1%;
+  background-color: white;
+  border-radius: 2px;
+ 
+}
+
+.contenedorBotones{
+  margin-top: 1%;
+}
+
+.botonNav{
+height: 5vh;
 }
 
 .contenedorBotones a:hover{
-    color:  white;
-    background-color: #fc9d9a;
+  color:  white;
+  background-color: #fc9d9a;
+  
 }
 
 .burger-menu {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100vw;
-    padding: 1%;    
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  padding: 1%;    
 }
 
 .burger-menu i{
-    padding: 1%;
-    border: white solid 1px;
-    color: white ;
-    border-radius: 5px;
+  padding: 1%;
+  border: white solid 1px;
+  color: white ;
+  border-radius: 5px;
 }
 
 .burger-menu i:hover {
-    background-color: white;
-    border: #fc9d9a solid 1px;
-    color: #fc9d9a ;
+  background-color: white;
+  border: #fc9d9a solid 1px;
+  color: #fc9d9a ;
 }
 
 /*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
@@ -62,7 +83,7 @@
 .contenedorBanner h1{
     position: absolute;
     color: gray;
-    top:12vh;
+    top: 20vh;
     font-family: "poppins";
     
     
@@ -71,7 +92,7 @@
 .contenedorBanner p{
     position: absolute;
     color: gray;
-    top:17vh;
+    top:25vh;
     font-family: "poppins";
     font-size: 20px;   
     
@@ -80,7 +101,7 @@
 
 .img-children{
     width: 100vw;
-    height: 50vh;
+    height: 85vh;
     margin: 0;
     
 }
@@ -204,6 +225,7 @@ h3 {
   font-size: 14px;
   
 }
+
   
 /*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
 footer {
