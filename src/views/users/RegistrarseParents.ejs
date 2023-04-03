@@ -27,11 +27,11 @@
 <%- include('../partials/header.ejs')%>
 <main class="form-container">
 <!--- Formulario-->
-<form action="/new-user" method="POST" class="create-form">
+<form action="/new-user" method="POST" class="create-form" enctype="multipart/form-data">
 <h1>¡Bienvenido a Nannies!</h1>
 
 <div class="control-formulario">
-Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple">
+Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple" >
 <% if(locals.errors && errors.img){%>
     <div class="text-danger">
         <%= errors.img.msg %>
@@ -40,7 +40,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 </div>
      <div class="control-formulario">
         <label>Nombre</label>
-        <input type="text" name="nombre" class="control">
+        <input type="text" name="nombre" class="control" value="<%locals.oldData ? oldData.nombre :null%>">
         <% if(locals.errors && errors.nombre){%>
             <div class="text-danger">
                 <%= errors.nombre.msg %>
@@ -50,7 +50,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label>Apellido</label>
-        <input type="text" name="apellido" class="control">
+        <input type="text" name="apellido" class="control" value="<%locals.oldData ? oldData.apellido :null%>">
         <% if(locals.errors && errors.apellido){%>
             <div class="text-danger">
                 <%= errors.apellido.msg %>
@@ -60,7 +60,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label>Correo Electrónico</label>
-        <input type="email" name="email" class="control">
+        <input type="email" name="email" class="control" value="<%locals.oldData ? oldData.email :null%>">
         <% if(locals.errors && errors.email){%>
             <div class="text-danger">
                 <%= errors.email.msg %>
@@ -70,7 +70,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label for="" class="label">Username</label>
-        <input type="text" name="username" class="control">
+        <input type="text" name="username" class="control" value="<%locals.oldData ? oldData.username :null%>">
         <% if(locals.errors && errors.username){%>
             <div class="text-danger">
                 <%= errors.username.msg %>
@@ -80,7 +80,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label for="" class="label">Password</label>
-        <input type="password" name="password" class="control">
+        <input type="password" name="password" class="control" >
         <% if(locals.errors && errors.username){%>
             <div class="text-danger">password
                 <%= errors.password.msg %>
@@ -90,7 +90,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label>Nacionadlidad</label>
-        <input type="text" name="nacionalidad" class="control" >
+        <input type="text" name="nacionalidad" class="control"value="<%locals.oldData ? oldData.nacionalidad :null%>">
         <% if(locals.errors && errors.nacionalidad){%>
             <div class="text-danger">password
                 <%= errors.nacionalidad.msg %>
@@ -100,7 +100,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label>País de residencia</label>
-        <select name="pais_de_residencia" class="control">
+        <select name="pais_de_residencia" class="control" >
             <option value="Elegi una opcion">Elegi una opción</option>
             <option value="Argentina">Argentina</option>
             <option value="Colombia">Colombia</option>
@@ -116,7 +116,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label>Ciudad de residencia</label>
-        <select name="ciudad_de_residencia" class="control">
+        <select name="ciudad_de_residencia" class="control" >
            <option value="Elegi una ciudad">Elegi una ciudad</option>
            <option value="Buenos aires">Buenos aires</option>
            <option value="Santa Fe">Santa Fe</option>
@@ -130,7 +130,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
     
     <div class="control-formulario">
         <label>Dirección</label>
-        <input type="number" name="direccion" class="control" placeholder="">
+        <input type="text" name="direccion" class="control" placeholder="" value="<%locals.oldData ? oldData.direccion :null%>">
         <% if(locals.errors && errors.direccion){%>
             <div class="text-danger">
                 <%= errors.direccion.msg %>
@@ -140,7 +140,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
     
     <div class="control-formulario">
         <label>Número de Contacto</label>
-        <input type="number" name="movil" class="control" placeholder="">
+        <input type="text" name="movil" class="control" placeholder="" value="<%locals.oldData ? oldData.text :null%>">
         <% if(locals.errors && errors.movil){%>
             <div class="text-danger">
                 <%= errors.movil.msg %>
@@ -156,7 +156,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label>Dejanos tus dudas</label>
-        <textarea name="dudas" class="control"></textarea >
+        <textarea name="dudas" class="control" value="<%locals.oldData ? oldData.dudas :null%>"></textarea >
     </div>
 
     
