@@ -31,7 +31,7 @@ const controller = {
 
 	store: (req, res) => {
 
-
+		console.log(req.body)
 		const resultvalidation = validationResult(req);
 
 		if(resultvalidation.errors.length>0){
