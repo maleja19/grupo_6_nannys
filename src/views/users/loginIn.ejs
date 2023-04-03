@@ -30,22 +30,27 @@
     
 <!--- Formulario Niñeras-->
 <main>
-    <form action="/crear-producto" method="POST" class="create-form">
+    <form action="/login-process" method="POST" class="create-form">
 
         <h1>Bienvenido! Inicia tu sesión</h1>
         <div class="control-formulario">
-            <label for="" class="label">Username</label>
-            <input type="text" name="Username" class="control">
+            <label for="" class="label">E-mail</label>
+            <input type="email" name="email" class="control">
+            <% if(locals.errors && errors.email){%>
+                <div class="text-danger">
+                    <%= errors.email.msg %>
+                </div>
+            <%} %>
         </div>
 
         <div class="control-formulario">
             <label for="" class="label">Password</label>
-            <input type="password" name="Password" class="control">
+            <input type="password" name="password" class="control">
         </div>
 
     
         <button type="submit" class="boton-formulario-enter">Sign In</button>
-        <a href="#" class="password-forgot">Olvidaste tu contraseña</a>
+        <input type="checkbox" class="rememberUser" name="rememberUser">Recordar usuario</a>
         
     </form>
 

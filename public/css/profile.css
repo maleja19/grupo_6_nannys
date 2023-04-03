@@ -1,8 +1,11 @@
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  }
+  
+  
+}
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
 
 .navBar {
@@ -70,99 +73,28 @@ height: 5vh;
   border: #fc9d9a solid 1px;
   color: #fc9d9a ;
 }
-/*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
 
-main{
- 
-  padding-top: 25vh;
-  padding-bottom: 5vh;
-  width: 100%;
-
-  
-}
-form {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: #83af9b solid 2px;
-  border-radius: 5px;
-  background-color: #EDEDEC;
-}
+  /*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
 
 
-h1 {
-  text-align: center;
-  margin-bottom: 5vh;
-  font-size: 4vh;
-  color:#83af9b;
-}
-
- .create-form {
-    padding-top: 6vh;
- }    
-
- .control-formulario {
-    margin-bottom: 30px;
-    width:141vw;
-    text-align: center;
-    color:#83af9b;
-    
-     }
-
- .control-formulario label {
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: bold;
+.contain-profile{
     display: block;
-     }
-
- .radio {
-    padding: 5px 5px;
- }
-
- .control {   
-    padding: 8px 8px;
+    margin: auto;
+    text-align: center;
+    padding-top: 25vh;
+    padding-bottom: 25vh;
+   
     
- }
-
-.boton-formulario-enter {
-  border-color: gray;
-  color: #83af9b;
-  font-weight:200;
-  justify-content:stretch;
-  text-align:center;
-  border-radius: 5px;
-  display:inline-table;
-  width: 30%;
-  padding: 0px 8px;
-  margin-bottom: 1vh;
-  height: 3.5vh;
-
-  }
-
-form a{
-  color:black;
-  font-weight:200;
-  justify-content:right;
-  text-align:center;
-  padding: 0px 8px;
-  margin-bottom: 3vh;
-  
-  }
-
-  .text-danger{
-    font-size: 2vh;
-    color: #bd081c;
-  }
-
-  
+}
 
 
-/*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
+.imagen{
+    width: 25vw;
+    height: 25vh;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
 footer {
   background-color:#fc9d9a ;
   position: relative;
@@ -296,94 +228,75 @@ width: 100vw;
 /*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
 
 @media (max-width:768px) {
-  .contenedorLogo {
-      width: 100vw;
-      text-align: center;
-  }
-
-  .contenedorBotones {
-      display: none;
-  }
-
-  .subtitulo {
+.contenedorLogo {
+    width: 100vw;
     text-align: center;
-  }
+}
 
-  .contenedorFooter {
-      width: 90vw;
-  }
+.contenedorBotones {
+    display: none;
+}
 
-  .contenedorFooterRedes {
+.subtitulo {
+  text-align: center;
+}
+
+.contenedorFooter {
     width: 90vw;
-  }
+}
 
-  .servicios {
-    flex-wrap: wrap;
-  }
+.contenedorFooterRedes {
+  width: 90vw;
+}
 
-  .contenedorAccordion{
-    width: 100vw;
-  }
+.servicios {
+  flex-wrap: wrap;
+}
 
-  .contenedorImagenServicios {
-    width: 100vw;
-  }
+.contenedorAccordion{
+  width: 100vw;
+}
 
-  .recomendacionesImg {
-    width: inherit;
-  }
-  .recomendacionesExp {
-    width: 100vw;
-  }
+.contenedorImagenServicios {
+  width: 100vw;
+}
 
-  .recomendacionesExp h4 {
-    font-size: large;
-  }
-  .contactoImg {
-    width: 100vw;
-  }
-  .contenedorFormulario {
-    width: 100vw;
-  }
-  
+.recomendacionesImg {
+  width: inherit;
+}
+.recomendacionesExp {
+  width: 100vw;
+}
+
+.recomendacionesExp h4 {
+  font-size: large;
+}
+.contactoImg {
+  width: 100vw;
+}
+.contenedorFormulario {
+  width: 100vw;
+}
 
 }
 
 @media (min-width:769px) {
-.contenedorLogo {
-    width: 50vw;
-}
-
-.contenedorLogo a {
-    margin-left: 5%;
-}
-
-.contenedorBotones {
-    width: 49vw;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 2%;
-}
-
-.burger-menu {
-  display: none;
-}
-
-.control-formulario {
-margin-bottom: 30px;
-width:70vw;
-text-align: center;
-
+  .contenedorLogo {
+      width: 50vw;
   }
 
-main{
+  .contenedorLogo a {
+      margin-left: 5%;
+  }
 
-padding-top: 20vh;
-  
-}
+  .contenedorBotones {
+      width: 49vw;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 2%;
+  }
 
-.control{
-    width:25vw;
-    
-   }
+  .burger-menu {
+      display: none;
+  }
 }
