@@ -5,21 +5,18 @@ const userController = require('../controllers/userController');
 const routerUsers = express.Router();
 
 
-const guestMiddlewares=require('../middlewares/guestMiddlewares')
-const authMiddlewares=require('../middlewares/authMiddlewares')
 const validations=require('../middlewares/validationMiddlewares')
 const upload=require('../middlewares/multerMiddlewares')
 
 
 
-routerUsers.get('/users/signp',guestMiddlewares,userController.create);
-
+routerUsers.get('/users/signp',userController.create);
 routerUsers.post('/new-user',upload.single('img'),validations,userController.data)
 
-routerUsers.get('/users/login',guestMiddlewares,userController.login);
+routerUsers.get('/users/login',userController.login);
 routerUsers.post('/login-process',userController.loginProcess);
-
-routerUsers.get('/users/profile',authMiddlewares,userController.profile);
+routerUsers.get('/users/profile',userController.profile);
+routerUsers.post('/admin',userController.admin);
 routerUsers.get('/users/logout',userController.logout);
 
 
