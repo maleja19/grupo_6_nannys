@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
 .navBar {
   background-color: #fc9d9a;
@@ -54,7 +55,13 @@ h1 {
   text-align: center;
   margin-bottom: 30px;
 
-}
+  }
+
+  .imagen-perfil{
+    width: 3vw;
+    height: 5vh;
+    border-radius: 50%;
+  }
 
 
 body {

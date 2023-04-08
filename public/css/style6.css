@@ -4,6 +4,7 @@
   box-sizing: border-box;
   overflow-x:  hidden;
 }
+
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
 
 .navBar {
@@ -49,6 +50,12 @@ height: 5vh;
   color:  white;
   background-color: #fc9d9a;
   
+}
+
+.imagen-perfil{
+  width: 3vw;
+  height: 5vh;
+  border-radius: 50%;
 }
 
 /*BODY*/

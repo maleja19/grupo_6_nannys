@@ -1,26 +1,57 @@
 <header>      
 
-   
+    <% if(locals.isLogged){%>
 
-    <nav class="navBar">
+        <nav class="navBar">
+
         
-        <div class="contenedorLogo">
-            <a href="home.html"><img src="/images/logo.jpg" class="logo"  alt="Logo"></a>
-        </div>
         
-         <div class="contenedorBotones">
-            <a href="#" class="botonNav">Como Funciona?</a>
-            <a href="compras.html" class="botonNav">Servicios</a>
-            <a href="#" class="botonNav">Ayuda</a>
+            <div class="contenedorLogo">
+                <a href="/"><img src="/images/logo.jpg" class="logo"  alt="Logo"></a>
+            </div>
             
-            <a href="/users/login" class="botonNav">Acceder</a>
-            <a href="/users/signp" class="botonNav">Registrarse</a>
-           
-        </div>
+             <div class="contenedorBotones">
+                <a href="/" class="botonNav">Como Funciona?</a>
+                <a href="/products/compras" class="botonNav">Servicios</a>
+                <a href="#" class="botonNav">Ayuda</a>
+                
+                <a href="/users/profile" class="botonNav">Profile</a>
+                <a href="/users/logout" class="botonNav">LogOut</a>
+                <img class="imagen-perfil"src="<%=locals.userLogged.img%>">
+               
+                
+                
+               
+            </div>
+    
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
 
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
+    
+       <%}else{%>
+        <nav class="navBar">
 
-       </div>
+        
+        
+            <div class="contenedorLogo">
+                <a href="/"><img src="/images/logo.jpg" class="logo"  alt="Logo"></a>
+            </div>
+            
+             <div class="contenedorBotones">
+                <a href="/" class="botonNav">Como Funciona?</a>
+                <a href="/products/compras" class="botonNav">Servicios</a>
+                <a href="#" class="botonNav">Ayuda</a>
+                
+                <a href="/users/login" class="botonNav">Acceder</a>
+                <a href="/users/signp" class="botonNav">Registrarse</a>
+                
+               
+            </div>
+    
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        
+        <%}%>
 </header>
