@@ -74,6 +74,17 @@ height: 5vh;
   color: #fc9d9a ;
 }
 
+.imagen-perfil{
+  width: 3vw;
+  height: 5vh;
+  border-radius: 50%;
+}
+
+h4{
+  position: relative;
+  top: 4.5vh;
+  right: 6.5vw
+}
   /*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
 
 
@@ -91,6 +102,14 @@ height: 5vh;
 .imagen{
     width: 25vw;
     height: 25vh;
+}
+
+.boton-formulario{
+  position: absolute;
+  top:20vh;
+  right:5vw;
+  text-align: center;
+  width: 4vw;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
@@ -228,59 +247,66 @@ width: 100vw;
 /*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
 
 @media (max-width:768px) {
-.contenedorLogo {
-    width: 100vw;
+  .contenedorLogo {
+      width: 100vw;
+      text-align: center;
+  }
+
+  .contenedorBotones {
+      display: none;
+  }
+
+  .subtitulo {
     text-align: center;
-}
+  }
 
-.contenedorBotones {
-    display: none;
-}
-
-.subtitulo {
-  text-align: center;
-}
-
-.contenedorFooter {
-    width: 90vw;
-}
+  .contenedorFooter {
+      width: 90vw;
+  }
 
 .contenedorFooterRedes {
-  width: 90vw;
-}
+    width: 90vw;
+  }
 
-.servicios {
-  flex-wrap: wrap;
-}
+  .servicios {
+    flex-wrap: wrap;
+  }
 
-.contenedorAccordion{
-  width: 100vw;
-}
+  .contenedorAccordion{
+    width: 100vw;
+  }
 
-.contenedorImagenServicios {
-  width: 100vw;
-}
+  .contenedorImagenServicios {
+    width: 100vw;
+  }
 
-.recomendacionesImg {
-  width: inherit;
-}
-.recomendacionesExp {
-  width: 100vw;
-}
+  .recomendacionesImg {
+    width: inherit;
+  }
+  .recomendacionesExp {
+    width: 100vw;
+  }
 
-.recomendacionesExp h4 {
-  font-size: large;
-}
-.contactoImg {
-  width: 100vw;
-}
-.contenedorFormulario {
-  width: 100vw;
-}
+  .recomendacionesExp h4 {
+    font-size: large;
+  }
+  .contactoImg {
+    width: 100vw;
+  }
+  .contenedorFormulario {
+    width: 100vw;
+  }
 
 }
 
 @media (min-width:769px) {
+
+  
+  h4{
+    position: relative;
+    top: 4.5vh;
+    right: 6.5vw
+  }
   .contenedorLogo {
       width: 50vw;
   }
@@ -300,3 +326,4 @@ width: 100vw;
       display: none;
   }
 }
+

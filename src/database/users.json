@@ -13,7 +13,8 @@
         "direccion": "Santa Fe 130",
         "movil": "1173574470",
         "pregunta": "nb",
-        "dudas": "Quisiera saber si hay descuento contratando mensual"
+        "dudas": "Quisiera saber si hay descuento contratando mensual",
+        "admin":0
     },
     {
         "id": 2,
@@ -29,7 +30,8 @@
         "direccion": "Calle 56 # 31-16",
         "movil": "6024123456",
         "pregunta": "si",
-        "dudas": "Quisiera que la niñera tenga las cosas claras"
+        "dudas": "Quisiera que la niñera tenga las cosas claras",
+        "admin":0
     },
     {
         "id": 3,
@@ -45,11 +47,12 @@
         "direccion": "Zeballos y Buenos Aires",
         "movil": "341275086",
         "pregunta": "si",
-        "dudas": "Hay niñeras que sepan de fútbol?"
+        "dudas": "Hay niñeras que sepan de fútbol?",
+        "admin":0
     },
     {
         "id": 4,
-        "img": "/images/product-1680405626068_img.jpg",
+        "img": "/images/usuarios.jpg",
         "nombre": "Consuelo",
         "apellido": "Duval",
         "email": "maria.aleja19@hotmail.com",
@@ -61,11 +64,12 @@
         "direccion": "Vereda la balsa ",
         "movil": "2535525",
         "pregunta": "on",
-        "dudas": "sa,dlasld,las"
+        "dudas": "sa,dlasld,las",
+        "admin":0
     },
     {
         "id": 5,
-        "img": "/images/product-1680413876210_img.jpg",
+        "img": "/images/usuarios.jpg",
         "nombre": "carlos",
         "apellido": "Duval",
         "email": "carlos.julio98@gmail.com",
@@ -77,11 +81,12 @@
         "direccion": "ZXDCFGVHB",
         "movil": "SZDFCGH",
         "pregunta": "on",
-        "dudas": "SDFGH"
+        "dudas": "SDFGH",
+        "admin":0
     },
     {
         "id": 6,
-        "img": "/images/product-1680472534634_img.jpg",
+        "img": "/images/usuarios.jpg",
         "nombre": "Patricio",
         "apellido": "Cardona",
         "email": "pato.cardona@gmail.com",
@@ -93,7 +98,7 @@
         "direccion": "calle 5 4a b",
         "movil": "3156565497",
         "pregunta": "on",
-        "dudas": "ninguna"
+        "dudas": "ninguna",
+        "admin":1
     }
-    
 ]

@@ -6,9 +6,8 @@ const routerProducts = require('./src/routes/products');
 const routerUsers = require('./src/routes/users');
 const path=require('path');
 const methodOverride=require("method-override");
-const cookies = require('cookie-parser');
 const port = process.env.PORT || 3030;
-//const userLoggedMiddlewares=require('./src/middlewares/userLoggedMiddlewares')
+const userLoggedMiddlewares=require('./src/middlewares/userLoggedMiddlewares');
 
 
 const app = express();
@@ -25,13 +24,13 @@ app.use(session({
     saveUninitialized: false
 }));
 
-//app.use(userLoggedMiddlewares);
-app.use(cookies());
+app.use(userLoggedMiddlewares);
+
 
 app.use(morgan('dev'));
 
 app.use(express.static('public'));
-
+ 
 app.use(routerMain)
 app.use(routerProducts)
 app.use(routerUsers)

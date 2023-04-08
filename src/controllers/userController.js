@@ -10,7 +10,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userControllers={
     create:(req,res)=>{
-		res.cookie('testing','Hola,mundo',{maxAge: 1000	*30})
+		
         res.render('users/RegistrarseParents.ejs')
     },
 
@@ -79,11 +79,9 @@ const userControllers={
 			if(passwordIsTrue){
 				delete userToLogin.password;
 				req.session.userLogged=userToLogin;
-				//if(req.body.rememberUser){
-					//res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*2})
-				//}
+				
 				return res.redirect('users/profile')
-			}
+			}	
 			return res.render('users/loginIn.ejs',{
 				errors:{
 					email: {
@@ -102,10 +100,22 @@ const userControllers={
 	},
 
 	profile:(req,res)=>{
-		console.log(req.cookies.userEmail)
+		
 		res.render('users/profile.ejs',{
 			user: req.session.userLogged,
 		})
+	},
+
+	admin:(req,res)=>{
+
+		let usuarios=User.findAll()
+		user=usuarios.find(usuario=>usuario.admin==1)
+	
+		if(user){
+		res.redirect('/products/sign')}
+		else{
+		res.send('No eres administrador')
+		}
 	},
 
 	logout:(req,res)=>{
