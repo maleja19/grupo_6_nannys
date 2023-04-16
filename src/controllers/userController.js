@@ -11,7 +11,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const userControllers={
     create:(req,res)=>{
 		
-        res.render('users/RegistrarseParents.ejs')
+        res.render('users/registerParents.ejs')
     },
 
     data: (req, res) => {
@@ -21,7 +21,7 @@ const userControllers={
 
 		if(resultvalidation.errors.length>0){
 
-			return res.render('users/RegistrarseParents.ejs',{
+			return res.render('users/registerParents.ejs',{
 				errors: resultvalidation.mapped(),
 				oldData: req.body
 			});
@@ -31,7 +31,7 @@ const userControllers={
 		let userInDB =User.findbyfield('email', req.body.email)
 		if(userInDB){
 
-			return res.render('users/RegistrarseParents.ejs',{
+			return res.render('users/registerParents.ejs',{
 				errors: {
 					email:{
 						msg:'Este email ya esta registrado',
@@ -60,7 +60,7 @@ const userControllers={
 
 		let createUser=User.create(userToCreate)
 		
-		res.redirect('users/login')
+		res.redirect('/users/login')
 			
 	},
 
@@ -106,17 +106,7 @@ const userControllers={
 		})
 	},
 
-	admin:(req,res)=>{
-
-		let usuarios=User.findAll()
-		user=usuarios.find(usuario=>usuario.admin==1)
 	
-		if(user){
-		res.redirect('/products/sign')}
-		else{
-		res.send('No eres administrador')
-		}
-	},
 
 	logout:(req,res)=>{
 		req.session.destroy()

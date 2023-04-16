@@ -14,7 +14,7 @@
         "movil": "1173574470",
         "pregunta": "nb",
         "dudas": "Quisiera saber si hay descuento contratando mensual",
-        "admin":0
+        "admin": 0
     },
     {
         "id": 2,
@@ -31,7 +31,7 @@
         "movil": "6024123456",
         "pregunta": "si",
         "dudas": "Quisiera que la niñera tenga las cosas claras",
-        "admin":0
+        "admin": 0
     },
     {
         "id": 3,
@@ -48,7 +48,7 @@
         "movil": "341275086",
         "pregunta": "si",
         "dudas": "Hay niñeras que sepan de fútbol?",
-        "admin":0
+        "admin": 0
     },
     {
         "id": 4,
@@ -65,40 +65,23 @@
         "movil": "2535525",
         "pregunta": "on",
         "dudas": "sa,dlasld,las",
-        "admin":0
+        "admin": 0
     },
     {
         "id": 5,
         "img": "/images/usuarios.jpg",
-        "nombre": "carlos",
-        "apellido": "Duval",
-        "email": "carlos.julio98@gmail.com",
-        "username": "ASDF",
-        "password": "$2a$10$k/ggSFn8PNkRy..mpil.Ju4MT348Pbzy27BmhE4UK8Xnr4SsBJdJG",
-        "nacionalidad": "ASDFGH",
-        "pais_de_residencia": "Argentina",
-        "ciudad_de_residencia": "Santa Fe",
-        "direccion": "ZXDCFGVHB",
-        "movil": "SZDFCGH",
-        "pregunta": "on",
-        "dudas": "SDFGH",
-        "admin":0
-    },
-    {
-        "id": 6,
-        "img": "/images/usuarios.jpg",
-        "nombre": "Patricio",
-        "apellido": "Cardona",
+        "nombre": "patricio",
+        "apellido": "cardona",
         "email": "pato.cardona@gmail.com",
         "username": "pato05",
-        "password": "$2a$10$7geGHMfLS0kuN1LEi.yV2OA1b/bb0XQ1mtJldgDaBbpdo4jfUPb5.",
+        "password": "$2a$10$A2l8G9.jIuA9Ay8OvbaPs.Xwn1y/FFvhLN1kUfk1RbHk7.mweui/G",
         "nacionalidad": "Argentina",
         "pais_de_residencia": "Argentina",
         "ciudad_de_residencia": "Santa Fe",
-        "direccion": "calle 5 4a b",
-        "movil": "3156565497",
+        "direccion": "chia",
+        "movil": "2535525",
         "pregunta": "on",
         "dudas": "ninguna",
-        "admin":1
+        "admin": 1
     }
 ]

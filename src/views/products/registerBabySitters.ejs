@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-    <link rel="stylesheet" href="/css/style4.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <title>Nannies - Registrarse</title>
-</head>
+<%- include('../partials/head.ejs')%>
+<link rel="stylesheet" href="/css/registerBabySitter.css">
           
 <body>
 
@@ -30,7 +12,7 @@
 <!--- Formulario Niñeras-->
 
 <main class="form-container">
-<form action="/new-ninera" method="POST" enctype="multipart/form-data">
+<form action="/products/sign" method="POST" enctype="multipart/form-data">
     <h1>¡Bienvenido a Nannies!</h1>
     <div class="control-formulario">
       Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple">
@@ -120,15 +102,15 @@
 
     <div class="control-formulario">
         <label>País de residencia</label>
-        <select name="pais_de_residencia" class="control">
+        <select name="paisDeResidencia" class="control">
             <option value="">Elegi una opción</option>
             <option value="Argentina">Argentina</option>
             <option value="Colombia">Colombia</option>
             
         </select>
-        <% if(locals.errors && errors.pais_de_residencia){%>
+        <% if(locals.errors && errors.paisDeResidencia){%>
             <div class="text-danger">
-                <%= errors.pais_de_residencia.msg %>
+                <%= errors.paisDeResidencia.msg %>
             </div>
         <%} %>
           
@@ -136,7 +118,7 @@
 
     <div class="control-formulario">
          <label>Ciudad de residencia</label>
-         <select name="ciudad_de_residencia" class="control">
+         <select name="ciudadDeResidencia" class="control">
             <option value="Elegi una ciudad">Elegi una ciudad</option>
             <option value="Buenos aires">Buenos aires</option>
             <option value="Santa Fe">Santa Fe</option>

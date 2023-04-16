@@ -6,15 +6,15 @@ const bcrypt =require('bcryptjs');
 const productsFilePath = path.join(__dirname, '../database/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const controller = {
+const productsController = {
 	// Root - Show all products
 	allgetProducts: (req, res) => {
 		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render('products/compras.ejs',{'productos': products})
+		res.render('products/babySitters.ejs',{'productos': products})
 	},
 
 	create: (req,res) => {
-		res.render('products/RegistrarseNineras.ejs')
+		res.render('products/registerBabySitters.ejs')
 	},
 
 	detail: (req,res) => {
@@ -23,24 +23,25 @@ const controller = {
 		const product=products.find(elem => elem.id ==parseInt(id));
 		
 		if(product){
-			res.render('products/detalleProductos.ejs',{product:product})
+			return res.render('products/detailProductos.ejs',{product:product})
 		}
 
 		
 	},
 
 	store: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-		console.log(req.body)
+		//console.log(req.body)
 		const resultvalidation = validationResult(req);
 
 		if(resultvalidation.errors.length>0){
 
-			res.render('products/RegistrarseNineras.ejs',{
+			return res.render('products/registerBabySitters.ejs',{
 				errors: resultvalidation.mapped() })
 		}
 		
-		const{img,nombre,apellido,email,username,password,edad,nacionalidad,pais_de_residencia,ciudad_de_residencia,direccion,celular,descripcion,frase,precio,aptitudes}=req.body;
+		const{img,nombre,apellido,email,username,password,edad,nacionalidad,paisDeResidencia,ciudadDeResidencia,direccion,celular,descripcion,frase,precio,aptitudes}=req.body;
 
 		const newId=products[products.length-1].id+1;
 
@@ -63,8 +64,8 @@ const controller = {
 			password: bcrypt.hashSync(password,10),
 			edad,
 			nacionalidad,
-			pais_de_residencia,
-			ciudad_de_residencia,
+			paisDeResidencia,
+			ciudadDeResidencia,
 			direccion,
 			celular,
 			descripcion,
@@ -77,7 +78,8 @@ const controller = {
 		products.push(obj);
 		console.log(obj)
 		fs.writeFileSync(productsFilePath,JSON.stringify(products))
-		res.redirect('products/compras')
+		res.redirect('/products/compras')
+		
 		
 	},
 
@@ -116,8 +118,8 @@ const controller = {
 				elem.username=req.body.username;
 				elem.password=req.body.password;
 				elem.edad=req.body.edad;
-				elem.pais_de_residencia=req.body.pais_de_residencia;
-				elem.ciudad_de_residencia=req.body.ciudad_de_residencia;
+				elem.paisDeResidencia=req.body.paisDeResidencia;
+				elem.ciudadDeResidencia=req.body.ciudadDeResidencia;
 				elem.direccion=req.body.direccion;
 				elem.celular=req.body.celular;
 				elem.descripcion=req.body.descripcion;
@@ -152,4 +154,4 @@ const controller = {
 
 }
 
-module.exports= controller;
+module.exports= productsController ;
