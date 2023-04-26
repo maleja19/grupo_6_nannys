@@ -89,23 +89,13 @@
         
     </div>
 
-    <div class="control-formulario">
-        <label>Nacionadlidad</label>
-        <input type="text" name="nacionalidad" class="control">
-        <% if(locals.errors && errors.nacionalidad){%>
-            <div class="text-danger">
-                <%= errors.nacionalidad.msg %>
-            </div>
-        <%} %>
-       
-    </div>
+
 
     <div class="control-formulario">
         <label>País de residencia</label>
         <select name="paisDeResidencia" class="control">
-            <option value="">Elegi una opción</option>
             <option value="Argentina">Argentina</option>
-            <option value="Colombia">Colombia</option>
+            
             
         </select>
         <% if(locals.errors && errors.paisDeResidencia){%>
@@ -118,14 +108,14 @@
 
     <div class="control-formulario">
          <label>Ciudad de residencia</label>
-         <select name="ciudadDeResidencia" class="control">
-            <option value="Elegi una ciudad">Elegi una ciudad</option>
-            <option value="Buenos aires">Buenos aires</option>
-            <option value="Santa Fe">Santa Fe</option>
-            <option value="Rosario">Rosario</option>
-            <option value="Mendoza">Mendoza</option>
-            <option value="Mar de plata">Mar de plata</option>
-            <option value="La Plata">La Plata</option>
+         <select name="ciudad_de_residencias_id" class="control">
+            <option value="0">Elegi una ciudad</option>
+            <option value="1">Buenos aires</option>
+            <option value="2">Santa Fe</option>
+            <option value="3">Rosario</option>
+            <option value="4">Mendoza</option>
+            <option value="5">Mar de plata</option>
+            <option value="6">La Plata</option>
           
         </select>
     </div>  
@@ -177,19 +167,19 @@
     <div class="control-formulario">
         <label>Aptitudes (Seleccioná tres)</label>
         
-        <input  type="checkbox" name="aptitudes" value="Paciencia"><label for="Paciencia">Paciencia</label></div>
-        <input  type="checkbox" name="aptitudes" value="Respondable"><label for="Respondable">Respondable</label></div>
-        <input  type="checkbox" name="aptitudes" value="Proactiva"><label for="Proactiva">Proactiva</label></div>
-        <input  type="checkbox" name="aptitudes" value="Divertida"><label for="Divertida">Divertida</label></div>
-        <input  type="checkbox" name="aptitudes" value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
-        <input  type="checkbox" name="aptitudes" value="Organizada"><label for="Organizada">Organizada</label></div>
-        <input  type="checkbox" name="aptitudes" value="Puntual"><label for="Puntual">Puntual</label></div>
-        <input  type="checkbox" name="aptitudes" value="Creativa"><label for="Creativa">Creativa</label></div>
-        <input  type="checkbox" name="aptitudes" value="Amistosa"><label for="Amistosa">Amistosa</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="1"><label for="Paciencia">Paciencia</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="2"><label for="Responsable">Responsable</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="3"><label for="Proactiva">Proactiva</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="4"><label for="Divertida">Divertida</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="5"><label for="Comunicacion">Comunicacion</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="6"><label for="Organizada">Organizada</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="7"><label for="Puntual">Puntual</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="8"><label for="Creativa">Creativa</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="9"><label for="Amistosa">Amistosa</label></div>
 
-        <% if(locals.errors && errors.aptitudes){%>
+        <% if(locals.errors && errors.aptitudes_id){%>
             <div class="text-danger">
-                <%= errors.aptitudes.msg %>
+                <%= errors.aptitudes_id.msg %>
             </div>
         <%} %>
        

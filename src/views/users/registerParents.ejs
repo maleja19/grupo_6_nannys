@@ -71,22 +71,11 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
         <%} %>
     </div>
 
-    <div class="control-formulario">
-        <label>Nacionadlidad</label>
-        <input type="text" name="nacionalidad" class="control"value="<%locals.oldData ? oldData.nacionalidad :null%>">
-        <% if(locals.errors && errors.nacionalidad){%>
-            <div class="text-danger">password
-                <%= errors.nacionalidad.msg %>
-            </div>
-        <%} %>
-    </div>
-
-    <div class="control-formulario">
+      <div class="control-formulario">
         <label>País de residencia</label>
-        <select name="pais_de_residencia" class="control" >
-            <option value="Elegi una opcion">Elegi una opción</option>
+        <select name="paisDeResidencia" class="control" >
             <option value="Argentina">Argentina</option>
-            <option value="Colombia">Colombia</option>
+            
             
         </select>
         <% if(locals.errors && errors.pais_de_residencia){%>
@@ -99,14 +88,14 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label>Ciudad de residencia</label>
-        <select name="ciudad_de_residencia" class="control" >
-           <option value="Elegi una ciudad">Elegi una ciudad</option>
-           <option value="Buenos aires">Buenos aires</option>
-           <option value="Santa Fe">Santa Fe</option>
-           <option value="Rosario">Rosario</option>
-           <option value="Mendoza">Mendoza</option>
-           <option value="Mar de plata">Mar de plata</option>
-           <option value="La Plata">La Plata</option>
+        <select name="ciudad_de_residencias_id" class="control" >
+           <option value="0">Elegi una ciudad</option>
+           <option value="1">Buenos aires</option>
+           <option value="2">Santa Fe</option>
+           <option value="3">Rosario</option>
+           <option value="4">Mendoza</option>
+           <option value="5">Mar de plata</option>
+           <option value="6">La Plata</option>
          
        </select>
    </div>
@@ -133,8 +122,8 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label>Alguna vez contrataste niñera?</label>         
-            <input type="radio" name="pregunta" class="radio">Si
-            <input type="radio" name="pregunta" class="radio">No</label>
+            <input type="radio" name="pregunta" value="Si" class="radio">Si
+            <input type="radio" name="pregunta" value="No" class="radio">No</label>
     </div>
 
     <div class="control-formulario">
