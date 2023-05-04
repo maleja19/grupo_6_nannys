@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-    <link rel="stylesheet" href="/css/style4.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <title>Nannies - Registrarse</title>
-</head>
+<%- include('../partials/head.ejs')%>
+<link rel="stylesheet" href="/css/registerBabySitter.css">
           
 <body>
 
@@ -30,7 +12,7 @@
 <!--- Formulario Niñeras-->
 
 <main class="form-container">
-<form action="/new-ninera" method="POST" enctype="multipart/form-data">
+<form action="/products/sign" method="POST" enctype="multipart/form-data">
     <h1>¡Bienvenido a Nannies!</h1>
     <div class="control-formulario">
       Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple">
@@ -107,28 +89,18 @@
         
     </div>
 
-    <div class="control-formulario">
-        <label>Nacionadlidad</label>
-        <input type="text" name="nacionalidad" class="control">
-        <% if(locals.errors && errors.nacionalidad){%>
-            <div class="text-danger">
-                <%= errors.nacionalidad.msg %>
-            </div>
-        <%} %>
-       
-    </div>
+
 
     <div class="control-formulario">
         <label>País de residencia</label>
-        <select name="pais_de_residencia" class="control">
-            <option value="">Elegi una opción</option>
+        <select name="paisDeResidencia" class="control">
             <option value="Argentina">Argentina</option>
-            <option value="Colombia">Colombia</option>
+            
             
         </select>
-        <% if(locals.errors && errors.pais_de_residencia){%>
+        <% if(locals.errors && errors.paisDeResidencia){%>
             <div class="text-danger">
-                <%= errors.pais_de_residencia.msg %>
+                <%= errors.paisDeResidencia.msg %>
             </div>
         <%} %>
           
@@ -136,14 +108,14 @@
 
     <div class="control-formulario">
          <label>Ciudad de residencia</label>
-         <select name="ciudad_de_residencia" class="control">
-            <option value="Elegi una ciudad">Elegi una ciudad</option>
-            <option value="Buenos aires">Buenos aires</option>
-            <option value="Santa Fe">Santa Fe</option>
-            <option value="Rosario">Rosario</option>
-            <option value="Mendoza">Mendoza</option>
-            <option value="Mar de plata">Mar de plata</option>
-            <option value="La Plata">La Plata</option>
+         <select name="ciudad_de_residencias_id" class="control">
+            <option value="0">Elegi una ciudad</option>
+            <option value="1">Buenos aires</option>
+            <option value="2">Santa Fe</option>
+            <option value="3">Rosario</option>
+            <option value="4">Mendoza</option>
+            <option value="5">Mar de plata</option>
+            <option value="6">La Plata</option>
           
         </select>
     </div>  
@@ -195,19 +167,19 @@
     <div class="control-formulario">
         <label>Aptitudes (Seleccioná tres)</label>
         
-        <input  type="checkbox" name="aptitudes" value="Paciencia"><label for="Paciencia">Paciencia</label></div>
-        <input  type="checkbox" name="aptitudes" value="Respondable"><label for="Respondable">Respondable</label></div>
-        <input  type="checkbox" name="aptitudes" value="Proactiva"><label for="Proactiva">Proactiva</label></div>
-        <input  type="checkbox" name="aptitudes" value="Divertida"><label for="Divertida">Divertida</label></div>
-        <input  type="checkbox" name="aptitudes" value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
-        <input  type="checkbox" name="aptitudes" value="Organizada"><label for="Organizada">Organizada</label></div>
-        <input  type="checkbox" name="aptitudes" value="Puntual"><label for="Puntual">Puntual</label></div>
-        <input  type="checkbox" name="aptitudes" value="Creativa"><label for="Creativa">Creativa</label></div>
-        <input  type="checkbox" name="aptitudes" value="Amistosa"><label for="Amistosa">Amistosa</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="1"><label for="Paciencia">Paciencia</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="2"><label for="Responsable">Responsable</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="3"><label for="Proactiva">Proactiva</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="4"><label for="Divertida">Divertida</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="5"><label for="Comunicacion">Comunicacion</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="6"><label for="Organizada">Organizada</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="7"><label for="Puntual">Puntual</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="8"><label for="Creativa">Creativa</label></div>
+        <input  type="checkbox" name="aptitudes_id" value="9"><label for="Amistosa">Amistosa</label></div>
 
-        <% if(locals.errors && errors.aptitudes){%>
+        <% if(locals.errors && errors.aptitudes_id){%>
             <div class="text-danger">
-                <%= errors.aptitudes.msg %>
+                <%= errors.aptitudes_id.msg %>
             </div>
         <%} %>
        

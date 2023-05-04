@@ -10,18 +10,17 @@ const upload=require('../middlewares/multerMiddlewares')
 
 
 
-routerUsers.get('/users/signp',userController.create);
-routerUsers.post('/new-user',upload.single('img'),validations,userController.data)
+routerUsers.get('/users/signp',validations,userController.create);
+routerUsers.post('/users/signp',upload.single('img'),userController.data)
 
 routerUsers.get('/users/login',userController.login);
 routerUsers.post('/login-process',userController.loginProcess);
 routerUsers.get('/users/profile',userController.profile);
-routerUsers.post('/admin',userController.admin);
 routerUsers.get('/users/logout',userController.logout);
 
 
 
-/*routerUsers.get('/user/form-edit2', formEditParents);*/
+//routerUsers.get('/user/form-edit2', formEditParents);
 
 
 

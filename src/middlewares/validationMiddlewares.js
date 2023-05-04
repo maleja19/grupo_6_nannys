@@ -3,7 +3,7 @@ const path = require('path');
 const validations =[
     body('img').custom((value,{req})=>{
         let file = req.file;
-        let acceptedExtensions =['.jpg','.png','.gif'];
+        let acceptedExtensions =['.jpg','.png','.gif','.jpeg'];
         
         if(!file){
             throw new Error('Tienes que subir una imagen')

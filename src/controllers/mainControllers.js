@@ -5,17 +5,10 @@ const home = (req,res)=>{
     res.render('home.ejs');
 }
 
-const mision=(req,res)=>{
-    res.render('mision.ejs');
+const about=(req,res)=>{
+    res.render('about.ejs');
    
 }
-
-
-
-const login=(req,res)=>{
-    res.render('users/loginIn.ejs');
-}
-
 
 const formEditParents=(req,res)=>{
     res.render('users/formEditParents.ejs');
@@ -25,8 +18,7 @@ const formEditParents=(req,res)=>{
 
 module.exports={
     home,
-    mision,
-    login,   
+    about,   
     formEditParents,
    
 

@@ -1,37 +1,42 @@
 const fs = require('fs');
 const path = require('path');
-const User= require('../models/User');
+//const User= require('../models/User');
 const { validationResult }=require('express-validator');
 const bcrypt =require('bcryptjs');
 const { openDelimiter } = require('ejs');
+const db = require("../database/models/index");
 
-const usersFilePath = path.join(__dirname, '../database/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//const usersFilePath = path.join(__dirname, '../database/users.json');
+//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userControllers={
     create:(req,res)=>{
 		
-        res.render('users/RegistrarseParents.ejs')
+        res.render('users/registerParents.ejs')
     },
 
-    data: (req, res) => {
+    data: async(req, res) => {
 	
 		
 		const resultvalidation = validationResult(req);
 
 		if(resultvalidation.errors.length>0){
 
-			return res.render('users/RegistrarseParents.ejs',{
+			return res.render('users/registerParents.ejs',{
 				errors: resultvalidation.mapped(),
 				oldData: req.body
 			});
 
 		}
+		try {
 
-		let userInDB =User.findbyfield('email', req.body.email)
-		if(userInDB){
+		let allUsers= await db.User.findAll()
+        let userFind=allUsers.find(oneUser=>oneUser["email"]==req.body.email)
 
-			return res.render('users/RegistrarseParents.ejs',{
+		//let userInDB =User.findbyfield('email', req.body.email)
+		if(userFind){
+
+			return res.render('users/registerParents.ejs',{
 				errors: {
 					email:{
 						msg:'Este email ya esta registrado',
@@ -57,10 +62,17 @@ const userControllers={
 		}
 
 		
-
-		let createUser=User.create(userToCreate)
+		db.User.create(userToCreate)
+		//let createUser=User.create(userToCreate)
+		console.log(userToCreate)
 		
-		res.redirect('users/login')
+		res.redirect('/users/login')
+			
+		} catch (error) {
+			console.log(error)
+		}
+		
+		
 			
 	},
 
@@ -106,17 +118,7 @@ const userControllers={
 		})
 	},
 
-	admin:(req,res)=>{
-
-		let usuarios=User.findAll()
-		user=usuarios.find(usuario=>usuario.admin==1)
 	
-		if(user){
-		res.redirect('/products/sign')}
-		else{
-		res.send('No eres administrador')
-		}
-	},
 
 	logout:(req,res)=>{
 		req.session.destroy()
