@@ -77,7 +77,8 @@ const controller = {
 		products.push(obj);
 		console.log(obj)
 		fs.writeFileSync(productsFilePath,JSON.stringify(products))
-		res.redirect('products/compras')
+		//res.redirect('products/compras')
+		res.send(products);
 		
 	},
 

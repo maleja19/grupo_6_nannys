@@ -8,13 +8,13 @@ const routerProducts = express.Router();
 const validations=require('../middlewares/validationNinnerasMiddlewares')
 const upload=require('../middlewares/multerMiddlewares')
 
-
+routerProducts.get('/products/:id/', productsController.detail);
 
 
 routerProducts.get('/products/compras', productsController.allgetProducts);
-routerProducts.get('/products/:id/', productsController.detail);
-
 routerProducts.get('/products/sign', productsController.create);
+
+
 routerProducts.post('/new-ninera',upload.single('img'), validations,productsController.store);
 routerProducts.get('/products/:id/edit', productsController.edit);
 routerProducts.put('/:id/edit', upload.single('img'),productsController.update);
