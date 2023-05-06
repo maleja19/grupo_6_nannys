@@ -5,62 +5,55 @@
     <link rel="stylesheet" href="/css/sitters.css">
 
 <body>
-    <header>
-        <nav class="navBar">
-    
-            <div class="contenedorLogo">
-                <a href="/"><img src="/images/logo.jpg" class="logo" alt="Logo"></a>
+    <%- include('../partials/header.ejs')%> 
+           
+
+    <main>
+        
+        <form action="/products/buscar" method="POST">
+            <div class="buscador">
+                <input class="search" type="text" name="search"><button class="boton-buscar" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
             
-            <div class="contenedorBotones">
-                <i class="fa-solid fa-baby-carriage"></i>  
-                <a href="/" class="botonNav">Como Funciona?</a>
-                <a href="/products/compras" class="botonNav">Servicios</a>
-                <a href="#" class="botonNav">Ayuda</a>
-                <a href="/users/login" class="botonNav">Acceder</a>
-                <a href="/products/sign" class="botonNav">Registrarse</a>
-            </div>
-    
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-    
-        </nav>
-        </header>      
-
-    <main>       
-        <div class="buscador">
-            <input class="search" type="text" ><i class="fa fa-search" aria-hidden="true"></i>
-        </div>
+        </form>  
 
 
     <div class="contain-page">
         
-        <div class="contain-nineras">
-
-        <% for(i=0;i< productos.length;i++){%>
+        <div class="contain-nineras">   
             
-            <div class="contain-perfil">
-            
-            <div class="contain-person"><img class="img-person" src="<%= productos[i].img %>"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>               
-            <div class="descripcion">
-                <h4><%= productos[i].nombre+" "+productos[i].apellido%></h4>
-                <p><%= productos[i].frase %></p>
+      
 
-            <ul name="aptitudes">
-                <li><%= productos[i].aptitudes[0]%></li>
-                <li><%= productos[i].aptitudes[1]%></li>
-                <li><%= productos[i].aptitudes[2]%></li>            
-            </ul> 
-                     
-              
-                <p>Valor:<%= productos[i].precio %></p>
-                <input class="submit" type="submit" value="Seleccionar">
-                </div>
-            </div>
-            <%}%>
+                <% for(let i=0;i< productos.length;i++){%>
+            
+                    <div class="contain-perfil">
+                    
+                    <div class="contain-person"><img class="img-person" src="<%= productos[i].img %>"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>               
+                    <div class="descripcion">
+                        <h4><%= productos[i].nombre+" "+productos[i].apellido%></h4>
+
+                        <br>
+                        
+                        <p><%= productos[i].frase%></p>
+
+                        <br>
+                    <ul>
+                        <li>Me considero una persona <%= productos[i].babySitterAptitud.aptitudes%></li>
+                                 
+                    </ul> 
+                             
                       
+                        <p>Valor:$ <%= productos[i].precio %>/hora</p>
+                         <div>
+                        <input class="submit" type="submit" value="Seleccionar">
+                        </div>
+                     </div>
+                    </div>
+                   
+                    <%}%>
+            
+                                    
 
         </div>
                

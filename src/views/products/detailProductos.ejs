@@ -19,21 +19,22 @@
                 <a href="#">
                     <img src="<%= product.img %>">
                 </a>
-                <h2><%= product.nombre %></h2>
+                <h2><%= product.nombre +" "+ product.apellido %></h2>
                 <h4>Niñera Profesional</h4>
             </div>
             <div class="descripcion">
-                <p><%= product.descipción%></p>
-                    <div class="caracteristica">Precio:<%= product.precio%></div>
-                    <div class="caracteristica">Aptitudes:</div>
+                    <div class="caracteristica">Perfil</div>
+                    <p><%= product.descripcion%></p>
+                    <div class="caracteristica">frase</div>
+                    <p><%= product.frase%></p>
+                    <div class="caracteristica">Precio</div><span>$<%= product.precio%></span>
+                    <div class="caracteristica">Aptitud con la que mas me identifico</div>
                     <ul>
-                        <li><%= product.aptitudes[0]%></li>
-                        <li><%= product.aptitudes[1]%></li>
-                        <li><%= product.aptitudes[2]%></li>
-                        
+                        <p><%= product.babySitterAptitud.aptitudes%></p>
+                                                
                     </ul>
-                    <div class="caracteristica">Celular:<%= product.celular%></div>
-                    <div class="caracteristica">Mail:<%= product.email%></div>
+                    <div class="caracteristica">Celular</div><span><%= product.celular%></span>
+                    <div class="caracteristica">Email</div><span><%= product.email%><span></span>
                     
             </div>
         </div>

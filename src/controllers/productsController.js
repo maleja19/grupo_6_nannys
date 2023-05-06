@@ -1,49 +1,90 @@
-const fs = require('fs');
+//const fs = require('fs');
 const path = require('path');
 const { validationResult }=require('express-validator');
 const bcrypt =require('bcryptjs');
+const db = require("../database/models/index");
+const { Model, where } = require('sequelize');
 
-const productsFilePath = path.join(__dirname, '../database/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
 
 const productsController = {
 	// Root - Show all products
-	allgetProducts: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render('products/babySitters.ejs',{'productos': products})
+	allgetProducts: async(req, res) => {
+		
+		try{
+
+		const product=await db.BabySitter.findAll({include:[{model:db.Aptitud,as:'babySitterAptitud'}]})
+		console.log(product)
+		res.render('products/babySitters.ejs',{'productos':product})}
+		catch(error){
+			console.log(error)
+		}
+
 	},
+
+	search: async(req,res)=>{
+
+		const findBabbySitter= req.body.search;
+		try{		
+		
+
+		const products= await db.BabySitter.findAll({include:[{model:db.Aptitud,as:'babySitterAptitud'}],where:{nombre:findBabbySitter}})
+	
+
+		res.render('products/babySitters.ejs',{'productos':products})
+		}	
+		catch(error){
+			console.log(error)
+		}
+
+		
+			
+	},		
+	
 
 	create: (req,res) => {
 		res.render('products/registerBabySitters.ejs')
 	},
 
-	detail: (req,res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		const{id}=req.params;
-		const product=products.find(elem => elem.id ==parseInt(id));
+	detail: async (req,res) => {
+
+		const IdProduct=req.params.id
+		try{	
+			
+			const product=await db.BabySitter.findByPk(IdProduct, {include:[{model:db.Aptitud,as:'babySitterAptitud'}]})
+			
 		
 		if(product){
-			return res.render('products/detailProductos.ejs',{product:product})
+			return res.render('products/detailProductos.ejs',{product})
 		}
+
+		}catch(error){
+			console.log(error)
+		}
+		
+		
 
 		
 	},
 
-	store: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-		//console.log(req.body)
+	store: async(req, res) => {
+		
 		const resultvalidation = validationResult(req);
 
 		if(resultvalidation.errors.length>0){
-
 			return res.render('products/registerBabySitters.ejs',{
-				errors: resultvalidation.mapped() })
+				errors: resultvalidation.mapped(),
+				
+				oldData: req.body})
 		}
 		
-		const{img,nombre,apellido,email,username,password,edad,nacionalidad,paisDeResidencia,ciudadDeResidencia,direccion,celular,descripcion,frase,precio,aptitudes}=req.body;
+		const{img,nombre,apellido,email,username,password,edad,paisDeResidencia,ciudad_de_residencias_id,direccion,celular,descripcion,frase,precio,aptitudes_id}=req.body;
 
-		const newId=products[products.length-1].id+1;
+		//console.log("Imprimiré las aptitudes");
+		
+
+		//const newId=products[products.length-1].id+1;
 
 		const image= req.file? req.file.filename : '';
 		let newImage;
@@ -53,9 +94,13 @@ const productsController = {
 		if(image.length >0){
 			newImage = `/images/${image}`;
 		}
-
+		
+		try{
+		let aptitudes = await db.Aptitud.findByPk(aptitudes_id)
+			console.log(aptitudes)
 		const obj = {
-			id:newId, 
+			//id:newId, 
+			
 			img:newImage,
 			nombre,
 			apellido,
@@ -63,94 +108,115 @@ const productsController = {
 			username,
 			password: bcrypt.hashSync(password,10),
 			edad,
-			nacionalidad,
 			paisDeResidencia,
-			ciudadDeResidencia,
+			ciudad_de_residencias_id,
 			direccion,
 			celular,
 			descripcion,
 			frase,
-			precio,
-			aptitudes
-
+			aptitudes_id:aptitudes.id,
+			precio
+			
+			
+			}	
+		
+			
+			let dta=await(db.BabySitter.create(obj,{include:[{model:db.Aptitud,as:'babySitterAptitud'}]}))
 		}
-
-		products.push(obj);
-		console.log(obj)
-		fs.writeFileSync(productsFilePath,JSON.stringify(products))
+	
+		
+		catch(error){
+			console.log(error,"soy catch")
+		}
+		//fs.writeFileSync(productsFilePath,JSON.stringify(products))
 		res.redirect('/products/compras')
-		
-		
+		//console.log(aptitudes);
 	},
 
 	
 
-	edit:(req,res)=>{
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		const {id}=req.params;
-		const aptitudes=["creativa","organizada","comunicativa"]
+	edit:async(req,res)=>{
+		//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		const babySitterId=req.params.id;
+		
+		const editProducts = await db.BabySitter.findByPk(parseInt(babySitterId))
+	
 
-		const editProducts = products.find(elem=> elem.id ==id)
-
-		res.render('products/formEditNineras.ejs',{editProducts,aptitudes})
+		res.render('products/formEditNineras.ejs',{editProducts})
 
 	},
 
-	update: (req, res) => {	
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	update: async(req, res) => {	
+		//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-		const image= req.file? req.file.filename : elem.img;
-		let newImage;	
+		
+		const image= req.file? req.file.filename : '';
+		let newImage;
+		
 		
 		
 		if(image.length >0){
 			newImage = `/images/${image}`;
 		}
-				
-		products.forEach(elem => {		
-			
-						
-			if(elem.id == req.params.id){
-				elem.img = newImage;
-				elem.nombre = req.body.nombre;
-				elem.apellido=req.body.apellido;
-				elem.email=req.body.email;
-				elem.username=req.body.username;
-				elem.password=req.body.password;
-				elem.edad=req.body.edad;
-				elem.paisDeResidencia=req.body.paisDeResidencia;
-				elem.ciudadDeResidencia=req.body.ciudadDeResidencia;
-				elem.direccion=req.body.direccion;
-				elem.celular=req.body.celular;
-				elem.descripcion=req.body.descripcion;
-				elem.precio=req.body.precio;
-				elem.frase=req.body.frase;
-				elem.aptitudes=req.body.aptitudes;
-			}	
-				
-					
-				
-			
-		});
+		
 
 		
-		fs.writeFileSync(productsFilePath,JSON.stringify(products))
+	
+			//let aptitudes = await db.Aptitud.findByPk(aptitudes_id)	
+
+		const{img,nombre,apellido,email,username,password,edad,paisDeResidencia,ciudad_de_residencias_id,direccion,celular,descripcion,frase,precio,aptitudes_id}=req.body;
+
+		const editBabySitter={
+				img : newImage,
+				nombre,
+				apellido,
+				email,
+				username,
+				password:bcrypt.hashSync(password,10),
+				edad,
+				paisDeResidencia,
+				ciudad_de_residencias_id,
+				direccion,
+				celular,
+				descripcion,
+				precio,
+				frase,
+				aptitudes_id
+			}
 		
+		try{
+		await db.BabySitter.update(editBabySitter,{where:{id:req.params.id}});
+		}catch(error){
+			console.log(error)
+		}
+
+		
+				
 		res.redirect('/products/compras')
 	},
 
-	eliminar: (req,res)=>{
+	destroy: async(req,res)=>{
 
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		const id=req.params.id;
-		const productsFilter=products.filter(elem => elem.id != id);
+		
+		const babySitterId=req.params.id;
+
+		try{
+		
+		
+		await db.BabySitter.destroy({where:{id:babySitterId}, force: true})
+
+
+		}catch(error)
+		{console.log(error)}
 		
 		
 		
-		fs.writeFileSync(productsFilePath,JSON.stringify(productsFilter))
+		
 			
 		res.redirect('/products/compras')
 	}
+
+
 
 }
 

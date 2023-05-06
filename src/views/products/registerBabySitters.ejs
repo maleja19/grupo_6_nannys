@@ -15,7 +15,7 @@
 <form action="/products/sign" method="POST" enctype="multipart/form-data">
     <h1>¡Bienvenido a Nannies!</h1>
     <div class="control-formulario">
-      Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple">
+      Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" value="<%locals.oldData ? oldData.img :null%>">
       <% if(locals.errors && errors.img){%>
         <div class="text-danger">
             <%= errors.img.msg %>
@@ -26,7 +26,7 @@
     
     <div class="control-formulario">
         <label>Nombre</label>
-        <input type="text" name="nombre" class="control">
+        <input type="text" name="nombre" class="control" value="<%locals.oldData ? oldData.nombre :null%>">
         <% if(locals.errors && errors.nombre){%>
             <div class="text-danger">
                 <%= errors.nombre.msg %>
@@ -36,7 +36,7 @@
 
     <div class="control-formulario">
         <label>Apellido</label>
-        <input type="text" name="apellido" class="control">
+        <input type="text" name="apellido" class="control" value="<%locals.oldData ? oldData.apellido :null%>">
         <% if(locals.errors && errors.apellido){%>
             <div class="text-danger">
                 <%= errors.apellido.msg %>
@@ -47,7 +47,7 @@
 
     <div class="control-formulario">
         <label>Correo Electrónico</label>
-        <input type="email" name="email" class="control">
+        <input type="email" name="email" class="control" value="<%locals.oldData ? oldData.email :null%>">
         <% if(locals.errors && errors.email){%>
             <div class="text-danger">
                 <%= errors.email.msg %>
@@ -58,7 +58,7 @@
 
     <div class="control-formulario">
         <label for="" class="label">Username</label>
-        <input type="text" name="username" class="control">
+        <input type="text" name="username" class="control" value="<%locals.oldData ? oldData.username :null%>">
         <% if(locals.errors && errors.username){%>
             <div class="text-danger">
                 <%= errors.username.msg %>
@@ -69,7 +69,7 @@
 
     <div class="control-formulario">
         <label for="" class="label">Password</label>
-        <input type="password" name="password" class="control">
+        <input type="password" name="password" class="control" value="<%locals.oldData ? oldData.password :null%>">
         <% if(locals.errors && errors.password){%>
             <div class="text-danger">
                 <%= errors.password.msg %>
@@ -80,7 +80,7 @@
    
     <div class="control-formulario">
         <label>Edad</label>
-        <input type="text" name="edad" class="control">
+        <input type="text" name="edad" class="control" value="<%locals.oldData ? oldData.edad :null%>">
         <% if(locals.errors && errors.edad){%>
             <div class="text-danger">
                 <%= errors.edad.msg %>
@@ -89,23 +89,13 @@
         
     </div>
 
-    <div class="control-formulario">
-        <label>Nacionadlidad</label>
-        <input type="text" name="nacionalidad" class="control">
-        <% if(locals.errors && errors.nacionalidad){%>
-            <div class="text-danger">
-                <%= errors.nacionalidad.msg %>
-            </div>
-        <%} %>
-       
-    </div>
+
 
     <div class="control-formulario">
         <label>País de residencia</label>
-        <select name="paisDeResidencia" class="control">
-            <option value="">Elegi una opción</option>
+        <select name="paisDeResidencia" class="control" value="<%locals.oldData ? oldData.paisDeResidencia :null%>">
             <option value="Argentina">Argentina</option>
-            <option value="Colombia">Colombia</option>
+            
             
         </select>
         <% if(locals.errors && errors.paisDeResidencia){%>
@@ -118,21 +108,21 @@
 
     <div class="control-formulario">
          <label>Ciudad de residencia</label>
-         <select name="ciudadDeResidencia" class="control">
-            <option value="Elegi una ciudad">Elegi una ciudad</option>
-            <option value="Buenos aires">Buenos aires</option>
-            <option value="Santa Fe">Santa Fe</option>
-            <option value="Rosario">Rosario</option>
-            <option value="Mendoza">Mendoza</option>
-            <option value="Mar de plata">Mar de plata</option>
-            <option value="La Plata">La Plata</option>
+         <select name="ciudad_de_residencias_id" class="control" value="<%locals.oldData ? oldData.ciudad_de_residencias_id :null%>">
+            <option value="0">Elegi una ciudad</option>
+            <option value="1">Buenos aires</option>
+            <option value="2">Santa Fe</option>
+            <option value="3">Rosario</option>
+            <option value="4">Mendoza</option>
+            <option value="5">Mar de plata</option>
+            <option value="6">La Plata</option>
           
         </select>
     </div>  
     
     <div class="control-formulario">
         <label>Dirección</label>
-        <input type="text" name="direccion" class="control">
+        <input type="text" name="direccion" class="control" value="<%locals.oldData ? oldData.direccion :null%>">
         <% if(locals.errors && errors.direccion){%>
             <div class="text-danger">
                 <%= errors.direccion.msg %>
@@ -142,7 +132,7 @@
     
     <div class="control-formulario">
         <label>Número de Contacto</label>
-        <input type="number" name="celular" class="control" placeholder="">
+        <input type="number" name="celular" class="control" value="<%locals.oldData ? oldData.celular :null%>">
         <% if(locals.errors && errors.celular){%>
             <div class="text-danger">
                 <%= errors.celular.msg %>
@@ -154,7 +144,7 @@
  
     <div class="control-formulario">
         <label>Descripción</label>
-        <textarea name="descripcion" class="control"></textarea >
+        <textarea name="descripcion" class="control" value="<%locals.oldData ? oldData.descripcion :null%>"></textarea >
             <% if(locals.errors && errors.descripcion){%>
                 <div class="text-danger">
                     <%= errors.descripcion.msg %>
@@ -164,7 +154,7 @@
 
     <div class="control-formulario">
         <label>Describete en una frase</label><!--- Se debe limitar-->
-        <textarea name="frase" class="control"></textarea >
+        <textarea name="frase" class="control" value="<%locals.oldData ? oldData.frase :null%>"></textarea >
             <% if(locals.errors && errors.frase){%>
                 <div class="text-danger">
                     <%= errors.frase.msg %>
@@ -175,21 +165,22 @@
     
 
     <div class="control-formulario">
-        <label>Aptitudes (Seleccioná tres)</label>
-        
-        <input  type="checkbox" name="aptitudes" value="Paciencia"><label for="Paciencia">Paciencia</label></div>
-        <input  type="checkbox" name="aptitudes" value="Respondable"><label for="Respondable">Respondable</label></div>
-        <input  type="checkbox" name="aptitudes" value="Proactiva"><label for="Proactiva">Proactiva</label></div>
-        <input  type="checkbox" name="aptitudes" value="Divertida"><label for="Divertida">Divertida</label></div>
-        <input  type="checkbox" name="aptitudes" value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
-        <input  type="checkbox" name="aptitudes" value="Organizada"><label for="Organizada">Organizada</label></div>
-        <input  type="checkbox" name="aptitudes" value="Puntual"><label for="Puntual">Puntual</label></div>
-        <input  type="checkbox" name="aptitudes" value="Creativa"><label for="Creativa">Creativa</label></div>
-        <input  type="checkbox" name="aptitudes" value="Amistosa"><label for="Amistosa">Amistosa</label></div>
+        <label>Aptitudes(Escoge una aptitud que más te represente)</label>
+        <select name="aptitudes_id" class="control" value="<%locals.oldData ? oldData.aptitudes_id :null%>">
+            <option value="1">Creativa</option>
+            <option value="2">Paciencia</option>
+            <option value="3">Responsable</option>
+            <option value="4">Comunicativa</option>
+            <option value="5">Divertida</option>
+            <option value="6">Organizada</option>
+            <option value="7">Atenta</option>
+            
+          
+        </select>
 
-        <% if(locals.errors && errors.aptitudes){%>
+        <% if(locals.errors && errors.aptitudes_id){%>
             <div class="text-danger">
-                <%= errors.aptitudes.msg %>
+                <%= errors.aptitudes_id.msg %>
             </div>
         <%} %>
        
@@ -198,7 +189,7 @@
 
     <div class="control-formulario">
         <label>Precio por Hora</label>
-       <input type="price" name="precio" class="control" placeholder="">
+       <input type="price" name="precio" class="control" value="<%locals.oldData ? oldData.precio :null%>">
        <% if(locals.errors && errors.precio){%>
         <div class="text-danger">
             <%= errors.precio.msg %>

@@ -40,6 +40,14 @@ height: 10vh;
   margin-top: 1%;
 }
 
+.contenedorBotones i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 28px;
+  top: 4px;
+}
+
 .botonNav{
 height: 5vh;
 }
@@ -97,6 +105,8 @@ form {
   border: #83af9b solid 2px;
   border-radius: 5px;
   background-color: #EDEDEC;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
 }
 
 

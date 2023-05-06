@@ -2,7 +2,7 @@
 <html lang="en">
     
 <%- include('../partials/head.ejs')%>
-<link rel="stylesheet" href="/css/registerParents.css">
+<link rel="stylesheet" href="/css/editParents.css">
 
           
 <body>
@@ -14,7 +14,7 @@
 <h1>¡Bienvenido a Nannies!</h1>
 
 <div class="control-formulario">
-Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple" >
+Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" value="<%locals.oldData ? oldData.img :null%>">
 <% if(locals.errors && errors.img){%>
     <div class="text-danger">
         <%= errors.img.msg %>
@@ -63,52 +63,38 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label for="" class="label">Password</label>
-        <input type="password" name="password" class="control" >
-        <% if(locals.errors && errors.username){%>
+        <input type="password" name="password" class="control" value="<%locals.oldData ? oldData.password :null%>">
+        <% if(locals.errors && errors.password){%>
             <div class="text-danger">password
                 <%= errors.password.msg %>
             </div>
         <%} %>
     </div>
 
-    <div class="control-formulario">
-        <label>Nacionadlidad</label>
-        <input type="text" name="nacionalidad" class="control"value="<%locals.oldData ? oldData.nacionalidad :null%>">
-        <% if(locals.errors && errors.nacionalidad){%>
-            <div class="text-danger">password
-                <%= errors.nacionalidad.msg %>
-            </div>
-        <%} %>
-    </div>
-
-    <div class="control-formulario">
+      <div class="control-formulario">
         <label>País de residencia</label>
-        <select name="pais_de_residencia" class="control" >
-            <option value="Elegi una opcion">Elegi una opción</option>
+        <select name="paisDeResidencia" class="control" value="<%locals.oldData ? oldData.paisDeResidencia :null%>">
             <option value="Argentina">Argentina</option>
-            <option value="Colombia">Colombia</option>
+            
             
         </select>
-        <% if(locals.errors && errors.pais_de_residencia){%>
-            <div class="text-danger">
-                <%= errors.pais_de_residencia.msg %>
-            </div>
-        <%} %>
+        
           
     </div>
 
     <div class="control-formulario">
         <label>Ciudad de residencia</label>
-        <select name="ciudad_de_residencia" class="control" >
-           <option value="Elegi una ciudad">Elegi una ciudad</option>
-           <option value="Buenos aires">Buenos aires</option>
-           <option value="Santa Fe">Santa Fe</option>
-           <option value="Rosario">Rosario</option>
-           <option value="Mendoza">Mendoza</option>
-           <option value="Mar de plata">Mar de plata</option>
-           <option value="La Plata">La Plata</option>
+        <select name="ciudad_de_residencias_id" class="control" value="<%locals.oldData ? oldData.ciudad_de_residencias_id :null%>" >
+           <option value="0">Elegi una ciudad</option>
+           <option value="1">Buenos aires</option>
+           <option value="2">Santa Fe</option>
+           <option value="3">Rosario</option>
+           <option value="4">Mendoza</option>
+           <option value="5">Mar de plata</option>
+           <option value="6">La Plata</option>
          
        </select>
+       
    </div>
     
     <div class="control-formulario">
@@ -125,7 +111,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
         <label>Número de Contacto</label>
         <input type="text" name="movil" class="control" placeholder="" value="<%locals.oldData ? oldData.text :null%>">
         <% if(locals.errors && errors.movil){%>
-            <div class="text-danger">
+            <div class="text-danger">   
                 <%= errors.movil.msg %>
             </div>
         <%} %>
@@ -133,16 +119,11 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label>Alguna vez contrataste niñera?</label>         
-            <input type="radio" name="pregunta" class="radio">Si
-            <input type="radio" name="pregunta" class="radio">No</label>
+            <input type="radio" name="pregunta" value="Si" class="radio">Si
+            <input type="radio" name="pregunta" value="No" class="radio">No</label>
     </div>
 
-    <div class="control-formulario">
-        <label>Dejanos tus dudas</label>
-        <textarea name="dudas" class="control" value="<%locals.oldData ? oldData.dudas :null%>"></textarea >
-    </div>
-
-    
+       
     <button type="submit" class="boton-formulario">Guardar</button>
  </form>
 

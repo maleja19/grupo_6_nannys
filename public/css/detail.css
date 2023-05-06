@@ -2,9 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x:  hidden;
+  /*overflow-x: hidden;*/
 }
-
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
 
 .navBar {
@@ -42,6 +41,14 @@ height: 10vh;
   margin-top: 1%;
 }
 
+.contenedorBotones i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 28px;
+  top: 4px;
+}
+
 .botonNav{
 height: 5vh;
 }
@@ -52,11 +59,33 @@ height: 5vh;
   
 }
 
+.burger-menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  padding: 1%;    
+}
+
+.burger-menu i{
+  padding: 1%;
+  border: white solid 1px;
+  color: white ;
+  border-radius: 5px;
+}
+
+.burger-menu i:hover {
+  background-color: white;
+  border: #fc9d9a solid 1px;
+  color: #fc9d9a ;
+}
+
 .imagen-perfil{
   width: 3vw;
   height: 5vh;
   border-radius: 50%;
 }
+
 
 /*BODY*/
 
@@ -65,11 +94,11 @@ height: 5vh;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #f9cdad;
-  padding: 0 20px;
+  background: white;
+  padding-top: 15vh;
   font-family: "poppins";
   font-weight: bolder;
-  margin-top: 60px;
+  /*margin-top: 60px;*/
 }
 
 .card-container {
@@ -82,13 +111,15 @@ height: 5vh;
 
 .header {
   border-right: 1px solid gray;
-  width: 50vw;
+  width: 40vw;
+  background-color:  #f9cdad;
 }
 
 .descripcion {
-  background: #fc9d9a;
-  width: 50vw;
+  border-right: 1px solid gray;
+  width: 40vw;
 }
+
 
 .header, .descripcion {
   padding: 20px;
@@ -112,14 +143,14 @@ height: 5vh;
 }
 
 .header h2 {
-  color: #fc9d9a;
+  color: #83af9b;
   font-family: "montserrat";
 }
 
 .header h4 {
   margin-bottom: 20px;
-  color: gray;
-  font-family:"poppins";
+  color: white;
+  font-family:"montserrat";
 }
 
 .descripcion {
@@ -128,14 +159,27 @@ height: 5vh;
 
 .descripcion p {
   margin: 20px 30px;
-  color: gray;
+  color: black;
+  font-family: "montserrat";
+  font-size: 2vh;
+}
+
+.descripcion span {
+  
+  color: black;
+  font-family: "montserrat";
+  font-size: 2vh;
 }
 
 .caracteristica {
   text-align: initial;
-  color: gray;
+  color: #83af9b;
   margin: 10px;
+  font-family: "montserrat";
+  
 }
+
+
 
 .header img{
   width: 60vw;
