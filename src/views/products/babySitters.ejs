@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs')%>
+    <link rel="stylesheet" href="/css/sitters.css">
+
+<body>
+    <%- include('../partials/header.ejs')%> 
+           
+
+    <main>
+        
+        <form action="/products/buscar" method="POST">
+            <div class="buscador">
+                <input class="search" type="text" name="search"><button class="boton-buscar" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+            
+        </form>  
+
+
+    <div class="contain-page">
+        
+        <div class="contain-nineras">   
+            
+      
+
+                <% for(let i=0;i< productos.length;i++){%>
+            
+                    <div class="contain-perfil">
+                    
+                    <div class="contain-person"><img class="img-person" src="<%= productos[i].img %>"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>               
+                    <div class="descripcion">
+                        <h4><%= productos[i].nombre+" "+productos[i].apellido%></h4>
+
+                        <br>
+                        
+                        <p><%= productos[i].frase%></p>
+
+                        <br>
+                    <ul>
+                        <li>Me considero una persona <%= productos[i].babySitterAptitud.aptitudes%></li>
+                                 
+                    </ul> 
+                             
+                      
+                        <p>Valor:$ <%= productos[i].precio %>/hora</p>
+                         <div>
+                        <input class="submit" type="submit" value="Seleccionar">
+                        </div>
+                     </div>
+                    </div>
+                   
+                    <%}%>
+            
+                                    
+
+        </div>
+               
+        <div class="contain-map">
+            
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.955285859576!2d-58.52320478519984!3d-34.47865855839786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb047eee0d8a3%3A0xc37aa5894070f63b!2sAv.%20Bernab%C3%A9%20M%C3%A1rquez%20700%2C%20San%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1617900991168!5m2!1ses!2sar" 
+                style="border:0; " allowfullscreen="" loading="lazy"></iframe>
+            
+        </div>
+                    
+    </div>
+    </main>      
+
+    <%- include('../partials/footer.ejs')%>   
+           
+</body>
+
+
+
+
+</html>

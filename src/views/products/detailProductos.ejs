@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs')%>
+    <link rel="stylesheet" href="/css/detail.css">
+
+<body>  
+
+    <%- include('../partials/header.ejs')%>  
+    
+        
+    
+    <div class="contenedorDetalle">
+
+       
+        <div class="card-container">
+            <div class="header">        
+        
+                <a href="#">
+                    <img src="<%= product.img %>">
+                </a>
+                <h2><%= product.nombre +" "+ product.apellido %></h2>
+                <h4>Niñera Profesional</h4>
+            </div>
+            <div class="descripcion">
+                    <div class="caracteristica">Perfil</div>
+                    <p><%= product.descripcion%></p>
+                    <div class="caracteristica">frase</div>
+                    <p><%= product.frase%></p>
+                    <div class="caracteristica">Precio</div><span>$<%= product.precio%></span>
+                    <div class="caracteristica">Aptitud con la que mas me identifico</div>
+                    <ul>
+                        <p><%= product.babySitterAptitud.aptitudes%></p>
+                                                
+                    </ul>
+                    <div class="caracteristica">Celular</div><span><%= product.celular%></span>
+                    <div class="caracteristica">Email</div><span><%= product.email%><span></span>
+                    
+            </div>
+        </div>
+
+    </div>
+   
+    
+    
+
+    <%- include('../partials/footer.ejs')%>
+
+</body>
+</html>

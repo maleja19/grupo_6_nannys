@@ -2,7 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  }
+  /*overflow-x: hidden;*/
+}
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
 
 .navBar {
@@ -38,6 +39,14 @@ height: 10vh;
 
 .contenedorBotones{
   margin-top: 1%;
+}
+
+.contenedorBotones i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 28px;
+  top: 4px;
 }
 
 .botonNav{
@@ -76,99 +85,109 @@ height: 5vh;
   height: 5vh;
   border-radius: 50%;
 }
-/*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
 
-main{
- 
-  padding-top: 25vh;
-  padding-bottom: 5vh;
-  width: 100%;
 
-  
-}
-form {
-  width: 80%;
-  max-width: 600px;
-  margin: 0 auto;
+/*BODY*/
+
+.contenedorDetalle {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border: #83af9b solid 2px;
-  border-radius: 5px;
-  background-color: #EDEDEC;
+  justify-content: center;
+  height: 100vh;
+  background: white;
+  padding-top: 15vh;
+  font-family: "poppins";
+  font-weight: bolder;
+  /*margin-top: 60px;*/
+}
+
+.card-container {
+  display: flex;
+  height: auto;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  border-right: 1px solid gray;
+  width: 40vw;
+  background-color:  #f9cdad;
+}
+
+.descripcion {
+  border-right: 1px solid gray;
+  width: 40vw;
 }
 
 
-h1 {
+.header, .descripcion {
+  padding: 20px;
   text-align: center;
-  margin-bottom: 5vh;
-  font-size: 4vh;
-  color:#83af9b;
 }
 
- .create-form {
-    padding-top: 6vh;
- }    
+.header a{
+  position: relative;
+  display: block;
+}
 
- .control-formulario {
-    margin-bottom: 30px;
-    width:141vw;
-    text-align: center;
-    color:#83af9b;
-    
-     }
+.header img {
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, .06);
+  margin: 20px 30px;
+  transition: .2s;
+}
 
- .control-formulario label {
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-     }
+.header a:hover img {
+  box-shadow: 0 0 0 12px rgba(0, 0, 0, .1);
+}
 
- .radio {
-    padding: 5px 5px;
- }
-
- .control {   
-    padding: 8px 8px;
-    
- }
-
-.boton-formulario-enter {
-  border-color: gray;
+.header h2 {
   color: #83af9b;
-  font-weight:200;
-  justify-content:stretch;
-  text-align:center;
-  border-radius: 5px;
-  display:inline-table;
-  width: 30%;
-  padding: 0px 8px;
-  margin-bottom: 1vh;
-  height: 3.5vh;
+  font-family: "montserrat";
+}
 
-  }
+.header h4 {
+  margin-bottom: 20px;
+  color: white;
+  font-family:"montserrat";
+}
 
-form a{
-  color:black;
-  font-weight:200;
-  justify-content:right;
-  text-align:center;
-  padding: 0px 8px;
-  margin-bottom: 3vh;
+.descripcion {
+  position: relative;
+}
+
+.descripcion p {
+  margin: 20px 30px;
+  color: black;
+  font-family: "montserrat";
+  font-size: 2vh;
+}
+
+.descripcion span {
   
-  }
+  color: black;
+  font-family: "montserrat";
+  font-size: 2vh;
+}
 
-  .text-danger{
-    font-size: 2vh;
-    color: #bd081c;
-  }
+.caracteristica {
+  text-align: initial;
+  color: #83af9b;
+  margin: 10px;
+  font-family: "montserrat";
   
-  
+}
 
 
-/*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
+
+.header img{
+  width: 60vw;
+  height: 35vh;
+}
+
+/*FOOTER*/
+
 footer {
   background-color:#fc9d9a ;
   position: relative;
@@ -299,7 +318,32 @@ width: 100vw;
 .contenedorRedes ul li .youtube:hover {
   background: var(--youtube);
 }
-/*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
+
+/*MEDIA QUERIES*/
+
+
+
+@media (max-width:640px){
+  .card-container{
+      display: block;
+      width: 450px;
+  }
+  .header {
+      padding: 20px 20px 5px 20px;
+      border: none;
+      width: auto;
+      border-bottom: gray solid 1px;
+  }
+  .descripcion{
+      padding: 5px 20px 20px 20px;
+      background: transparent;
+      width: auto;
+  }
+
+  .header h4 {
+      margin:0;
+  }
+}
 
 @media (max-width:768px) {
   .contenedorLogo {
@@ -319,77 +363,72 @@ width: 100vw;
       width: 90vw;
   }
 
-  .contenedorFooterRedes {
+.contenedorFooterRedes {
     width: 90vw;
   }
 
-  .servicios {
-    flex-wrap: wrap;
-  }
+.servicios {
+  flex-wrap: wrap;
+}
 
-  .contenedorAccordion{
-    width: 100vw;
-  }
+.contenedorAccordion{
+  width: 100vw;
+}
 
-  .contenedorImagenServicios {
-    width: 100vw;
-  }
+.contenedorImagenServicios {
+  width: 100vw;
+}
 
-  .recomendacionesImg {
-    width: inherit;
-  }
-  .recomendacionesExp {
-    width: 100vw;
-  }
+.recomendacionesImg {
+  width: inherit;
+}
+.recomendacionesExp {
+  width: 100vw;
+}
 
-  .recomendacionesExp h4 {
-    font-size: large;
-  }
-  .contactoImg {
-    width: 100vw;
-  }
-  .contenedorFormulario {
-    width: 100vw;
-  }
-  
+.recomendacionesExp h4 {
+  font-size: large;
+}
+.contactoImg {
+  width: 100vw;
+}
+.contenedorFormulario {
+  width: 100vw;
+}
 
 }
 
 @media (min-width:769px) {
-.contenedorLogo {
-    width: 50vw;
-}
-
-.contenedorLogo a {
-    margin-left: 5%;
-}
-
-.contenedorBotones {
-    width: 49vw;
-    display: flex;
-    justify-content: space-between;
-    padding-right: 2%;
-}
-
-.burger-menu {
-  display: none;
-}
-
-.control-formulario {
-margin-bottom: 30px;
-width:70vw;
-text-align: center;
-
+  .contenedorLogo {
+      width: 50vw;
   }
 
-main{
+  .contenedorLogo a {
+      margin-left: 5%;
+  }
 
-padding-top: 20vh;
-  
+  .contenedorBotones {
+      width: 49vw;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 2%;
+  }
+
+  .burger-menu {
+      display: none;
+  }
+
+  .header img{
+    width: 20vw !important;
+    
+  }
+
 }
 
-.control{
-    width:25vw;
+@media (min-width:426px){
+  .header img{
+    width: 30vw;
     
-   }
+  }
+
 }

@@ -1,11 +1,8 @@
-
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
-}
-
+  }
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
 
 .navBar {
@@ -43,6 +40,14 @@ height: 10vh;
   margin-top: 1%;
 }
 
+.contenedorBotones i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 28px;
+  top: 4px;
+}
+
 .botonNav{
 height: 5vh;
 }
@@ -53,17 +58,41 @@ height: 5vh;
   
 }
 
+.burger-menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  padding: 1%;    
+}
+
+.burger-menu i{
+  padding: 1%;
+  border: white solid 1px;
+  color: white ;
+  border-radius: 5px;
+}
+
+.burger-menu i:hover {
+  background-color: white;
+  border: #fc9d9a solid 1px;
+  color: #fc9d9a ;
+}
+
 .imagen-perfil{
   width: 3vw;
   height: 5vh;
   border-radius: 50%;
 }
-
 /*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
 
-.form-container{
-  padding-top:20vh;
-  width:100%;
+main{
+ 
+  padding-top: 25vh;
+  padding-bottom: 5vh;
+  width: 100%;
+
+  
 }
 form {
   width: 80%;
@@ -76,68 +105,78 @@ form {
   border: #83af9b solid 2px;
   border-radius: 5px;
   background-color: #EDEDEC;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
 }
+
 
 h1 {
-font-size:4vh;
-text-align: center;
-margin-bottom: 10px;
-margin-top: 10px;
-color: #83af9b;
-
-}
-
-body {
-  background-color: white;
-  font-family: 'Poppins';
-  font-size: large;
+  text-align: center;
+  margin-bottom: 5vh;
+  font-size: 4vh;
   color:#83af9b;
 }
 
-.control-formulario {
-  margin-bottom: 10px;  
-  width:180vw;
-  padding-left: 60vw;
-}
+ .create-form {
+    padding-top: 6vh;
+ }    
 
-.control-formulario label {
-  margin-bottom: 0.5vh;
-  font-size: 3vh;
-  font-weight: bold;
-  display: block;
-  font-family: "montserrat";
+ .control-formulario {
+    margin-bottom: 30px;
+    width:141vw;
+    text-align: center;
+    color:#83af9b;
+    
+     }
 
-   }
+ .control-formulario label {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+     }
 
-.file{
-  width: 60vw;
-  display: block;
-  font-size: 1.5vh;
-  text-align: justify;
-}
+ .radio {
+    padding: 5px 5px;
+ }
 
-.radio {
-  padding: 5px 5px;
-}
+ .control {   
+    padding: 8px 8px;
+    
+ }
 
-.control {
-  width: 50%;
-  padding: 8px 8px;
-  height: 3vh;
-}
+.boton-formulario-enter {
+  border-color: gray;
+  color: #83af9b;
+  font-weight:200;
+  justify-content:stretch;
+  text-align:center;
+  border-radius: 5px;
+  display:inline-table;
+  width: 30%;
+  padding: 0px 8px;
+  margin-bottom: 1vh;
+  height: 3.5vh;
 
+  }
+
+form a{
+  color:black;
+  font-weight:200;
+  justify-content:right;
+  text-align:center;
+  padding: 0px 8px;
+  margin-bottom: 3vh;
   
-.boton-formulario {
+  }
 
-border-color: #83af9b;
-color: gray;
-font-size: medium;
-font-weight:bolder;
-position: relative;
-text-align:center;
-border-radius: 5px;
-width: 6vw;
-}
+  .text-danger{
+    font-size: 2vh;
+    color: #bd081c;
+  }
+  
+  
+
 
 /*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
 footer {
@@ -271,37 +310,63 @@ width: 100vw;
   background: var(--youtube);
 }
 /*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
+
 @media (max-width:768px) {
-.contenedorLogo {
-  width: 100vw;
-  text-align: center;
-}
+  .contenedorLogo {
+      width: 100vw;
+      text-align: center;
+  }
 
-.contenedorBotones {
-  display: none;
-}
+  .contenedorBotones {
+      display: none;
+  }
 
-.subtitulo {
-text-align: center;
-}
+  .subtitulo {
+    text-align: center;
+  }
 
-.contenedorFooter {
-  width: 90vw;
-}
+  .contenedorFooter {
+      width: 90vw;
+  }
 
-.contenedorFooterRedes {
-width: 90vw;
-}
+  .contenedorFooterRedes {
+    width: 90vw;
+  }
 
-.boton-formulario {
-  width: 18vw;
+  .servicios {
+    flex-wrap: wrap;
+  }
 
-}
+  .contenedorAccordion{
+    width: 100vw;
+  }
+
+  .contenedorImagenServicios {
+    width: 100vw;
+  }
+
+  .recomendacionesImg {
+    width: inherit;
+  }
+  .recomendacionesExp {
+    width: 100vw;
+  }
+
+  .recomendacionesExp h4 {
+    font-size: large;
+  }
+  .contactoImg {
+    width: 100vw;
+  }
+  .contenedorFormulario {
+    width: 100vw;
+  }
+  
 
 }
 
 @media (min-width:769px) {
-  .contenedorLogo {
+.contenedorLogo {
     width: 50vw;
 }
 
@@ -317,12 +382,24 @@ width: 90vw;
 }
 
 .burger-menu {
-    display: none;
+  display: none;
 }
 
 .control-formulario {
-  margin-bottom: 10px;    
-  width:105vw;
-  padding-left: 35vw;
+margin-bottom: 30px;
+width:70vw;
+text-align: center;
+
+  }
+
+main{
+
+padding-top: 20vh;
+  
 }
+
+.control{
+    width:25vw;
+    
+   }
 }

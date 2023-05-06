@@ -1,0 +1,338 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+  /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
+  
+  .navBar {
+    background-color: #fc9d9a;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    position: fixed;
+    width: 100vw;
+    
+    
+  }
+  .logo{
+  height: 10vh;
+  }
+  
+  .contenedorLogo{
+    padding-top: 0.1vh;
+    height: 11vh;
+  } 
+  
+  .contenedorBotones a{ 
+    display: flex;
+    font-family: "montserrat";
+    color:  gray;
+    text-decoration: none;
+    padding:1%;
+    background-color: white;
+    border-radius: 2px;
+   
+  }
+  
+  .contenedorBotones{
+    margin-top: 1%;
+  }
+  .contenedorBotones i {
+    font-size: 25px;
+    color: white;
+    position: relative;
+    left: 28px;
+    top: 4px;
+}
+  .botonNav{
+  height: 5vh;
+  }
+  
+  .contenedorBotones a:hover{
+    color:  white;
+    background-color: #fc9d9a;
+    
+  }
+  
+  .imagen-perfil{
+    width: 3vw;
+    height: 5vh;
+    border-radius: 50%;
+  }
+  
+  /*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
+  
+  .form-container{
+    padding-top:20vh;
+    width:100%;
+  }
+  form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #83af9b solid 2px;
+    border-radius: 5px;
+    background-color: #EDEDEC;
+  }
+  
+  h1 {
+  font-size:4vh;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #83af9b;
+  
+  }
+  
+  body {
+    background-color: white;
+    font-family: 'Poppins';
+    font-size: large;
+    color:#83af9b;
+  }
+  
+  .control-formulario {
+    margin-bottom: 10px;  
+    width:180vw;
+    padding-left: 60vw;
+  }
+  
+  .control-formulario label {
+    margin-bottom: 0.5vh;
+    font-size: 2.5vh;
+    font-weight: bold;
+    display: block;
+    font-family: "montserrat";
+  
+     }
+  
+  .file{
+    width: 60vw;
+    display: block;
+    font-size: 1.5vh;
+    text-align: justify;
+  }
+  
+  .radio {
+    padding: 5px 5px;
+  }
+  
+  
+
+  .control {
+    width: 50%;
+    padding: 1px 1px;
+    height: 3vh;
+  }
+  
+    
+  .boton-formulario {
+  
+  border-color: #83af9b;
+  color: gray;
+  font-size: medium;
+  font-weight:bolder;
+  position: relative;
+  text-align:center;
+  border-radius: 5px;
+  width: 6vw;
+  }
+  
+  .text-danger{
+    font-size: 1.5vh;
+    color: #bd081c;
+  }
+  /*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
+  footer {
+    background-color:#fc9d9a ;
+    position: relative;
+    bottom: 0;
+  }
+  
+  .GranContenedorFooter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+  }
+  
+  .contenedorFooter {
+    width: 20vw;
+    text-align: center;
+    background-color: white;
+    border-radius: 3px;
+    color: gray;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+  
+  .contenedorFooterRedes {
+  width: 20vw;
+  text-align: center;
+  border-radius: 3px;
+  color: gray;
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; 
+  }
+  
+  .contenedorFooter h3 {
+    font-family: "poppins";
+    border-bottom: #fc9d9a solid 2px;
+    width: 100vw;
+    background-color: white;
+  }
+  
+  .contenedorFooterRedes h3 {
+  font-family: "poppins";
+  border-bottom: #fc9d9a solid 2px;
+  width: 100vw;
+  }
+  
+  .itemFooter {
+    list-style: none;
+    font-family: "montserrat";
+  }
+  
+  .itemFooter:hover {
+    background-color: #fc9d9a;
+    color: white;
+  }
+  
+  .itemFooter a {
+    text-decoration: none;
+    color: gray;
+  }
+  
+  :root {
+    --instagram: #e4405f;
+    --facebook:#3b5999;
+    --twitter:#55acee;
+    --youtube: #bd081c;
+  }
+  
+  .contenedorRedes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contenedorRedes ul {
+    display: flex;
+   flex-wrap: nowrap;
+  }
+  
+  .contenedorRedes ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+  
+  .contenedorRedes ul li a {
+    display: block;
+    padding: 0 10px;
+    background: white;
+    color: #fc9d9a;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow:#83af9b 0 3px 5px 0px;
+    transition: 2s;
+    border-radius: 6px; 
+  }
+  
+  .contenedorRedes ul:hover a {
+    filter: blur(2px);
+  }
+  
+  .contenedorRedes ul li a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.4);
+    filter: none;
+  }
+  
+  .contenedorRedes ul li .facebook:hover {
+    background: var(--facebook);
+  }
+  
+  .contenedorRedes ul li .instagram:hover {
+    background: var(--instagram);
+  }
+  
+  .contenedorRedes ul li .twitter:hover {
+    background: var(--twitter);
+  }
+  
+  .contenedorRedes ul li .youtube:hover {
+    background: var(--youtube);
+  }
+  /*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
+  @media (max-width:768px) {
+  .contenedorLogo {
+    width: 100vw;
+    text-align: center;
+  }
+  
+  .contenedorBotones {
+    display: none;
+  }
+  
+  .subtitulo {
+  text-align: center;
+  }
+  
+  .contenedorFooter {
+    width: 90vw;
+  }
+  
+  .contenedorFooterRedes {
+  width: 90vw;
+  }
+  
+  .boton-formulario {
+    width: 18vw;
+  
+  }
+  
+  }
+  
+  @media (min-width:769px) {
+    .contenedorLogo {
+      width: 50vw;
+  }
+  
+  .contenedorLogo a {
+      margin-left: 5%;
+  }
+  
+  .contenedorBotones {
+      width: 49vw;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 2%;
+  }
+  
+  .burger-menu {
+      display: none;
+  }
+  
+  .control-formulario {
+    margin-bottom: 10px;    
+    width:105vw;
+    padding-left: 35vw;
+  }
+  }

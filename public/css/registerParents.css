@@ -1,8 +1,9 @@
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x:  hidden;
+  
 }
 
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
@@ -52,98 +53,106 @@ height: 5vh;
   
 }
 
+.contenedorBotones i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 28px;
+  top: 4px;
+}
+
 .imagen-perfil{
   width: 3vw;
   height: 5vh;
   border-radius: 50%;
 }
 
-/*BODY*/
+/*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
 
-.contenedorDetalle {
+.form-container{
+  padding-top:20vh;
+  width:100%;
+}
+form {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  background: #f9cdad;
-  padding: 0 20px;
-  font-family: "poppins";
-  font-weight: bolder;
-  margin-top: 60px;
+  align-items: center;
+  border: #83af9b solid 2px;
+  border-radius: 5px;
+  background-color: #EDEDEC;
 }
 
-.card-container {
-  display: flex;
-  height: auto;
+h1 {
+font-size:4vh;
+text-align: center;
+margin-bottom: 10px;
+margin-top: 10px;
+color: #83af9b;
+
+}
+
+body {
   background-color: white;
-  border-radius: 2px;
-  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.4);
+  font-family: 'Poppins';
+  font-size: large;
+  color:#83af9b;
 }
 
-.header {
-  border-right: 1px solid gray;
-  width: 50vw;
+.control-formulario {
+  margin-bottom: 10px;  
+  width:180vw;
+  padding-left: 60vw;
 }
 
-.descripcion {
-  background: #fc9d9a;
-  width: 50vw;
-}
-
-.header, .descripcion {
-  padding: 20px;
-  text-align: center;
-}
-
-.header a{
-  position: relative;
+.control-formulario label {
+  margin-bottom: 0.5vh;
+  font-size: 2.5vh;
+  font-weight: bold;
   display: block;
-}
-
-.header img {
-  border-radius: 50%;
-  box-shadow: 0 0 0 8px rgba(0, 0, 0, .06);
-  margin: 20px 30px;
-  transition: .2s;
-}
-
-.header a:hover img {
-  box-shadow: 0 0 0 12px rgba(0, 0, 0, .1);
-}
-
-.header h2 {
-  color: #fc9d9a;
   font-family: "montserrat";
-}
 
-.header h4 {
-  margin-bottom: 20px;
-  color: gray;
-  font-family:"poppins";
-}
+   }
 
-.descripcion {
-  position: relative;
-}
-
-.descripcion p {
-  margin: 20px 30px;
-  color: gray;
-}
-
-.caracteristica {
-  text-align: initial;
-  color: gray;
-  margin: 10px;
-}
-
-.header img{
+.file{
   width: 60vw;
-  height: 35vh;
+  display: block;
+  font-size: 1.5vh;
+  text-align: justify;
 }
 
-/*FOOTER*/
+.radio {
+  padding: 5px 5px;
+}
 
+.control {
+  width: 50%;
+  padding: 1px 1px;
+  height: 3vh;
+}
+
+  
+.boton-formulario {
+
+border-color: #83af9b;
+color: gray;
+font-size: medium;
+font-weight:bolder;
+position: relative;
+text-align:center;
+border-radius: 5px;
+width: 6vw;
+}
+
+.text-danger{
+  font-size: 1.5vh;
+  color: #bd081c;
+}
+
+/*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
 footer {
   background-color:#fc9d9a ;
   position: relative;
@@ -274,117 +283,59 @@ width: 100vw;
 .contenedorRedes ul li .youtube:hover {
   background: var(--youtube);
 }
-
-/*MEDIA QUERIES*/
-
-
-
-@media (max-width:640px){
-  .card-container{
-      display: block;
-      width: 450px;
-  }
-  .header {
-      padding: 20px 20px 5px 20px;
-      border: none;
-      width: auto;
-      border-bottom: gray solid 1px;
-  }
-  .descripcion{
-      padding: 5px 20px 20px 20px;
-      background: transparent;
-      width: auto;
-  }
-
-  .header h4 {
-      margin:0;
-  }
+/*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
+@media (max-width:768px) {
+.contenedorLogo {
+  width: 100vw;
+  text-align: center;
 }
 
-@media (max-width:768px) {
-  .contenedorLogo {
-      width: 100vw;
-      text-align: center;
-  }
+.contenedorBotones {
+  display: none;
+}
 
-  .contenedorBotones {
-      display: none;
-  }
+.subtitulo {
+text-align: center;
+}
 
-  .subtitulo {
-    text-align: center;
-  }
-
-  .contenedorFooter {
-      width: 90vw;
-  }
+.contenedorFooter {
+  width: 90vw;
+}
 
 .contenedorFooterRedes {
-    width: 90vw;
-  }
-
-.servicios {
-  flex-wrap: wrap;
+width: 90vw;
 }
 
-.contenedorAccordion{
-  width: 100vw;
-}
+.boton-formulario {
+  width: 18vw;
 
-.contenedorImagenServicios {
-  width: 100vw;
-}
-
-.recomendacionesImg {
-  width: inherit;
-}
-.recomendacionesExp {
-  width: 100vw;
-}
-
-.recomendacionesExp h4 {
-  font-size: large;
-}
-.contactoImg {
-  width: 100vw;
-}
-.contenedorFormulario {
-  width: 100vw;
 }
 
 }
 
 @media (min-width:769px) {
   .contenedorLogo {
-      width: 50vw;
-  }
-
-  .contenedorLogo a {
-      margin-left: 5%;
-  }
-
-  .contenedorBotones {
-      width: 49vw;
-      display: flex;
-      justify-content: space-between;
-      padding-right: 2%;
-  }
-
-  .burger-menu {
-      display: none;
-  }
-
-  .header img{
-    width: 20vw !important;
-    
-  }
-
+    width: 50vw;
 }
 
-@media (min-width:426px){
-  .header img{
-    width: 30vw;
-    
-  }
+.contenedorLogo a {
+    margin-left: 5%;
+}
 
+.contenedorBotones {
+    width: 49vw;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2%;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.control-formulario {
+  margin-bottom: 10px;    
+  width:105vw;
+  padding-left: 35vw;
+}
 }

@@ -2,80 +2,90 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow-x:  hidden;
+    /*overflow-x:  hidden;*/
 }
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
 
+
 .navBar {
-    background-color: #fc9d9a;
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    position: fixed;
-    width: 100vw;
-    
-    
-  }
+  background-color: #fc9d9a;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  position: fixed;
+  width: 100vw;
+  
+  
+}
 .logo{
-  height: 10vh;
+height: 10vh;
 }
 
 .contenedorLogo{
-    padding-top: 0.1vh;
-    height: 11vh;
+  padding-top: 0.1vh;
+  height: 11vh;
 } 
 
 .contenedorBotones a{ 
-    display: flex;
-    font-family: "montserrat";
-    color:  gray;
-    text-decoration: none;
-    padding:1%;
-    background-color: white;
-    border-radius: 2px;
-   
+  display: flex;
+  font-family: "montserrat";
+  color:  gray;
+  text-decoration: none;
+  padding:1%;
+  background-color: white;
+  border-radius: 2px;
+ 
 }
 
 .contenedorBotones{
-    margin-top: 1%;
+  margin-top: 1%;
 }
 
 .botonNav{
-  height: 5vh;
+height: 5vh;
 }
 
 .contenedorBotones a:hover{
-    color:  white;
-    background-color: #fc9d9a;
-    
+  color:  white;
+  background-color: #fc9d9a;
+  
+}
+
+.contenedorBotones i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 28px;
+  top: 4px;
 }
 
 .burger-menu {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100vw;
-    padding: 1%;    
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  padding: 1%;    
 }
 
 .burger-menu i{
-    padding: 1%;
-    border: white solid 1px;
-    color: white ;
-    border-radius: 5px;
+  padding: 1%;
+  border: white solid 1px;
+  color: white ;
+  border-radius: 5px;
 }
 
 .burger-menu i:hover {
-    background-color: white;
-    border: #fc9d9a solid 1px;
-    color: #fc9d9a ;
+  background-color: white;
+  border: #fc9d9a solid 1px;
+  color: #fc9d9a ;
 }
 .imagen-perfil{
-  width: 3vw;
-  height: 5vh;
-  border-radius: 50%;
+width: 3vw;
+height: 5vh;
+border-radius: 50%;
 }
+
 
 /*-----------------------------------------------------------------------------------Body--------------------------------------------------------------------------------------------*/
 
@@ -513,6 +523,8 @@ footer {
         display: none;
     }
 }
+
+
 
 
 
