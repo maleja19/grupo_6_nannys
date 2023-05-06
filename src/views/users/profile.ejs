@@ -8,10 +8,12 @@
 
     <%- include('../partials/header.ejs')%>
 <div class="contain-profile">
-    <div><h1><%= user.nombre %></h1></div>
+    <div><h1>Hola <%= user.nombre +" "+user.apellido%></h1></div>
     <div><img src="<%=user.img%>" class="imagen"></div>
-    <div><p><%= user.email%></p></div>
-
+    <div><p><%= user.username%></p></div>
+    <div><p>email:<%= user.email%></p></div>
+    <div><p>Celular:<%= user.movil%></p></div>
+    <a href="/products/compras">Contrata a una niñera:Aqui</a>
 </div>
 
 

@@ -70,11 +70,9 @@ module.exports = (sequelize, dataTypes) => {
 
     BabySitter.associate = function (models) {
 
-        BabySitter.belongsToMany(models.Aptitud, {
+        BabySitter.belongsTo(models.Aptitud, {
             as: "babySitterAptitud",
-            through: 'babysitters_has_aptitudes',
-            foreignKey: 'babysitters_id',
-            otherKey: 'aptitudes_id',
+            foreignKey: 'aptitudes_id',
             timestamps:false
         })
 

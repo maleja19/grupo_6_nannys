@@ -24,8 +24,6 @@ const validations =[
     body('username').notEmpty().withMessage('Tienes que escribir un username'),
     body('password').notEmpty().withMessage('Tienes que escribir un password'),
     body('nacionalidad').notEmpty().withMessage('Tienes que escribir una nacionalidad'),
-    body('pais_de_residencia').notEmpty().withMessage('Tienes que escribir un pais'),
-    body('ciudad_de_residencia').notEmpty().withMessage('Tienes que escribir una ciudad'),
     body('direccion').notEmpty().withMessage('Tienes que escribir un direccion'),
     body('movil').notEmpty().withMessage('Tienes que escribir un celular'),
     

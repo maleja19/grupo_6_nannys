@@ -50,10 +50,31 @@ height: 5vh;
   background-color: #fc9d9a;
   
 }
+
+.burger-menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  padding: 1%;    
+}
+
+.burger-menu i{
+  padding: 1%;
+  border: white solid 1px;
+  color: white ;
+  border-radius: 5px;
+}
+
+.burger-menu i:hover {
+  background-color: white;
+  border: #fc9d9a solid 1px;
+  color: #fc9d9a ;
+}
 .imagen-perfil{
-  width: 3vw;
-  height: 5vh;
-  border-radius: 50%;
+width: 3vw;
+height: 5vh;
+border-radius: 50%;
 }
 
 
@@ -90,7 +111,7 @@ body {
     border: 2px solid #83af9b;
     width: 50%;
     height: 5vh;
-    margin-top: 30vh;
+    margin-top: 10vh;
     margin-bottom: 0.5vh;
     border-radius: 20px;
     
@@ -115,6 +136,7 @@ body {
     margin-right: 10%;
     border-radius: 5px;
     padding: 2%;  
+   
     
         
 }
@@ -146,14 +168,20 @@ body {
 
 .submit{
   font-family: "poppins";
-  position: relative;
-  left: 100px;
   background-color: #83af9b;
   border-radius: 5px;
+  position: relative;
+  left: 29vw;
+  top: 4vh;
+  font-size: 3vw;
+  padding: 3px;
+  color: white;
 }
+
 
 .fa-star{
   color:#83af9b;
+  font-size: 0.9vw;
   
 }
 
@@ -358,12 +386,179 @@ footer {
   .descripcion ul{
     display: none;
   }
+
+  .fa-star{
+    color:#83af9b;
+    font-size: 3.5vw;
+    
+  }
   
 
 }
 
-@media (min-width:769px) {
+@media (min-width:650px) {
 .contenedorLogo {
+    width: 50vw;
+}
+
+.contenedorLogo a {
+    margin-left: 5%;
+}
+
+.contenedorBotones {
+    width: 49vw;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2%;
+}
+
+.contenedorBotones i{
+    font-size: 25px;
+    color: white;
+    position: relative; 
+    left: 28px;
+    top:4px;
+}
+
+.burger-menu {
+    display: none;
+}
+
+  
+.buscador{
+  display: block;
+  margin:auto;
+  text-align: center;
+  
+  
+}
+
+.fa-search{ 
+color: #83af9b; 
+font-size: 20px;
+position:relative;
+top: 3px;
+
+}
+
+
+.search{
+  border: 2px solid #83af9b;
+  width: 30%;
+  height: 5vh;
+  margin-top: 15vh;
+  margin-bottom: 8vh;
+  border-radius: 20px;
+  
+}
+
+.contain-page{
+  display: flex;
+  width: 100%;  
+ 
+  
+}
+
+.contain-nineras{
+  width: 40%;
+  margin-right: 2%;
+  margin-left: 1%;
+}
+
+
+
+.contain-perfil{
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  border: 1px solid #83af9b;
+  background-color: white;
+  margin-top: 3vh;
+  margin-bottom: 1vh;    
+  margin-left: 5%;  
+  margin-right: 7%;
+  border-radius: 5px;
+  padding-top: 2%; 
+  padding-left: 2%; 
+    
+    
+        
+}
+
+.contain-person{
+  margin: auto;
+  width: 30%;
+  
+  
+}
+.img-person{
+    width: 10vw;
+    height: 15vh;
+    
+}
+
+.descripcion{
+  width: 65%;
+  padding-top: 5px;
+
+}
+.descripcion h4{
+  font-family: "montserrat";
+  margin-bottom: 5px;
+}
+.descripcion p{
+  font-family: "poppins";
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.descripcion ul{
+  font-family: "poppins";
+  margin-bottom: 2px;
+  font-size: 13px;
+}
+
+.submit{
+  font-family: "poppins";
+  position: relative;
+  background-color: #83af9b;
+  border-radius: 5px;
+  position: relative;
+  font-size: 0.8vw;
+  left: 18vw;
+  top: 10vh;
+  
+}
+
+.contain-map{
+  width: 60%;
+  height:80vh;
+  padding-left: 5%;
+  margin-right: 0;
+  padding-top: 1.5%;
+  
+ 
+}
+
+.map{
+  width: 90%;
+  height: 40vw;
+  padding-right: 0;
+  position: fixed;
+  
+}
+
+.fa-star{
+  color:#83af9b;
+  font-size: 1.7vw;
+  
+}
+
+}
+
+@media (min-width:1024px) {
+
+  .contenedorLogo {
     width: 50vw;
 }
 
@@ -489,6 +684,10 @@ top: 3px;
   position: relative;
   background-color: #83af9b;
   border-radius: 5px;
+  position: relative;
+  font-size: 0.7vw;
+  left: 19vw;
+  top: 0.1vh;
   
 }
 
@@ -510,4 +709,10 @@ top: 3px;
   
 }
 
+.fa-star{
+  color:#83af9b;
+  font-size: 1.2vw;
+  
+}
+  
 }

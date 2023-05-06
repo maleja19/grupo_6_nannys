@@ -4,144 +4,151 @@
     <%- include('../partials/head.ejs')%>
     <link rel="stylesheet" href="/css/editNineras.css">
 
-<body>
+    <body>
 
-    <%- include('../partials/header.ejs')%>
-
+        <%- include('../partials/header.ejs')%>
+    
+            
+    <!--- Formulario Niñeras-->
+    
+    <main class="form-container">
+    <form form action="/products/<%=editProducts.id%>/edit?_method=PUT"  method="POST" class="create-form" enctype="multipart/form-data">
+        <h1>Modifica tus datos</h1>
+        <div class="control-formulario">
+          Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple" value="<%= editProducts.img %>">
+          
+        </div>
         
-<!--- Formulario Niñeras-->
-<main class="form-container">
-
-<form action="/<%=editProducts.id%>/edit?_method=PUT"  method="POST" class="create-form" enctype="multipart/form-data" >
-    <h1>Modificacion de datos</h1>
-    <div class="control-formulario">
-      <label>Imagen de Perfil:</label> <input type="file" class="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple" value="<%= editProducts.img %>">
-    </div>
+        
+        <div class="control-formulario">
+            <label>Nombre</label>
+            <input type="text" name="nombre" class="control" value="<%= editProducts.nombre %>">
+            
+        </div>
+    
+        <div class="control-formulario">
+            <label>Apellido</label>
+            <input type="text" name="apellido" class="control" value="<%= editProducts.apellido %>">
+            
+           
+        </div>
+    
+        <div class="control-formulario">
+            <label>Correo Electrónico</label>
+            <input type="email" name="email" class="control" value="<%= editProducts.email %>">
+            
+          
+        </div>
+    
+        <div class="control-formulario">
+            <label for="" class="label">Username</label>
+            <input type="text" name="username" class="control" value="<%= editProducts.username %>">
+            
+        </div>
+    
+        <div class="control-formulario">
+            <label for="" class="label">Password</label>
+            <input type="password" name="password" class="control" value="<%= editProducts.password %>">
+            
+                
+        </div>
+       
+        <div class="control-formulario">
+            <label>Edad</label>
+            <input type="text" name="edad" class="control" value="<%= editProducts.edad %>">
+           
+            
+        </div>
     
     
-    <div class="control-formulario">
-        <label>Nombre</label>
-        <input type="text" name="nombre" class="control" value="<%= editProducts.nombre %>">
-    </div>
-
-    <div class="control-formulario">
-        <label>Apellido</label>
-        <input type="text" name="apellido" class="control" value="<%= editProducts.apellido %>">
-    </div>
-
-    <div class="control-formulario">
-        <label>Correo Electrónico</label>
-        <input type="email" name="email" class="control" value="<%= editProducts.email %>">
-    </div>
-
-    <div class="control-formulario">
-        <label for="" class="label">Username</label>
-        <input type="text" name="username" class="control" value="<%= editProducts.username %>">
-    </div>
-
-    <div class="control-formulario">
-        <label for="" class="label">Password</label>
-        <input type="text" name="password" class="control" value="<%= editProducts.password %>">
-    </div>
-      
-    <div class="control-formulario">
-        <label>Edad</label>
-        <input type="text" name="edad" class="control" value="<%= editProducts.edad %>">
-    </div>
-
-    <div class="control-formulario">
-        <label>Nacionadlidad</label>
-        <input type="text" name="nacionalidad" class="control" value="<%= editProducts.nacionalidad %>">
-    </div> 
-
-    <div class="control-formulario">
-        <label>País de residencia</label>
-        <select name="pais_de_residencia" class="control" value="<%= editProducts.pais_de_residencia %>">
-            <option value="Argentina">Argentina</option>
-            <option value="Colombia">Colombia</option>
-        </select>     
-
-
-
+    
+        <div class="control-formulario">
+            <label>País de residencia</label>
+            <select name="paisDeResidencia" class="control" value="<%= editProducts.paisDeResidencia %>">
+                <option value="Argentina">Argentina</option>
+                
+                
+            </select>
+           
+        </div>
+    
+        <div class="control-formulario">
+             <label>Ciudad de residencia</label>
+             <select name="ciudad_de_residencias_id" class="control" value="<%= editProducts.ciudad_de_residencias_id %>">
+                <option value="" selected>Elegi una ciudad</option>
+                <option value="1"selected>Buenos aires</option>
+                <option value="2"selected>Santa Fe</option>
+                <option value="3"selected>Rosario</option>
+                <option value="4"selected >Mendoza</option>
+                <option value="5"selected>Mar de plata</option>
+                <option value="6"selected >La Plata</option>
+              
+            </select>
+            
+        </div>  
+        
+        <div class="control-formulario">
+            <label>Dirección</label>
+            <input type="text" name="direccion" class="control" value="<%= editProducts.direccion %>">
          
-    </div>
-
-    <div class="control-formulario">
-         <label>ciudad de residencia</label>
-         <select name="ciudad_de_residencia" class="control" value="<%= editProducts.ciudad_de_residencia %>">
-            <option value="CABA">CABA</option>
-            <option value="COR">Córdoba</option> 
-            <option value="LP">La Plata</option>
-            <option value="MDQ">Mar del Plata</option>
-            <option value="Ro">Rosario</option>
-            <option value="BGT">Bogotá</option>
-            <option value="BARR">Barranquilla</option>
-            <option value="CAL">Cali</option>
-            <option value="Cart">Cartagena</option>
-            <option value="Med">Medellín</option>  
-        </select>
-    </div>
+        </div>
+        
+        <div class="control-formulario">
+            <label>Número de Contacto</label>
+            <input type="number" name="celular" class="control" placeholder="" value="<%= editProducts.celular %>">
+           
+            
+        </div>
     
-    <div class="control-formulario">
-        <label>Dirección</label>
-        <input type="text" name="direccion" class="control" value="<%= editProducts.direccion%>">
-    </div>
+     
+        <div class="control-formulario">
+            <label>Descripción</label>
+            <textarea name="descripcion" class="control"><%= editProducts.descripcion%></textarea >
+                
+        </div> 
     
-    <div class="control-formulario">
-        <label>Número de Contacto</label>
-        <input type="number" name="celular" class="control" placeholder="" value="<%= editProducts.celular%>">
-    </div>
-
- 
-    <div class="control-formulario">
-        <label>Descripción</label>
-        <textarea name="descripcion" class="control"></textarea value="<%= editProducts.descripcion%>">
-    </div>
-
-    <div class="control-formulario">
-        <label>Describete en una frase</label><!--- Se debe limitar-->
-        <textarea name="frase" class="control" value="<%= editProducts.frase%>"></textarea >
-    </div>
-
-
-    <label>Aptitudes (Seleccioná tres)</label>
-
-    <div class="contain-aptitudes">        
-        
-        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Paciencia"><label for="Paciencia">Paciencia</label></div>
-        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Respondable"><label for="Respondable">Respondable</label></div>
-        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Proactiva"><label for="Proactiva">Proactiva</label></div>
-        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Divertida"><label for="Divertida">Divertida</label></div>
-        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Comunicacion"><label for="Comunicacion">Comunicacion</label></div>
-        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Organizada"><label for="Organizada">Organizada</label></div>
-        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Puntual"><label for="Puntual">Puntual</label></div>
-        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Creativa"><label for="Creativa">Creativa</label></div>
-        <input  type="checkbox" name="aptitudes" clase=aptitudes value="Amistosa"><label for="Amistosa">Amistosa</label></div>
-    </div>
-
-        
-        
-        
-    </div>
-
-
-    <div class="control-formulario">
-        <label>Precio por Hora</label>
-       <input type="price" name="precio" class="control" placeholder="" value="<%= editProducts.precio%>">       
-    </div>
-
+        <div class="control-formulario">
+            <label>Describete en una frase</label><!--- Se debe limitar-->
+            <textarea name="frase" class="control"><%= editProducts.frase%></textarea >
+               
+        </div>
+    
         
     
-    <button type="submit" class="boton-formulario">Guardar</button>
-   
+        <div class="control-formulario">
+            <label>Aptitudes(Escoge una aptitud que más te represente)</label>
+            <select name="aptitudes_id" class="control" value="<%= editProducts.aptitudes_id %>">
+                <option value="1">Creativa</option>
+                <option value="2">Paciencia</option>
+                <option value="3">Responsable</option>
+                <option value="4">Comunicativa</option>
+                <option value="5">Divertida</option>
+                <option value="6">Organizada</option>
+                <option value="7">Atenta</option>
+            </select>
+    
+            
+           
+        </div>
     
     
-
-</form>
-<form action="/<%=editProducts.id%>/borrar?_method=DELETE" method="POST" class="create-form" enctype="multipart/form-data">
-    <button type="submit" class="boton-formulario">Borrar</button></form>
-</main>
-
-<%- include('../partials/footer.ejs')%>   
-</body>
-</html>
+        <div class="control-formulario">
+            <label>Precio por Hora</label>
+           <input type="price" name="precio" class="control" placeholder="" value="<%= editProducts.precio %>">
+           
+           
+        </div>
+    
+            
+        <button type="submit" class="boton-formulario">Guardar</button>
+        
+    
+    </form>
+    <form action="/products/<%= editProducts.id%>/delete?_method=DELETE" method="POST" class="create-form" enctype="multipart/form-data">
+        <button type="submit" class="boton-formulario">Borrar</button></form>
+    
+    </main>
+    
+    <%- include('../partials/footer.ejs')%>   
+    </body>
+    </html>
