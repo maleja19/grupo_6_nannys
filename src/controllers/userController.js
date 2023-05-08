@@ -147,7 +147,7 @@ const userControllers={
 		if(userToLogin){
 
 			const passwordIsTrue = bcrypt.compareSync(req.body.password,userToLogin[0].password);
-			console.log(passwordIsTrue,"soy yo password")
+			
 			
 			if(passwordIsTrue){
 				delete userToLogin.password;
