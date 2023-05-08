@@ -249,12 +249,10 @@ body {
   margin-bottom: 30%;
 }
 
-.recomendacionesExp button:hover {
+.recomendacionesExp a {
   color:  white;
   background-color: #fc9d9a;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 5px 5px 0px #83af9b;
-  transition: 1s;
+  
 }
 
 .contacto {
@@ -521,6 +519,14 @@ footer {
 
     .burger-menu {
         display: none;
+    }
+
+    .recomendacionesExp a {
+      color:  white;
+      background-color: #fc9d9a;
+      position: relative;
+      bottom:20vh
+      
     }
 }
 

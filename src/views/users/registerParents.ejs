@@ -63,9 +63,9 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" value="<%l
 
     <div class="control-formulario">
         <label for="" class="label">Password</label>
-        <input type="password" name="password" class="control" value="<%locals.oldData ? oldData.password :null%>">
+        <input type="password" name="password" class="control" >
         <% if(locals.errors && errors.password){%>
-            <div class="text-danger">password
+            <div class="text-danger">
                 <%= errors.password.msg %>
             </div>
         <%} %>
@@ -84,7 +84,7 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" value="<%l
 
     <div class="control-formulario">
         <label>Ciudad de residencia</label>
-        <select name="ciudad_de_residencias_id" class="control" value="<%locals.oldData ? oldData.ciudad_de_residencias_id :null%>" >
+        <select name="ciudad_de_residencias_id" class="control" >
            <option value="0">Elegi una ciudad</option>
            <option value="1">Buenos aires</option>
            <option value="2">Santa Fe</option>
@@ -94,7 +94,10 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" value="<%l
            <option value="6">La Plata</option>
          
        </select>
-       
+   </div>
+
+          
+              
    </div>
     
     <div class="control-formulario">

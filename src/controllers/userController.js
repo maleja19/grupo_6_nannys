@@ -28,23 +28,8 @@ const userControllers={
 			});
 
 		}
-		try {
-
-		let allUsers= await db.User.findAll()
-        let userFind=allUsers.find(oneUser=>oneUser["email"]==req.body.email)
-
-		//let userInDB =User.findbyfield('email', req.body.email)
-		if(userFind){
-
-			return res.render('users/registerParents.ejs',{
-				errors: {
-					email:{
-						msg:'Este email ya esta registrado',
-					},
-				oldData: req.body
-					
-				 }})
-		}
+		
+	      
 
 		const image= req.file? req.file.filename :'';
 		let newImage;
@@ -73,18 +58,17 @@ const userControllers={
 
 		}
 
+		try{
 		
-		await db.User.create(userToCreate)
-		
+			await db.User.create(userToCreate)	
 	
 		
-		res.redirect('/users/login')
-			
+					
 		} catch (error) {
 			console.log(error)
 		}
 		
-		
+		res.redirect('/users/login')
 			
 	},
 
@@ -95,7 +79,6 @@ const userControllers={
 		
 		const editUsers = await db.User.findByPk(userId);
 
-		console.log(editUsers)
 
 		res.render('users/formEditParents.ejs',{editUsers})
 		}catch(error){
@@ -153,15 +136,18 @@ const userControllers={
         res.render('users/loginIn.ejs')
     },
 
-	loginProcess:async (req,res)=>{
-		try{let allUsers= await db.User.findAll()
-        let userToLogin=allUsers.find(oneUser=>oneUser["email"]==req.body.email)
-		//let userToLogin = await db.User.find('email', req.body.email);
+	loginProcess: async(req,res)=>{
+		try{
+			
+			const userToLogin= await db.User.findAll({where: {email:req.body.email}})
+        //let userToLogin=allUsers.find(oneUser=>oneUser["email"]==req.body.email)
 		
+		console.log(userToLogin)
 
 		if(userToLogin){
 
-			let passwordIsTrue = bcrypt.compareSync(req.body.password,userToLogin.password);
+			const passwordIsTrue = bcrypt.compareSync(req.body.password,userToLogin[0].password);
+			console.log(passwordIsTrue,"soy yo password")
 			
 			if(passwordIsTrue){
 				delete userToLogin.password;
