@@ -5,7 +5,7 @@ const userController = require('../controllers/userController');
 const routerUsers = express.Router();
 
 
-//const validations=require('../middlewares/validationMiddlewares')
+const validations=require('../middlewares/validationMiddlewares')
 const upload=require('../middlewares/multerMiddlewares')
 const guest=require('../middlewares/guestMiddleware')
 const restriction=require('../middlewares/restrictionPageMiddlewares')
@@ -13,6 +13,7 @@ const restriction=require('../middlewares/restrictionPageMiddlewares')
 
 routerUsers.get('/users/signp',guest,userController.create);
 routerUsers.post('/users/signp',upload.single('img'),userController.data)
+
 
 routerUsers.get('/users/:id/edit',restriction,userController.edit);
 routerUsers.put('/users/:id/edit',upload.single('img'),userController.update);
