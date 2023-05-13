@@ -5,6 +5,7 @@ const { validationResult }=require('express-validator');
 const bcrypt =require('bcryptjs');
 const { openDelimiter } = require('ejs');
 const db = require("../database/models/index");
+const { error } = require('console');
 
 //const usersFilePath = path.join(__dirname, '../database/users.json');
 //const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -19,7 +20,7 @@ const userControllers={
 	
 		
 		const resultvalidation = validationResult(req);
-
+		
 		if(resultvalidation.errors.length>0){
 
 			return res.render('users/registerParents.ejs',{
@@ -28,6 +29,20 @@ const userControllers={
 			});
 
 		}
+
+		try{
+
+		const userFind= await db.User.findAll({where: {email:req.body.email}})
+			
+		if(userFind.length>0){
+		return res.render('users/registerParents.ejs',{
+			errors:{
+				email: {
+					msg: 'El email ya registra en nuestra base de datos'
+				}
+			}
+		})}
+
 		
 	      
 
@@ -58,7 +73,7 @@ const userControllers={
 
 		}
 
-		try{
+		
 		
 			await db.User.create(userToCreate)	
 	
@@ -74,13 +89,19 @@ const userControllers={
 
 	edit:async(req,res)=>{
 		//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 		const userId=req.params.id;		
+
+		
+
 		try{
 		
-		const editUsers = await db.User.findByPk(userId);
+		const editUsers = await db.User.findByPk(parseInt(userId));
+		
 
 
 		res.render('users/formEditParents.ejs',{editUsers})
+
 		}catch(error){
 			console.log(error)
 		}
@@ -89,8 +110,19 @@ const userControllers={
 	update: async(req, res) => {	
 		//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+		const resultvalidation = validationResult(req);
 		
-		const image= req.file? req.file.filename : "";
+		if(resultvalidation.errors.length>0){
+
+			return res.render('users/formEditParents.ejs',{
+				errors: resultvalidation.mapped(),
+				editUsers: req.body				
+			})	
+			
+
+		}
+
+		const image= req.file? req.file.filename : '';
 		let newImage;	
 		
 		
@@ -98,9 +130,13 @@ const userControllers={
 			newImage = `/images/${image}`;
 		}
 
+		
+		
+
 		const{img,nombre,apellido,email,username,password,paisDeResidencia,ciudad_de_residencias_id,direccion,movil,pregunta}=req.body;
 		
-		
+		console.log(req.body)
+
 			
 		const userEdit=	
 						
@@ -118,8 +154,10 @@ const userControllers={
 				pregunta
 				
 			}
+
+		
 				
-			try{	
+	try{			
 			await db.User.update(userEdit,{where:{id:req.params.id}})	
 			
 				
@@ -129,7 +167,7 @@ const userControllers={
 	}
 		//fs.writeFileSync(productsFilePath,JSON.stringify(products))
 	
-		res.redirect('/users/profile')
+		res.send('Usuario editado')
 	},
 
 	login:(req,res)=>{
@@ -178,7 +216,10 @@ const userControllers={
 		
 		res.render('users/profile.ejs',{
 			user: req.session.userLogged,
+			
 		})
+
+		
 	},
 
 	
