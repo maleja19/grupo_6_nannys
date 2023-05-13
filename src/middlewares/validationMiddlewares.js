@@ -26,9 +26,7 @@ const validations =[
     body('email').notEmpty().withMessage('Tienes que escribir un email').bail().isEmail().withMessage('Ingresas un formato de email valido'),
     body('username').notEmpty().withMessage('Tienes que escribir un username'),
     body('password').notEmpty().withMessage('Tienes que escribir un password').bail().isLength({min: 8}).withMessage('El password debe tener al menos 8 caracteres'),
-    body('ciudad_de_residencias_id').notEmpty().withMessage('Tienes que escribir un direccion'),
-    body('direccion').notEmpty().withMessage('Tienes que escribir un direccion'),
-    body('movil').notEmpty().withMessage('Tienes que escribir un celular'),
+    
     
     
 ]

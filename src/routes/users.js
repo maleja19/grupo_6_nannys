@@ -12,11 +12,11 @@ const restriction=require('../middlewares/restrictionPageMiddlewares')
 
 
 routerUsers.get('/users/signp',guest,userController.create);
-routerUsers.post('/users/signp',upload.single('img'),userController.data)
+routerUsers.post('/users/signp',upload.single('img'),validations,userController.data)
 
 
 routerUsers.get('/users/:id/edit',restriction,userController.edit);
-routerUsers.put('/users/:id/edit',upload.single('img'),userController.update);
+routerUsers.put('/users/:id/edit',upload.single('img'),validations,userController.update);
 
 
 routerUsers.get('/users/login',userController.login);

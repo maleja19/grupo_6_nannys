@@ -42,14 +42,6 @@ height: 10vh;
   margin-top: 1%;
 }
 
-.contenedorBotones i {
-  font-size: 25px;
-  color: white;
-  position: relative;
-  left: 28px;
-  top: 4px;
-}
-
 .botonNav{
 height: 5vh;
 }
@@ -60,10 +52,38 @@ height: 5vh;
   
 }
 
+.contenedorBotones i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 28px;
+  top: 4px;
+}
+
+.burger-menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  padding: 1%;    
+}
+
+.burger-menu i{
+  padding: 1%;
+  border: white solid 1px;
+  color: white ;
+  border-radius: 5px;
+}
+
+.burger-menu i:hover {
+  background-color: white;
+  border: #fc9d9a solid 1px;
+  color: #fc9d9a ;
+}
 .imagen-perfil{
-  width: 3vw;
-  height: 5vh;
-  border-radius: 50%;
+width: 3vw;
+height: 5vh;
+border-radius: 50%;
 }
 
 /*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
@@ -83,6 +103,18 @@ form {
   border: #83af9b solid 2px;
   border-radius: 5px;
   background-color: #EDEDEC;
+}
+
+.errores ul{
+  text-align: center;
+  display: block;
+  margin-bottom: 2vh;
+ }
+
+
+.errores ul li{
+ font-size: 12px;
+ color:red
 }
 
 h1 {
