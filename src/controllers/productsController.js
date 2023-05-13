@@ -79,6 +79,18 @@ const productsController = {
 				oldData: req.body})
 		}
 		
+
+		const userFind= await db.BabySitter.findAll({where: {email:req.body.email}})
+			
+		if(userFind.length>0){
+		return res.render('products/registerBabySitters.ejs',{
+			errors:{
+				email: {
+					msg: 'El email ya registra en nuestra base de datos'
+				}
+			}
+		})}
+		
 		const{img,nombre,apellido,email,username,password,edad,paisDeResidencia,ciudad_de_residencias_id,direccion,celular,descripcion,frase,precio,aptitudes_id}=req.body;
 
 		//console.log("Imprimiré las aptitudes");
@@ -149,8 +161,17 @@ const productsController = {
 	update: async(req, res) => {	
 		//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+		const resultvalidation = validationResult(req);
+
+		if(resultvalidation.errors.length>0){
+			return res.render('products/formEditNineras.ejs',{
+				errors: resultvalidation.mapped(),
+				editProducts: req.body
+			})
+		}
+
 		
-		const image= req.file? req.file.filename : '';
+		const image= req.file? req.file.filename :'';
 		let newImage;
 		
 		

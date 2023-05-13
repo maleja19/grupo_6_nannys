@@ -41,14 +41,6 @@ height: 10vh;
   margin-top: 1%;
 }
 
-.contenedorBotones i {
-  font-size: 25px;
-  color: white;
-  position: relative;
-  left: 28px;
-  top: 4px;
-}
-
 .botonNav{
 height: 5vh;
 }
@@ -59,11 +51,40 @@ height: 5vh;
   
 }
 
-.imagen-perfil{
-  width: 3vw;
-  height: 5vh;
-  border-radius: 50%;
+.contenedorBotones i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 28px;
+  top: 4px;
 }
+
+.burger-menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  padding: 1%;    
+}
+
+.burger-menu i{
+  padding: 1%;
+  border: white solid 1px;
+  color: white ;
+  border-radius: 5px;
+}
+
+.burger-menu i:hover {
+  background-color: white;
+  border: #fc9d9a solid 1px;
+  color: #fc9d9a ;
+}
+.imagen-perfil{
+width: 3vw;
+height: 5vh;
+border-radius: 50%;
+}
+
 
 /*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
 
@@ -71,6 +92,20 @@ height: 5vh;
   padding-top:20vh;
   width:100%;
 }
+
+.errores ul{
+  text-align: center;
+  display: block;
+  margin-bottom: 2vh;
+ }
+
+
+.errores ul li{
+ font-size: 12px;
+ color:red
+}
+
+
 form {
   width: 80%;
   max-width: 600px;
@@ -147,7 +182,7 @@ width: 6vw;
 
 .text-danger{
   font-size: 1.5vh;
-  color: #bd081c;
+  color: #bd081c; 
 }
 /*-----------------------------------------------------------------------------------Footer------------------------------------------------------------------------------------------*/
 footer {
