@@ -5,7 +5,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-           
+          
            
 
         },
@@ -17,15 +17,14 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         timestamps: false,
+        tableName: 'aptitudes'
     }
     const Aptitud = sequelize.define(alias, cols, config); 
 
     Aptitud.associate = function (models) {
-        Aptitud.belongsToMany(models.BabySitter, {
+        Aptitud.hasMany(models.BabySitter, {
             as: "babySitterAptitud",
-            through: 'babysitters_has_aptitudes',
             foreignKey: 'aptitudes_id',
-            otherKey: 'babysitters_id',
             timestamps:false
         })
     }

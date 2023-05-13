@@ -3,7 +3,6 @@
     <% if(locals.isLogged){%>
 
         <nav class="navBar">
-
         
         
             <div class="contenedorLogo">
@@ -11,13 +10,14 @@
             </div>
             
              <div class="contenedorBotones">
-                <a href="/" class="botonNav">Como Funciona?</a>
+             
+                <a href="/about" class="botonNav">Como Funciona?</a>
                 <a href="/products/compras" class="botonNav">Servicios</a>
                 <a href="#" class="botonNav">Ayuda</a>
                 
                 <a href="/users/profile" class="botonNav">Profile</a>
                 <a href="/users/logout" class="botonNav">LogOut</a>
-                <img class="imagen-perfil"src="<%=locals.userLogged.img%>">
+                <img class="imagen-perfil"src="<%=locals.userLogged[0].img%>">
                
                 
                 
@@ -39,7 +39,8 @@
             </div>
             
              <div class="contenedorBotones">
-                <a href="/" class="botonNav">Como Funciona?</a>
+                <i class="fa-solid fa-baby-carriage"></i>
+                <a href="/about" class="botonNav">Como Funciona?</a>
                 <a href="/products/compras" class="botonNav">Servicios</a>
                 <a href="#" class="botonNav">Ayuda</a>
                 

@@ -7,13 +7,17 @@
 <body>
 
     <%- include('../partials/header.ejs')%>
+
+<% for(let i=0;i< user.length;i++){%>   
 <div class="contain-profile">
-    <div><h1><%= user.nombre %></h1></div>
-    <div><img src="<%=user.img%>" class="imagen"></div>
-    <div><p><%= user.email%></p></div>
-
+    <div><h1>Hola <%= user[i].nombre +" "+user[i].apellido%></h1></div>
+    <div><img src="<%=user[i].img%>" class="imagen"></div>
+    <div><p><%= user[i].username%></p></div>
+    <div><p>email:<%= user[i].email%></p></div>
+    <div><p>Celular:<%= user[i].movil%></p></div>
+    <a href="/products/compras">Contrata a una niñera:Aqui</a>
 </div>
-
+<%}%>
 
 
     <%- include('../partials/footer.ejs')%>

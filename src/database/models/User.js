@@ -52,9 +52,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BOOLEAN,            
         },
 
-        dudas: {
-            type: dataTypes.STRING(45),            
-        },
 
         admin: {
             type: dataTypes.TINYINT(4),            
@@ -75,6 +72,11 @@ module.exports = (sequelize, dataTypes) => {
         User.belongsTo(models.Ciudad, {
             as: "ciudadDeResidencia",
             foreignKey: 'ciudad_de_residencias_id',
+        })
+
+        User.hasMany(models.Experiencia, {
+            as: "userExperiencias",
+            foreignKey: 'users_id',
         })
     }
 

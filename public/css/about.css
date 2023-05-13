@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x:  hidden;
+
 }
 
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
@@ -40,6 +40,14 @@ height: 10vh;
 
 .contenedorBotones{
   margin-top: 1%;
+}
+
+.contenedorBotones i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 28px;
+  top: 4px;
 }
 
 .botonNav{

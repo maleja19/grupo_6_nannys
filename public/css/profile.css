@@ -53,6 +53,14 @@ height: 5vh;
   
 }
 
+.contenedorBotones i {
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 28px;
+  top: 4px;
+}
+
 .burger-menu {
   display: flex;
   justify-content: center;
