@@ -81,6 +81,18 @@
     border-radius: 5px;
     background-color: #EDEDEC;
   }
+
+  .errores ul{
+    text-align: center;
+    display: block;
+    margin-bottom: 2vh;
+   }
+  
+  
+  .errores ul li{
+   font-size: 12px;
+   color:red
+  }
   
   h1 {
   font-size:4vh;

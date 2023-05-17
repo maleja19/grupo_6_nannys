@@ -12,43 +12,71 @@
     <!--- Formulario Niñeras-->
     
     <main class="form-container">
-    <form form action="/products/<%=editProducts.id%>/edit?_method=PUT"  method="POST" class="create-form" enctype="multipart/form-data">
+        <div class="errores">
+            <ul></ul>
+        </div>
+    <form  action="/products/<%=editProducts.id%>/edit?_method=PUT"  method="POST" class="create-form" enctype="multipart/form-data">
         <h1>Modifica tus datos</h1>
         <div class="control-formulario">
-          Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple" value="<%= editProducts.img %>">
+          Imagen de Perfil: <input type="file" name="img" id="img" ><%= editProducts.img %>
+          <% if(locals.errors && errors.img){%>
+            <div class="text-danger">
+                <%= errors.img.msg %>
+            </div>
+        <%} %>
           
         </div>
         
         
         <div class="control-formulario">
             <label>Nombre</label>
-            <input type="text" name="nombre" class="control" value="<%= editProducts.nombre %>">
+            <input type="text" name="nombre" class="control" id="nombre" value="<%= editProducts.nombre %>">
+            <% if(locals.errors && errors.nombre){%>
+                <div class="text-danger">
+                    <%= errors.nombre.msg %>
+                </div>
+            <%} %>
             
         </div>
     
         <div class="control-formulario">
             <label>Apellido</label>
-            <input type="text" name="apellido" class="control" value="<%= editProducts.apellido %>">
+            <input type="text" name="apellido" class="control" id="apellido" value="<%= editProducts.apellido %>">
+            <% if(locals.errors && errors.apellido){%>
+                <div class="text-danger">
+                    <%= errors.apellido.msg %>
+                </div>
+            <%} %>
             
            
         </div>
     
         <div class="control-formulario">
             <label>Correo Electrónico</label>
-            <input type="email" name="email" class="control" value="<%= editProducts.email %>">
+            <input type="email" name="email" class="control" id="email" value="<%= editProducts.email %>">
+            <% if(locals.errors && errors.email){%>
+                <div class="text-danger">
+                    <%= errors.email.msg %>
+                </div>
+            <%} %>
             
           
         </div>
     
         <div class="control-formulario">
             <label for="" class="label">Username</label>
-            <input type="text" name="username" class="control" value="<%= editProducts.username %>">
+            <input type="text" name="username" class="control" id="username" value="<%= editProducts.username %>">
             
         </div>
     
         <div class="control-formulario">
             <label for="" class="label">Password</label>
-            <input type="password" name="password" class="control" value="<%= editProducts.password %>">
+            <input type="password" name="password" id="password" class="control">
+            <% if(locals.errors && errors.password){%>
+                <div class="text-danger">
+                    <%= errors.password.msg %>
+                </div>
+            <%} %>
             
                 
         </div>
@@ -75,7 +103,7 @@
         <div class="control-formulario">
              <label>Ciudad de residencia</label>
              <select name="ciudad_de_residencias_id" class="control" value="<%= editProducts.ciudad_de_residencias_id %>">
-                <option value="" selected>Elegi una ciudad</option>
+                
                 <option value="1"selected>Buenos aires</option>
                 <option value="2"selected>Santa Fe</option>
                 <option value="3"selected>Rosario</option>
@@ -103,7 +131,12 @@
      
         <div class="control-formulario">
             <label>Descripción</label>
-            <textarea name="descripcion" class="control"><%= editProducts.descripcion%></textarea >
+            <textarea name="descripcion" class="control" id="descripcion"><%= editProducts.descripcion%></textarea >
+                <% if(locals.errors && errors.descripcion){%>
+                    <div class="text-danger">
+                        <%= errors.descripcion.msg %>
+                    </div>
+                <%} %>
                 
         </div> 
     
@@ -148,6 +181,7 @@
         <button type="submit" class="boton-formulario">Borrar</button></form>
     
     </main>
+    <script src="/js/validation.js"></script>
     
     <%- include('../partials/footer.ejs')%>   
     </body>

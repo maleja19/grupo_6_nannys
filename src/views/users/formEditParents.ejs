@@ -2,7 +2,7 @@
 <html lang="en">
     
 <%- include('../partials/head.ejs')%>
-<link rel="stylesheet" href="/css/registerParents.css">
+<link rel="stylesheet" href="/css/editParents.css">
 
           
 <body>
@@ -10,48 +10,84 @@
 <%- include('../partials/header.ejs')%>
 <main class="form-container">
 <!--- Formulario-->
-<form form action="/users/<%=editUsers.id%>/edit?_method=PUT"  method="POST" class="create-form" enctype="multipart/form-data">
-<h1>Modifica tus datos</h1>
-
-<div class="control-formulario">
-Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".jpg, multiple" value="<%= editUsers.img %>">
-
+<div class="errores">
+    <ul></ul>
 </div>
+
+
+<form action="/users/<%= editUsers.id%>/edit?_method=PUT"  method="POST" class="create-form" enctype="multipart/form-data">
+    <h1>Modifica tus datos</h1>
+
+    <div class="control-formulario">
+    Imagen de Perfil: <input type="file" name="img" id="img"  value="<%= editUsers.img%>">
+    <% if(locals.errors && errors.img){%>
+        <div class="text-danger">
+            <%= errors.img.msg %>
+        </div>
+    <%} %>
+
+    </div>
      <div class="control-formulario">
         <label>Nombre</label>
-        <input type="text" name="nombre" class="control" value="<%= editUsers.nombre %>">
+        <input type="text" name="nombre" class="control" id="nombre" value="<%= editUsers.nombre%>" >
+    <% if(locals.errors && errors.nombre){%>
+        <div class="text-danger">
+            <%= errors.nombre.msg %>
+        </div>
+    <%} %>
+    
         
     </div>
 
     <div class="control-formulario">
         <label>Apellido</label>
-        <input type="text" name="apellido" class="control" value="<%= editUsers.apellido %>">
+        <input type="text" name="apellido" class="control" id="apellido" value="<%= editUsers.apellido%>">
+        <% if(locals.errors && errors.apellido){%>
+            <div class="text-danger">
+                <%= errors.apellido.msg %>
+            </div>
+        <%} %>
         
     </div>
 
     <div class="control-formulario">
         <label>Correo Electrónico</label>
-        <input type="email" name="email" class="control" value="<%= editUsers.email %>">
+        <input type="email" name="email" class="control" id="email" value="<%= editUsers.email%>">
+        <% if(locals.errors && errors.email){%>
+            <div class="text-danger">
+                <%= errors.email.msg %>
+            </div>
+        <%} %>
         
     </div>
 
     <div class="control-formulario">
         <label for="" class="label">Username</label>
-        <input type="text" name="username" class="control" value="<%= editUsers.username %>">
+        <input type="text" name="username" class="control" id="username" value="<%= editUsers.username%>">
       
     </div>
 
     <div class="control-formulario">
         <label for="" class="label">Password</label>
-        <input type="password" name="password" class="control" value="<%= editUsers.password %>">
+        <input type="password" name="password" class="control" id="password"   >    
+        <% if(locals.errors && errors.password){%>
+            <div class="text-danger">
+                <%= errors.password.msg %>
+            </div>
+        <%} %>    
      
     </div>
+    
 
       <div class="control-formulario">
         <label>País de residencia</label>
-        <select name="paisDeResidencia" class="control" value="<%= editUsers.paisDeResidencia %>" >
+        <select name="paisDeResidencia" class="control" value="<%= editUsers.paisDeResidencia%>" >
             <option value="Argentina">Argentina</option>
-            
+            <% if(locals.errors && errors.paisDeResidencia){%>
+                <div class="text-danger">
+                    <%= errors.paisDeResidencia.msg %>
+                </div>
+            <%} %>
             
         </select>
         
@@ -60,8 +96,8 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
 
     <div class="control-formulario">
         <label>Ciudad de residencia</label>
-        <select name="ciudad_de_residencias_id" class="control" value="<%= editUsers.ciudad_de_residencias_id %>" >
-           <option value="0">Elegi una ciudad</option>
+        <select name="ciudad_de_residencias_id" class="control" value="<%= editUsers.ciudad_de_residencias_id%>">
+           
            <option value="1">Buenos aires</option>
            <option value="2">Santa Fe</option>
            <option value="3">Rosario</option>
@@ -74,20 +110,29 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
     
     <div class="control-formulario">
         <label>Dirección</label>
-        <input type="text" name="direccion" class="control" placeholder="" value="<%= editUsers.direccion %>">
-       
+        <input type="text" name="direccion" class="control"  value="<%= editUsers.direccion%>" >
+        <% if(locals.errors && errors.direccion){%>
+            <div class="text-danger">
+                <%= errors.direccion.msg %>
+            </div>
+        <%} %>
     </div>
     
     <div class="control-formulario">
         <label>Número de Contacto</label>
-        <input type="text" name="movil" class="control" placeholder="" value="<%= editUsers.movil %>">
+        <input type="text" name="movil" class="control" value="<%= editUsers.movil%>" >
+        <% if(locals.errors && errors.movil){%>
+            <div class="text-danger">
+                <%= errors.movil.msg %>
+            </div>
+        <%} %>
       
     </div>
 
     <div class="control-formulario">
         <label>Alguna vez contrataste niñera?</label>         
-            <input type="radio" name="pregunta" value="Si" class="radio" value="<%= editUsers.pregunta %>">Si
-            <input type="radio" name="pregunta" value="No" class="radio" value="<%= editUsers.pregunta %>">No</label>
+            <input type="radio" name="pregunta" value="si" class="radio" checked>Si
+            <input type="radio" name="pregunta" value="no" class="radio" checked>No</label>
     </div>
 
        
@@ -95,7 +140,10 @@ Imagen de Perfil: <input type="file" name="img" id="Imagen de Perfil" accept= ".
  </form>
 
 </div1>
+
 </main>   
+
+<script src="/js/validationUser.js"></script>
 <%- include('../partials/footer.ejs')%>
 
 </body>

@@ -4,6 +4,8 @@ const morgan = require('morgan');
 const routerMain = require('./src/routes/main');
 const routerProducts = require('./src/routes/products');
 const routerUsers = require('./src/routes/users');
+const routerApiUsers =require('./src/routes/userApiRouter')
+const routerApiproduct =require('./src/routes/productApiRouter')
 const path=require('path');
 const methodOverride=require("method-override");
 const port = process.env.PORT || 3030;
@@ -36,5 +38,7 @@ app.use(express.static('public'));
 app.use(routerMain)
 app.use(routerProducts)
 app.use(routerUsers)
+app.use(routerApiUsers)
+app.use(routerApiproduct)
 
 app.listen(port, () => console.log(`servidor escuchando en puerto ${port}`));

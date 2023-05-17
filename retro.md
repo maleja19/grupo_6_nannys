@@ -96,3 +96,25 @@ Continuar haciendo:
 - Seguir con la buena predisposicion para que los objetivos de cumplan
 - Avanzar mas rapido con los sprint del proyecto dado la fecha de terminacion del curso.
  
+Sexto sprint
+
+Comenzar hacer:
+
+-Pactar reuniones que puedan ser cumplidas por cada uno de los integrantes del grupo
+-Estar actualizados con el material de la clase pertinente para poder desarrollar el proyecto
+en tiempo y forma.
+-Participar en los meetings grupales que se realizan.
+-Estar revisando que las actividades en el trello se cumplan en los tiempos establecidos y actualizarlo
+
+Hacer mas:
+
+- Mas reuniones productivas para avanzar con los sprints
+- Tener una comunicacion mas frecuente entre integrantes
+- Retroalimentacion de los temas vistos en clase
+
+Continuar haciendo:
+
+- Participar en forma conjunta en el proyecto
+- Seguir con la buena predisposicion para que los objetivos de cumplan
+- Avanzar mas rapido con los sprint del proyecto dado la fecha de terminacion del curso y verificar que todo este funcionando correctamente antes de subirlo a git.
+
