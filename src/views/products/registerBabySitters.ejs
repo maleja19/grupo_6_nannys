@@ -62,7 +62,7 @@
 
     <div class="control-formulario">
         <label for="" class="label">Username</label>
-        <input type="text" name="username" class="control" value="<%= locals.oldData ? oldData.username :null%>">
+        <input type="text" name="username" class="control" id=username value="<%= locals.oldData ? oldData.username :null%>">
         
     </div>
 
@@ -100,7 +100,6 @@
     <div class="control-formulario">
          <label>Ciudad de residencia</label>
          <select name="ciudad_de_residencias_id" class="control" value="<%= locals.oldData ? oldData.ciudad_de_residencias_id :null%>">
-            <option value="0">Elegi una ciudad</option>
             <option value="1">Buenos aires</option>
             <option value="2">Santa Fe</option>
             <option value="3">Rosario</option>

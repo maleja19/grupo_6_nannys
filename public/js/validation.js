@@ -9,7 +9,7 @@ window.addEventListener("load",function(){
     let campoEmail =document.getElementById('email')
     let campoPassword =document.getElementById('password')
     let campoDescripcion =document.getElementById('descripcion')
-  
+    let campoUsername=document.getElementById('username')
 
 
 
@@ -42,8 +42,11 @@ window.addEventListener("load",function(){
             errores.push("*El campo de apellido debe tener mas de 2 caracteres")}
        
 
-      if(campoEmail.value ==""){
+         if(campoEmail.value ==""){
             errores.push("*El campo de email debe estar completo")      }
+
+        if(campoUsername.value ==""){
+            errores.push("*El campo de username debe estar completo")    }
 
         
 
@@ -64,7 +67,7 @@ window.addEventListener("load",function(){
             e.preventDefault();
 
             let ulErrores = document.querySelector(".errores ul");
-            console.log(ulErrores)
+            ulErrores.innerHTML="";
             for(let i=0; i< errores.length; i++){
                 ulErrores.innerHTML += "<li>"+errores[i]+"</li>"
             }

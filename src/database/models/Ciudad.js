@@ -17,6 +17,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         timestamps: false,
+        tableName: 'ciudad_de_residencias'
     }
     const Ciudad = sequelize.define(alias, cols, config); 
 

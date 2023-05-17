@@ -8,7 +8,7 @@ window.addEventListener("load",function(){
     let campoApellido=document.getElementById('apellido')
     let campoEmail =document.getElementById('email')
     let campoPassword =document.getElementById('password')
-    
+    let campoUsername =document.getElementById('username')
   
 
 
@@ -44,6 +44,9 @@ window.addEventListener("load",function(){
 
       if(campoEmail.value ==""){
             errores.push("*El campo de email debe estar completo")      }
+        
+        if(campoUsername.value ==""){
+            errores.push("*El campo de username debe estar completo")    }
 
         
 
@@ -53,6 +56,7 @@ window.addEventListener("load",function(){
 
         if(campoPassword.value.length <= 8 ){
             errores.push("*El campo de password debe tener mas de 8 y menos de 50 caracteres")}
+        
 
       
 
@@ -61,12 +65,13 @@ window.addEventListener("load",function(){
             e.preventDefault();
 
             let ulErrores = document.querySelector(".errores ul");
-            console.log(ulErrores)
-            for(let i=0; i< errores.length; i++){
-                ulErrores.innerHTML += "<li>"+errores[i]+"</li>"
+            ulErrores.innerHTML="";
+               for(let i=0; i< errores.length; i++){
+            ulErrores.innerHTML += "<li>"+errores[i]+"</li>"
             }
 
         }
+
     })
 
 
