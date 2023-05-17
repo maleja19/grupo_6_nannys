@@ -54,8 +54,20 @@ const userControllers={
 			newImage = `/images/${image}`;
 		}
 
+		
 		const{img,nombre,apellido,email,username,password,paisDeResidencia,ciudad_de_residencias_id,direccion,movil,pregunta}=req.body;
 
+		let answer;
+
+		if(pregunta=='si'){
+			answer=true
+		}
+
+		else if(pregunta=='no'){
+			answer=false
+		}
+
+		console.log(answer)
 		
 		let userToCreate={
 			img:newImage,
@@ -68,7 +80,7 @@ const userControllers={
 			ciudad_de_residencias_id,
 			direccion,
 			movil,
-			pregunta
+			pregunta:answer
 				
 
 		}
@@ -134,8 +146,17 @@ const userControllers={
 		
 
 		const{img,nombre,apellido,email,username,password,paisDeResidencia,ciudad_de_residencias_id,direccion,movil,pregunta}=req.body;
+
+		let answer;
 		
-		console.log(req.body)
+		if(pregunta=='si'){
+			answer=true
+		}
+		else if(pregunta=='no'){
+			answer=false
+		}
+
+		
 
 			
 		const userEdit=	
@@ -151,7 +172,7 @@ const userControllers={
 				ciudad_de_residencias_id,
 				direccion,
 				movil,
-				pregunta
+				pregunta:answer
 				
 			}
 
