@@ -112,7 +112,6 @@ const userControllers={
 		
 
 
-
 		res.render('users/formEditParents.ejs',{editUsers})
 
 		}catch(error){
