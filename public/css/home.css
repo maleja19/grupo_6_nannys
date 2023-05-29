@@ -6,7 +6,6 @@
 }
 /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
 
-
 .navBar {
   background-color: #fc9d9a;
   display: flex;
@@ -18,6 +17,20 @@
   
   
 }
+
+#list{
+  color: white;
+  list-style-type:none;
+  position: absolute;
+  right: 3.8vw;
+  top: 4.5vw;
+  background-color: white;
+  border: 5px gray;
+    
+}
+
+
+
 .logo{
 height: 10vh;
 }
@@ -51,6 +64,8 @@ height: 5vh;
   background-color: #fc9d9a;
   
 }
+
+
 
 .contenedorBotones i {
   font-size: 25px;
@@ -517,6 +532,7 @@ footer {
         padding-right: 2%;
     }
 
+    
     .burger-menu {
         display: none;
     }

@@ -7,9 +7,9 @@ function admin(req,res,next){
     }else{
 
         res.status(401);
-        return res.send('No Autorizado')
-    }   
+        return res.send('No Autorizado');
 		
 	}
+}
 
 module.exports=admin;
