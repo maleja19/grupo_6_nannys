@@ -1,9 +1,11 @@
+
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+  
+}
   /*-----------------------------------------------------------------------------------Header------------------------------------------------------------------------------------------*/
   
   .navBar {
@@ -17,6 +19,18 @@
     
     
   }
+  
+  #list{
+    color: white;
+    list-style-type:none;
+    position: absolute;
+    right: 3.8vw;
+    top: 4.5vw;
+    background-color: white;
+    border: 5px gray;
+      
+  }
+  
   .logo{
   height: 10vh;
   }
@@ -40,15 +54,18 @@
   .contenedorBotones{
     margin-top: 1%;
   }
+  
   .contenedorBotones i {
     font-size: 25px;
     color: white;
     position: relative;
     left: 28px;
     top: 4px;
-}
+  }
+  
   .botonNav{
   height: 5vh;
+  font-size: 2.4vh;
   }
   
   .contenedorBotones a:hover{
@@ -57,17 +74,41 @@
     
   }
   
+  .burger-menu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    padding: 1%;    
+  }
+  
+  .burger-menu i{
+    padding: 1%;
+    border: white solid 1px;
+    color: white ;
+    border-radius: 5px;
+  }
+  
+  .burger-menu i:hover {
+    background-color: white;
+    border: #fc9d9a solid 1px;
+    color: #fc9d9a ;
+  }
+  
   .imagen-perfil{
     width: 3vw;
     height: 5vh;
     border-radius: 50%;
   }
   
+  
+  
+  
   /*-----------------------------------------------------------------------------------body------------------------------------------------------------------------------------------*/
   
   .form-container{
     padding-top:20vh;
-    width:100%;
+    width:90%;
   }
   form {
     width: 80%;
@@ -292,6 +333,7 @@
   .contenedorRedes ul li .youtube:hover {
     background: var(--youtube);
   }
+  
   /*-----------------------------------------------------------------------------------Media------------------------------------------------------------------------------------------*/
   @media (max-width:768px) {
   .contenedorLogo {

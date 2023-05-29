@@ -196,6 +196,8 @@ const userControllers={
     },
 
 	loginProcess: async(req,res)=>{
+
+		
 		try{
 			
 			const userToLogin= await db.User.findAll({where: {email:req.body.email}})
