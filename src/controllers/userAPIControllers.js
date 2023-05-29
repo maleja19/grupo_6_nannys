@@ -4,6 +4,7 @@ const path = require('path');
 
 const usersAPIController = {
     list: (req, res) => {
+        let localhost= 'http://localhost:3030'
         db.User.findAll({include:['ciudadDeResidencia']})
             .then(users => {res.status(200).json({
                 total: users.length,
@@ -11,7 +12,7 @@ const usersAPIController = {
                     id: user.id,
                     nombre: user.nombre,
                     email: user.email,
-                    detail: '/api/users/detail/:id'
+                    detail: (localhost+'/api/products/'+user.id)
                     
                 }
                 })
@@ -24,27 +25,29 @@ const usersAPIController = {
     
     detail: (req,res)=>{
         const {id}=req.params;
-        db.User.findByPk(id)
-        .then(user=>res.status(200).json(
-            {
-                id: user.id
-                
-            }
-        ))
-    },
+        let ruta='http://localhost:3030'
+
+        db.User.findOne({include:['ciudadDeResidencia'],where:{id:id}})
+        .then(user=>res.status(200).json({
+            id: user.id,
+            img: ruta +''+user.img,
+            nombre: user.nombre,
+            apellido: user.apellido,
+            email: user.email,
+            username: user.username,               
+            paisDeResidencia: user.paisDeResidencia,
+            ciudad_de_residencias_id: user.ciudadDeResidencia.ciudad,
+            direccion:user.direccion,
+            movil:user.movil,
+            pregunta:user.pregunta
+        })
+
+            
            
-    findId: (req,res) => {
-
-        const {id}=req.params;
-        db.User.findByPk(id)
-            .then(user => {res.status(200).json(
-                 {
-                    url: user.img,
-                                        
-                })
-            })
-
-    }
+        )}
+    
+           
+    
 }               
     
         

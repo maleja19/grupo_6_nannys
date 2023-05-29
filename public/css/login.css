@@ -16,6 +16,18 @@
   
   
 }
+
+#list{
+  color: white;
+  list-style-type:none;
+  position: absolute;
+  right: 3.8vw;
+  top: 4.5vw;
+  background-color: white;
+  border: 5px gray;
+    
+}
+
 .logo{
 height: 10vh;
 }

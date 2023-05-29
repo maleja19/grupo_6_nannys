@@ -6,6 +6,7 @@ const routerProducts = require('./src/routes/products');
 const routerUsers = require('./src/routes/users');
 const routerApiUsers =require('./src/routes/userApiRouter')
 const routerApiproduct =require('./src/routes/productApiRouter')
+const cors =require('cors')
 const path=require('path');
 const methodOverride=require("method-override");
 const port = process.env.PORT || 3030;
@@ -18,7 +19,7 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'src/views'))
 
 
-
+app.use(cors())
 app.use(express.urlencoded({ extended:false}));
 app.use(express.json());
 app.use(methodOverride("_method"));
